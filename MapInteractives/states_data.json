@@ -1,0 +1,402 @@
+{
+    "AK": {
+        "capital": "Juneau",
+        "humidity": 0.69,
+        "icon": "snow",
+        "state": "Alaska",
+        "tempBucket": "cold",
+        "wind": 4.4
+    },
+    "AL": {
+        "capital": "Montgomery",
+        "humidity": 0.68,
+        "icon": "partly-cloudy-day",
+        "state": "Alabama",
+        "tempBucket": "warm",
+        "wind": 4.14
+    },
+    "AR": {
+        "capital": "Little Rock",
+        "humidity": 0.72,
+        "icon": "partly-cloudy-day",
+        "state": "Arkansas",
+        "tempBucket": "warm",
+        "wind": 9.41
+    },
+    "AZ": {
+        "capital": "Phoenix",
+        "humidity": 0.53,
+        "icon": "partly-cloudy-day",
+        "state": "Arizona",
+        "tempBucket": "warm",
+        "wind": 10.02
+    },
+    "CA": {
+        "capital": "Sacramento",
+        "humidity": 0.42,
+        "icon": "clear-day",
+        "state": "California",
+        "tempBucket": "warm",
+        "wind": 4.65
+    },
+    "CO": {
+        "capital": "Denver",
+        "humidity": 0.72,
+        "icon": "snow",
+        "state": "Colorado",
+        "tempBucket": "cool",
+        "wind": 2.5
+    },
+    "CT": {
+        "capital": "Hartford",
+        "humidity": 0.76,
+        "icon": "partly-cloudy-night",
+        "state": "Connecticut",
+        "tempBucket": "warm",
+        "wind": 3.47
+    },
+    "DE": {
+        "capital": "Dover",
+        "humidity": 0.79,
+        "icon": "partly-cloudy-night",
+        "state": "Delaware",
+        "tempBucket": "warm",
+        "wind": 3.7
+    },
+    "FL": {
+        "capital": "Tallahassee",
+        "humidity": 0.56,
+        "icon": "clear-day",
+        "state": "Florida",
+        "tempBucket": "hot",
+        "wind": 1.96
+    },
+    "GA": {
+        "capital": "Atlanta",
+        "humidity": 0.69,
+        "icon": "partly-cloudy-day",
+        "state": "Georgia",
+        "tempBucket": "warm",
+        "wind": 5.33
+    },
+    "HI": {
+        "capital": "Honolulu",
+        "humidity": 0.68,
+        "icon": "partly-cloudy-day",
+        "state": "Hawaii",
+        "tempBucket": "warm",
+        "wind": 6.25
+    },
+    "IA": {
+        "capital": "Des Moines",
+        "humidity": 0.74,
+        "icon": "partly-cloudy-day",
+        "state": "Iowa",
+        "tempBucket": "warm",
+        "wind": 5.9
+    },
+    "ID": {
+        "capital": "Boise",
+        "humidity": 0.45,
+        "icon": "partly-cloudy-day",
+        "state": "Idaho",
+        "tempBucket": "cool",
+        "wind": 12.28
+    },
+    "IL": {
+        "capital": "Springfield",
+        "humidity": 0.67,
+        "icon": "rain",
+        "state": "Illinois",
+        "tempBucket": "warm",
+        "wind": 19.65
+    },
+    "IN": {
+        "capital": "Indianapolis",
+        "humidity": 0.94,
+        "icon": "cloudy",
+        "state": "Indiana",
+        "tempBucket": "warm",
+        "wind": 9.47
+    },
+    "KS": {
+        "capital": "Topeka",
+        "humidity": 0.31,
+        "icon": "clear-day",
+        "state": "Kansas",
+        "tempBucket": "warm",
+        "wind": 10.79
+    },
+    "KY": {
+        "capital": "Frankfort",
+        "humidity": 0.87,
+        "icon": "cloudy",
+        "state": "Kentucky",
+        "tempBucket": "warm",
+        "wind": 11.41
+    },
+    "LA": {
+        "capital": "Baton Rouge",
+        "humidity": 0.69,
+        "icon": "partly-cloudy-day",
+        "state": "Louisiana",
+        "tempBucket": "warm",
+        "wind": 10.61
+    },
+    "MA": {
+        "capital": "Boston",
+        "humidity": 0.76,
+        "icon": "cloudy",
+        "state": "Massachusetts",
+        "tempBucket": "warm",
+        "wind": 4.75
+    },
+    "MD": {
+        "capital": "Annapolis",
+        "humidity": 0.76,
+        "icon": "rain",
+        "state": "Maryland",
+        "tempBucket": "warm",
+        "wind": 4.12
+    },
+    "ME": {
+        "capital": "Augusta",
+        "humidity": 0.59,
+        "icon": "partly-cloudy-night",
+        "state": "Maine",
+        "tempBucket": "cool",
+        "wind": 6.7
+    },
+    "MI": {
+        "capital": "Lansing",
+        "humidity": 0.91,
+        "icon": "cloudy",
+        "state": "Michigan",
+        "tempBucket": "warm",
+        "wind": 10.27
+    },
+    "MN": {
+        "capital": "Saint Paul",
+        "humidity": 0.73,
+        "icon": "cloudy",
+        "state": "Minnesota",
+        "tempBucket": "cool",
+        "wind": 7.53
+    },
+    "MO": {
+        "capital": "Jefferson City",
+        "humidity": 0.45,
+        "icon": "partly-cloudy-day",
+        "state": "Missouri",
+        "tempBucket": "warm",
+        "wind": 15.95
+    },
+    "MS": {
+        "capital": "Jackson",
+        "humidity": 0.54,
+        "icon": "partly-cloudy-day",
+        "state": "Mississippi",
+        "tempBucket": "hot",
+        "wind": 15.73
+    },
+    "MT": {
+        "capital": "Helena",
+        "humidity": 0.61,
+        "icon": "partly-cloudy-day",
+        "state": "Montana",
+        "tempBucket": "cold",
+        "wind": 13.12
+    },
+    "NC": {
+        "capital": "Raleigh",
+        "humidity": 0.61,
+        "icon": "partly-cloudy-night",
+        "state": "North Carolina",
+        "tempBucket": "warm",
+        "wind": 4.26
+    },
+    "ND": {
+        "capital": "Bismarck",
+        "humidity": 0.78,
+        "icon": "partly-cloudy-day",
+        "state": "North Dakota",
+        "tempBucket": "cold",
+        "wind": 3.93
+    },
+    "NE": {
+        "capital": "Lincoln",
+        "humidity": 0.74,
+        "icon": "cloudy",
+        "state": "Nebraska",
+        "tempBucket": "cool",
+        "wind": 8.24
+    },
+    "NH": {
+        "capital": "Concord",
+        "humidity": 0.48,
+        "icon": "clear-night",
+        "state": "New Hampshire",
+        "tempBucket": "cool",
+        "wind": 8.48
+    },
+    "NJ": {
+        "capital": "Trenton",
+        "humidity": 0.59,
+        "icon": "partly-cloudy-night",
+        "state": "New Jersey",
+        "tempBucket": "warm",
+        "wind": 1.94
+    },
+    "NM": {
+        "capital": "Santa Fe",
+        "humidity": 0.66,
+        "icon": "partly-cloudy-day",
+        "state": "New Mexico",
+        "tempBucket": "cool",
+        "wind": 12.92
+    },
+    "NV": {
+        "capital": "Carson City",
+        "humidity": 0.42,
+        "icon": "clear-day",
+        "state": "Nevada",
+        "tempBucket": "cool",
+        "wind": 2.81
+    },
+    "NY": {
+        "capital": "Albany",
+        "humidity": 0.43,
+        "icon": "partly-cloudy-night",
+        "state": "New York",
+        "tempBucket": "warm",
+        "wind": 2.41
+    },
+    "OH": {
+        "capital": "Columbus",
+        "humidity": 0.91,
+        "icon": "rain",
+        "state": "Ohio",
+        "tempBucket": "warm",
+        "wind": 6.9
+    },
+    "OK": {
+        "capital": "Oklahoma City",
+        "humidity": 0.62,
+        "icon": "partly-cloudy-day",
+        "state": "Oklahoma",
+        "tempBucket": "warm",
+        "wind": 15.08
+    },
+    "OR": {
+        "capital": "Salem",
+        "humidity": 0.81,
+        "icon": "partly-cloudy-day",
+        "state": "Oregon",
+        "tempBucket": "cool",
+        "wind": 4.08
+    },
+    "PA": {
+        "capital": "Harrisburg",
+        "humidity": 0.57,
+        "icon": "partly-cloudy-night",
+        "state": "Pennsylvania",
+        "tempBucket": "warm",
+        "wind": 3.6
+    },
+    "RI": {
+        "capital": "Providence",
+        "humidity": 0.87,
+        "icon": "cloudy",
+        "state": "Rhode Island",
+        "tempBucket": "cool",
+        "wind": 4.74
+    },
+    "SC": {
+        "capital": "Columbia",
+        "humidity": 0.49,
+        "icon": "partly-cloudy-day",
+        "state": "South Carolina",
+        "tempBucket": "warm",
+        "wind": 9.26
+    },
+    "SD": {
+        "capital": "Pierre",
+        "humidity": 0.83,
+        "icon": "cloudy",
+        "state": "South Dakota",
+        "tempBucket": "cold",
+        "wind": 6.97
+    },
+    "TN": {
+        "capital": "Nashville",
+        "humidity": 0.86,
+        "icon": "partly-cloudy-day",
+        "state": "Tennessee",
+        "tempBucket": "warm",
+        "wind": 9.78
+    },
+    "TX": {
+        "capital": "Austin",
+        "humidity": 0.72,
+        "icon": "partly-cloudy-day",
+        "state": "Texas",
+        "tempBucket": "warm",
+        "wind": 5.99
+    },
+    "UT": {
+        "capital": "Salt Lake City",
+        "humidity": 0.54,
+        "icon": "rain",
+        "state": "Utah",
+        "tempBucket": "cool",
+        "wind": 6.72
+    },
+    "VA": {
+        "capital": "Richmond",
+        "humidity": 0.62,
+        "icon": "partly-cloudy-night",
+        "state": "Virginia",
+        "tempBucket": "warm",
+        "wind": 1.61
+    },
+    "VT": {
+        "capital": "Montpelier",
+        "humidity": 0.58,
+        "icon": "partly-cloudy-night",
+        "state": "Vermont",
+        "tempBucket": "cool",
+        "wind": 6.01
+    },
+    "WA": {
+        "capital": "Olympia",
+        "humidity": 0.67,
+        "icon": "partly-cloudy-day",
+        "state": "Washington",
+        "tempBucket": "cool",
+        "wind": 8.49
+    },
+    "WI": {
+        "capital": "Madison",
+        "humidity": 0.97,
+        "icon": "fog",
+        "state": "Wisconsin",
+        "tempBucket": "cool",
+        "wind": 3.15
+    },
+    "WV": {
+        "capital": "Charleston",
+        "humidity": 0.95,
+        "icon": "partly-cloudy-day",
+        "state": "West Virginia",
+        "tempBucket": "warm",
+        "wind": 4.31
+    },
+    "WY": {
+        "capital": "Cheyenne",
+        "humidity": 0.45,
+        "icon": "clear-day",
+        "state": "Wyoming",
+        "tempBucket": "cold",
+        "wind": 23.05
+    }
+}
