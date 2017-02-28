@@ -23,8 +23,8 @@
 <body>
 	<section aria-label="items">
 <h2>Items</h2>
-<select aria-label="Numbers" id="list1"></select>
-<select aria-label="Letters" id="list2"></select>
+<select size="3" aria-label="Numbers" id="list1"></select>
+<select size="3" aria-label="Letters" id="list2"></select>
 <button onclick="addMatch()">Match</button>
 </section>
 
@@ -66,19 +66,19 @@ document.getElementById(liID).parentNode.removeChild(document.getElementById(liI
 }
 
     function addMatch() {
-list1Node = document.getElementById("list1")
-list2Node = document.getElementById("list2")
-val1 = list1Node.selectedOptions[0].getAttribute("value")
-val2 = list2Node.selectedOptions[0].getAttribute("value")
+var list1Node = document.getElementById("list1")
+var list2Node = document.getElementById("list2")
+var val1 = list1Node.selectedOptions[0].getAttribute("value")
+var val2 = list2Node.selectedOptions[0].getAttribute("value")
 
 matches[val1] = val2
 filter1.push(val1)
 filter2.push(val2)
 renderLists()
 
-matchesList = document.getElementById("matchesList")
-match = document.createElement("li")
-matchID = "match-"+val1+"-"+val2
+var matchesList = document.getElementById("matchesList")
+var match = document.createElement("li")
+var matchID = "match-"+val1+"-"+val2
 match.setAttribute("id", matchID)
 matchDelete = document.createElement("button")
 matchDelete.innerHTML = "Delete"
@@ -90,8 +90,8 @@ matchesList.appendChild(match)
 
 function renderLists() {
 // todo apply filters to list1 and list2
-populateList(list1, "list1")
-populateList(list2, "list2")
+populateList(list1.filter(function(item) { return filter1.indexOf(item) < 0;}), "list1")
+populateList(list2.filter(function(item) { return filter2.indexOf(item) < 0;}), "list2")
 }
 
 function populateList(list, id) {
