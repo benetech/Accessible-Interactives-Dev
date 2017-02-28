@@ -19,6 +19,20 @@
 	<!-- <script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script> -->
 	<!-- <script src="https://cdn.rawgit.com/abdmob/x2js/master/xml2json.js"></script> -->
     <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+</head>
+<body>
+	<section aria-label="items">
+<h2>Items</h2>
+<select aria-label="Numbers" id="list1"></select>
+<select aria-label="Letters" id="list2"></select>
+<button onclick="addMatch()">Match</button>
+</section>
+
+<section aria-label="Matches">
+<h2>Matches</h2>
+<ul id="matchesList">
+</ul>
+</section>
 
 	<!-- SCRIPTS IN PAGE  -->
     <script>
@@ -37,7 +51,7 @@ var filter1 = []
 var filter2 = []
 var     matches = {}
 
-function deleteMatch(val1, val2) {
+function deleteMatch(liID, val1, val2) {
 keys = Object.keys(matches)
 for(var i=0; i<keys.length; i++) {
 key = keys[i]
@@ -48,11 +62,14 @@ filter2 = filter2.splice(filter2.indexOf(val2), 1)
 }
 }
 renderLists()
+document.getElementById(liID).parentNode.removeChild(document.getElementById(liID))
 }
 
     function addMatch() {
-val1 = list1.value
-val2 = list2.value
+list1Node = document.getElementById("list1")
+list2Node = document.getElementById("list2")
+val1 = list1Node.selectedOptions[0].getAttribute("value")
+val2 = list2Node.selectedOptions[0].getAttribute("value")
 
 matches[val1] = val2
 filter1.push(val1)
@@ -61,9 +78,11 @@ renderLists()
 
 matchesList = document.getElementById("matchesList")
 match = document.createElement("li")
+matchID = "match-"+val1+"-"+val2
+match.setAttribute("id", matchID)
 matchDelete = document.createElement("button")
 matchDelete.innerHTML = "Delete"
-matchDelete.onClick = function(){deleteMatch(val1, val2)}
+matchDelete.onClick = function(){deleteMatch(matchID, val1, val2)}
 match.innerHTML = val1+" matches "+val2
 match.appendChild(matchDelete)
 matchesList.appendChild(match)
@@ -81,29 +100,13 @@ tmpSelect.innerHTML = ""
 
 list.forEach(function(item) {
 tmpOption = document.createElement("option")
+tmpOption.setAttribute("value", item)
 tmpOption.innerHTML = item
 tmpSelect.appendChild(tmpOption)
-}
+});
 }
 
-document.onload = function() {
 renderLists();
-}
 	</script>
-</head>
-<body>
-	<section aria-label="items">
-<h2>Items</h2>
-<select aria-label="Numbers" id="list1"></select>
-<select aria-label="Letters" id="list2"></select>
-<button onclick="addMatch()">Match</button>
-</section>
-
-<section aria-label="Matches">
-<h2>Matches</h2>
-<ul id="matchesList">
-</ul>
-</section>
-
 </body>
 </html>
