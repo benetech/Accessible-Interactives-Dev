@@ -29,44 +29,74 @@ function getIndexOf(ele, text) {
             return i;
         }
     }
+}
+
+var list1 = ["1", "2", "3"]
+var list2 = ["A", "B", "C"]
+var filter1 = []
+var filter2 = []
+var     matches = {}
+
+function deleteMatch(val1, val2) {
+keys = Object.keys(matches)
+for(var i=0; i<keys.length; i++) {
+key = keys[i]
+if(key == val1 && matches[key] == val2) {
+delete matches[val1]
+filter1 = filter1.splice(filter1.indexOf(val1), 1)
+filter2 = filter2.splice(filter2.indexOf(val2), 1)
+}
+}
+renderLists()
+}
 
     function addMatch() {
-    matches = {}
-    const list1 = document.getElementById('list1')
-    const list2 = document.getElementById('list2')
-
 val1 = list1.value
 val2 = list2.value
-matches[val1] = val2
-list1.remove(getIndexOf(list1, val1))
-list2.remove(getIndexOf(list2, val2))
 
-matchesList = getElementByID("matchesList")
+matches[val1] = val2
+filter1.push(val1)
+filter2.push(val2)
+renderLists()
+
+matchesList = document.getElementById("matchesList")
 match = document.createElement("li")
 matchDelete = document.createElement("button")
-matchDelete.textContents = "Delete"
+matchDelete.innerHTML = "Delete"
 matchDelete.onClick = function(){deleteMatch(val1, val2)}
 match.innerHTML = val1+" matches "+val2
 match.appendChild(matchDelete)
 matchesList.appendChild(match)
     }
+
+function renderLists() {
+// todo apply filters to list1 and list2
+populateList(list1, "list1")
+populateList(list2, "list2")
+}
+
+function populateList(list, id) {
+tmpSelect = document.getElementById(id)
+tmpSelect.innerHTML = ""
+
+list.forEach(function(item) {
+tmpOption = document.createElement("option")
+tmpOption.innerHTML = item
+tmpSelect.appendChild(tmpOption)
+}
+}
+
+document.onload = function() {
+renderLists();
+}
 	</script>
 </head>
 <body>
 	<section aria-label="items">
 <h2>Items</h2>
-<select aria-label="numbers" id="list1">
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-</select>
-
-<select aria-label="Letters" id="list2">
-  <option value="A">A</option>
-  <option value="B">B</option>
-  <option value="C">C</option>
-</select>
-<button onclick="addMatch">Match</button>
+<select aria-label="Numbers" id="list1"></select>
+<select aria-label="Letters" id="list2"></select>
+<button onclick="addMatch()">Match</button>
 </section>
 
 <section aria-label="Matches">
