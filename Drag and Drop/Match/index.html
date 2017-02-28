@@ -22,17 +22,33 @@
 
 	<!-- SCRIPTS IN PAGE  -->
     <script>
-    const column1 = [1, 2, 3, 4]
-    const column2 = ['a', 'b', 'c']
-    const matches = []
 
+function getIndexOf(ele, text) {
+    for (var i=0; i<ele.length;i++) {
+        if (ele[i].childNodes[0].nodeValue === text){
+            return i;
+        }
+    }
+
+    function addMatch() {
+    matches = {}
     const list1 = document.getElementById('list1')
     const list2 = document.getElementById('list2')
 
-    function addMatch() {
-      matches.push({list1: column1[list1.selectedIndex], list2: column2[list2.selectedIndex]})
-      // re-output the list1
-      
+val1 = list1.value
+val2 = list2.value
+matches[val1] = val2
+list1.remove(getIndexOf(list1, val1))
+list2.remove(getIndexOf(list2, val2))
+
+matchesList = getElementByID("matchesList")
+match = document.createElement("li")
+matchDelete = document.createElement("button")
+matchDelete.textContents = "Delete"
+matchDelete.onClick = function(){deleteMatch(val1, val2)}
+match.innerHTML = val1+" matches "+val2
+match.appendChild(matchDelete)
+matchesList.appendChild(match)
     }
 	</script>
 </head>
@@ -40,22 +56,22 @@
 	<section aria-label="items">
 <h2>Items</h2>
 <select aria-label="numbers" id="list1">
-  <option>1</option>
-  <option>2</option>
-  <option>3</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
 </select>
 
 <select aria-label="Letters" id="list2">
-  <option>A</option>
-  <option>B</option>
-  <option>C</option>
+  <option value="A">A</option>
+  <option value="B">B</option>
+  <option value="C">C</option>
 </select>
-<button onclick="addMatch()">Match</button>
+<button onclick="addMatch">Match</button>
 </section>
 
 <section aria-label="Matches">
 <h2>Matches</h2>
-<ul>
+<ul id="matchesList">
 </ul>
 </section>
 
