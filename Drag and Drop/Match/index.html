@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>CSUN</title>
-    
+
 	<!-- SCRIPTS -->
     <script src="lib/jquery-3.1.1.js"></script>
     <script src="lib/jquery-ui-1.12.1/jquery-ui.min.js"></script>
@@ -14,29 +14,41 @@
 	<link href="lib/jquery-ui-1.12.1/jquery-ui.min.css" rel="stylesheet" type="text/css" media="screen">
 	<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen">
 	<link href="styles/styles.css" rel="stylesheet" type="text/css" media="screen" />
-	
+
 	<!-- CDN -->
 	<!-- <script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script> -->
 	<!-- <script src="https://cdn.rawgit.com/abdmob/x2js/master/xml2json.js"></script> -->
     <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
-    
+
 	<!-- SCRIPTS IN PAGE  -->
     <script>
+    const column1 = [1, 2, 3, 4]
+    const column2 = ['a', 'b', 'c']
+    const matches = []
+
+    const list1 = document.getElementById('list1')
+    const list2 = document.getElementById('list2')
+
+    function addMatch() {
+      matches.push({list1: column1[list1.selectedIndex], list2: column2[list2.selectedIndex]})
+      // re-output the list1
+      
+    }
 	</script>
 </head>
 <body>
 	<section aria-label="items">
 <h2>Items</h2>
-<select aria-label="numbers">
-<option>1</option>
-<option>2</option>
-<option>3</option>
+<select aria-label="numbers" id="list1">
+  <option>1</option>
+  <option>2</option>
+  <option>3</option>
 </select>
 
-<select aria-label="Letters">
-<option>A</option>
-<option>B</option>
-<option>C</option>
+<select aria-label="Letters" id="list2">
+  <option>A</option>
+  <option>B</option>
+  <option>C</option>
 </select>
 <button onclick="addMatch()">Match</button>
 </section>
