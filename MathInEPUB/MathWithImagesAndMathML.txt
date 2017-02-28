@@ -1,0 +1,53 @@
+
+The math is represented as a pair: MathML that is hidden by being clipped and the image is not spoken because aria-hidden="true".
+
+<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>a</mi>
+        <msup>
+          <mi>x</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msup>
+        <mo>+</mo>
+        <mi>b</mi>
+        <mi>x</mi>
+        <mo>+</mo>
+        <mi>c</mi>
+        <mo>=</mo>
+        <mn>0</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle ax^{2}+bx+c=0}</annotation>
+  </semantics>
+</math></span>
+<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/23e70cfa003f402d108ec04d97983fb62f69536e" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.505ex; width:16.991ex; height:2.843ex;" alt="ax^2+bx+c=0">
+</span>
+
+Here are what the classes are:
+
+.mwe-math-element {
+    overflow-x: auto;
+    max-width: 100%;
+}
+
+span.mwe-math-mathml-inline {
+    font-size: 118%;
+}
+
+.mwe-math-mathml-a11y {
+    clip: rect( 1px,1px,1px,1px );
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+.mwe-math-fallback-image-inline {
+    display: inline-block;
+    vertical-align: middle;
+}
