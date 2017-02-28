@@ -82,7 +82,7 @@ matchID = "match-"+val1+"-"+val2
 match.setAttribute("id", matchID)
 matchDelete = document.createElement("button")
 matchDelete.innerHTML = "Delete"
-matchDelete.onClick = function(){deleteMatch(matchID, val1, val2)}
+matchDelete.onclick = function(){deleteMatch(matchID, val1, val2)}
 match.innerHTML = val1+" matches "+val2
 match.appendChild(matchDelete)
 matchesList.appendChild(match)
