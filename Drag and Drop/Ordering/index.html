@@ -78,7 +78,7 @@ tmpSelect.appendChild(tmpOption)
 }
 
 function moveUp() {
-listNode = getElementById("list")
+listNode = document.getElementById("list")
 index = listNode.selectedIndex
 
 currentNode = listNode.childNodes[index]
@@ -86,13 +86,17 @@ prevNode = currentNode.previousSibling
 listNode.insertBefore(currentNode, prevNode)
 }
 
-function moveUp() {
-listNode = getElementById("list")
+function moveDown() {
+listNode = document.getElementById("list")
 index = listNode.selectedIndex
 
 currentNode = listNode.childNodes[index]
-nextNode = currentNode.nextSibling
-listNode.insertBefore(currentNode, nextNode)
+if (currentNode.nextSibling && currentNode.nextSibling.nextSibling) {
+  nextNode = currentNode.nextSibling.nextSibling
+  listNode.insertBefore(currentNode, nextNode)
+} else {
+  listNode.appendChild(currentNode)
+}
 }
 
 generateShuffledList()
