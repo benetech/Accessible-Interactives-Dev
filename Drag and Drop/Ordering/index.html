@@ -85,6 +85,7 @@ currentNode = listNode.childNodes[index]
 if (currentNode.previousSibling) {
   prevNode = currentNode.previousSibling
   listNode.insertBefore(currentNode, prevNode)
+say("moved "+currentNode.value+" before "+prevNode.value)
 }
 }
 
@@ -95,8 +96,11 @@ index = listNode.selectedIndex
 currentNode = listNode.childNodes[index]
 if (currentNode.nextSibling && currentNode.nextSibling.nextSibling) {
   nextNode = currentNode.nextSibling.nextSibling
+say("moved "+currentNode.value+" after "+nextNode.previousSibling.value)
   listNode.insertBefore(currentNode, nextNode)
 } else {
+  nextNode = currentNode.nextSibling
+say("moved "+currentNode.value+" after "+nextNode.value)
   listNode.appendChild(currentNode)
 }
 }
