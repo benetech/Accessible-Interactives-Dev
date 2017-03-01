@@ -1,0 +1,1062 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600">
+  <title>US 2016 Presidential Election, Popular Vote by region</title>
+
+  <metadata id="sources">
+    <metadata id="sources"> </metadata>  
+  </metadata>
+
+
+  <g id="credits">
+    <metadata prefix="prov: http://www.w3.org/ns/prov#" resource="#" typeof="prov:Activity">
+      <metadata property="prov:used" resource="https://commons.wikimedia.org/wiki/File:Blank_US_Map_(regions_only).svg">
+        Map source modified from <metadata typeof="prov:Entity">Wikipedia</metadata>
+      </metadata>
+
+      <metadata property="prov:used" resource="http://cookpolitical.com/story/10174">
+        Election data from <metadata typeof="prov:Person">David Wasserman</metadata> 
+        on <metadata typeof="prov:Entity">The Cook Political Report</metadata> website, 
+        January 2, 2017. 
+        <a href="https://docs.google.com/spreadsheets/d/133Eb4qQmOxNvtesw2hdVns073R68EZx4SfCnP4IGQf8/edit#gid=19">Data also available via spreadsheet</a>
+      </metadata>
+
+      <metadata>
+        Visualization and script by <metadata resource="http://schepers.cc" typeof="prov:Person">Doug Schepers</metadata>.
+        Available under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a>.
+      </metadata>
+
+      <metadata property="prov:generated"
+        resource="http://schepers.cc/dataviz/2016_Popular_Vote_by_region-infobox.svg"/>
+    </metadata>
+  </g>
+
+  <style type="text/css">
+    text {
+      font-family: Tahoma, sans-serif;
+      font-size: 11px;
+      fill: rgb(90,90,90);
+    }
+
+      text[role=heading] {
+        font-size: 22px;
+        /*font-weight: bold;*/
+        text-anchor: middle;
+      }
+  
+    #regions {
+      fill: #d3d3d3;
+    }
+/*
+      #regions path:hover, #regions path:focus {
+        stroke: #000;
+        stroke-width: 2px;
+      }
+
+*/      
+      #regions path:focus {
+        stroke: #000;
+        stroke-width: 2px;
+      }
+
+    .divider {
+      stroke: gainsboro;
+      fill: none;
+      stroke-width: 2px;
+    }
+
+    .neutral {
+      fill: #ffffbf;
+    }
+
+    .weak.democratic {
+      fill: #e0f3f8;
+    }
+
+    .moderate.democratic {
+      fill: #91bfdb;
+    }
+
+    .strong.democratic {
+      fill: #4575b4;
+    }
+
+    .weak.republican {
+      fill: #fee0d2;
+    }
+
+    .moderate.republican {
+      fill: #fc9272;
+    }
+
+    .strong.republican {
+      fill: #d73027;
+    }
+
+  </style>
+
+  <!-- <rect x="0" y="0" width="100%" height="100%" class="divider"/> -->
+
+  <text x="480" y="25" role="heading">US 2016 Presidential Election, Popular Vote by region</text>
+
+  <g transform="translate(800,400)">
+    <g id="legend">
+      <g id="dem-5" transform="translate(0,0)">
+        <rect width="12" height="12" class="republican strong"/>
+        <text x="16" y="10">Republican, 11+% margin</text>
+      </g>   
+      <g id="dem-5" transform="translate(0,15)">
+        <rect width="12" height="12" class="republican moderate"/>
+        <text x="16" y="10">Republican, 6–10% margin</text>
+      </g>   
+      <g id="dem-5" transform="translate(0,30)">
+        <rect width="12" height="12" class="republican weak"/>
+        <text x="16" y="10">Republican, 0–5% margin</text>
+      </g> 
+
+      <g id="dem-5" transform="translate(0,45)">
+        <rect width="12" height="12" class="democratic weak"/>
+        <text x="16" y="10">Democratic, 0–5% margin</text>
+      </g>         
+      <g id="dem-5" transform="translate(0,60)">
+        <rect width="12" height="12" class="democratic moderate"/>
+        <text x="16" y="10">Democratic, 6–10% margin</text>
+      </g>   
+      <g id="dem-5" transform="translate(0,75)">
+        <rect width="12" height="12" class="democratic strong"/>
+        <text x="16" y="10">Democratic, 11+% margin</text>
+      </g>   
+    </g>
+  </g>
+  <g id="regions">
+    <path id="AL" role="datapoint" class="republican strong" aria-labeledby="AL-label" tabindex="0" d="M625.59,466.77 L623.98,451.57 L621.23,432.82 L621.39,418.75 L622.20,387.71 L622.04,371.06 L622.20,364.64 L629.96,364.27 L657.76,361.69 L666.69,361.02 L666.54,363.21 L666.70,365.31 L667.35,368.70 L670.74,376.62 L673.17,386.49 L674.62,392.63 L676.24,397.48 L677.69,404.43 L679.80,410.73 L682.38,414.13 L682.87,417.52 L684.81,418.33 L684.97,420.43 L683.19,425.28 L682.71,428.52 L682.54,430.46 L684.16,434.82 L684.48,440.16 L683.68,442.58 L684.32,443.39 L685.78,444.20 L686.81,446.73 L680.51,446.73 L673.72,447.38 L648.18,450.29 L637.76,451.70 L637.67,455.45 L639.45,457.23 L642.03,459.17 L642.61,467.10 L637.07,469.68 L634.32,469.35 L637.07,467.41 L637.07,466.44 L634.00,460.46 L631.74,459.81 L630.28,464.18 L628.99,466.93 L628.34,466.77 z">
+      <desc id="AL-label">Alabama</desc>
+      <metadata>
+        <metadata role="datavalue" data-name="d-total">729,547</metadata>
+        <metadata role="datavalue" data-name="r-total">1,318,255</metadata>
+        <metadata role="datavalue" data-name="other-total">75,570</metadata>
+        <metadata role="datavalue" data-name="d-percent">34.4%</metadata>
+        <metadata role="datavalue" data-name="r-percent">62.1%</metadata>
+        <metadata role="datavalue" data-name="other-percent">3.6%</metadata>
+        <metadata role="datavalue" data-name="margin">27.7%</metadata>
+        <metadata role="datavalue" data-name="winner">Republican</metadata>
+      </metadata>
+    </path>
+    <path id="AK" role="datapoint" class="republican strong" aria-labeledby="AK-label" tabindex="0" d="M158.07,453.67 L157.75,539.03 L159.36,540.00 L162.44,540.16 L163.89,539.03 L166.48,539.03 L166.64,541.94 L173.59,548.73 L174.08,551.31 L177.47,549.37 L178.12,549.21 L178.44,546.14 L179.90,544.52 L181.03,544.36 L182.97,542.91 L186.04,545.01 L186.69,547.92 L188.63,549.05 L189.76,551.48 L193.64,553.25 L197.03,559.23 L199.78,563.11 L202.04,565.86 L203.50,569.58 L208.51,571.36 L213.68,573.46 L214.65,577.83 L215.14,580.90 L214.17,584.29 L212.39,586.56 L210.77,585.75 L209.32,582.68 L206.57,581.22 L204.79,580.09 L203.98,580.90 L205.44,583.65 L205.60,587.36 L204.47,587.85 L202.53,585.91 L200.43,584.62 L200.91,586.23 L202.21,588.01 L201.40,588.82 C 201.40,588.82 200.59,588.50 200.10,587.85 C 199.62,587.20 198.00,584.45 198.00,584.45 L197.03,582.19 C 197.03,582.19 196.71,583.48 196.06,583.16 C 195.42,582.84 194.77,581.71 194.77,581.71 L196.55,579.77 L195.09,578.31 L195.09,573.30 L194.28,573.30 L193.48,576.69 L192.34,577.18 L191.37,573.46 L190.73,569.74 L189.92,569.26 L190.24,574.92 L190.24,576.05 L188.79,574.75 L185.23,568.77 L183.13,568.29 L182.48,564.57 L180.87,561.66 L179.25,560.53 L179.25,558.26 L181.35,556.97 L180.87,556.65 L178.28,557.29 L174.88,554.87 L172.30,551.96 L167.45,549.37 L163.41,546.79 L164.70,543.55 L164.70,541.94 L162.92,543.55 L160.01,544.69 L156.29,543.55 L150.64,541.13 L145.14,541.13 L144.49,541.61 L138.03,537.73 L135.92,537.41 L133.18,531.59 L129.62,531.91 L126.06,533.37 L126.55,537.90 L127.68,534.99 L128.65,535.31 L127.19,539.67 L130.43,536.93 L131.07,538.54 L127.19,542.91 L125.90,542.58 L125.42,540.64 L124.12,539.84 L122.83,540.97 L120.08,539.19 L117.01,541.29 L115.23,543.39 L111.84,545.49 L107.15,545.33 L106.66,543.23 L110.38,542.58 L110.38,541.29 L108.12,540.64 L109.09,538.22 L111.35,534.34 L111.35,532.56 L111.51,531.75 L115.88,529.49 L116.85,530.78 L119.60,530.78 L118.30,528.20 L114.58,527.87 L109.57,530.62 L107.15,534.02 L105.37,536.60 L104.24,538.87 L100.04,540.32 L96.96,542.91 L96.64,544.52 L98.90,545.49 L99.71,547.60 L96.96,550.83 L90.50,555.03 L82.74,559.23 L80.64,560.37 L75.30,561.50 L69.97,563.76 L71.74,565.05 L70.29,566.51 L69.80,567.64 L67.06,566.67 L63.82,566.83 L63.01,569.10 L62.04,569.10 L62.37,566.67 L58.81,567.96 L55.90,568.93 L52.51,567.64 L49.60,569.58 L46.36,569.58 L44.26,570.87 L42.65,571.68 L40.54,571.36 L37.96,570.23 L35.69,570.87 L34.72,571.84 L33.11,570.71 L33.11,568.77 L36.18,567.48 L42.48,568.13 L46.85,566.51 L48.95,564.41 L51.86,563.76 L53.64,562.95 L56.39,563.11 L58.00,564.41 L58.97,564.08 L61.24,561.34 L64.31,560.37 L67.70,559.72 L69.00,559.40 L69.64,559.88 L70.45,559.88 L71.74,556.16 L75.79,554.71 L77.73,550.99 L79.99,546.46 L81.61,545.01 L81.93,542.42 L80.31,543.72 L76.92,544.36 L76.27,541.94 L74.98,541.61 L74.01,542.58 L73.85,545.49 L72.39,545.33 L70.94,539.51 L69.64,540.81 L68.51,540.32 L68.19,538.38 L64.15,538.54 L62.04,539.67 L59.46,539.35 L60.91,537.90 L61.40,535.31 L60.75,533.37 L62.21,532.40 L63.50,532.24 L62.85,530.46 L62.85,526.09 L61.88,525.12 L61.07,526.58 L54.93,526.58 L53.48,525.29 L52.83,521.41 L50.73,517.85 L50.73,516.88 L52.83,516.07 L52.99,513.97 L54.12,512.84 L53.32,512.35 L52.02,512.84 L50.89,510.09 L51.86,505.08 L56.39,501.85 L58.97,500.23 L60.91,496.51 L63.66,495.22 L66.25,496.35 L66.57,498.77 L69.00,498.45 L72.23,496.03 L73.85,496.67 L74.82,497.32 L76.43,497.32 L78.70,496.03 L79.50,491.66 C 79.50,491.66 79.83,488.75 80.47,488.27 C 81.12,487.78 81.44,487.30 81.44,487.30 L80.31,485.36 L77.73,486.16 L74.49,486.97 L72.55,486.49 L69.00,484.71 L63.98,484.55 L60.43,480.83 L60.91,476.95 L61.56,474.52 L59.46,472.75 L57.52,469.03 L58.00,468.22 L64.79,467.73 L66.89,467.73 L67.86,468.70 L68.51,468.70 L68.35,467.09 L72.23,466.44 L74.82,466.76 L76.27,467.90 L74.82,470.00 L74.33,471.45 L77.08,473.07 L82.09,474.85 L83.87,473.88 L81.61,469.51 L80.64,466.28 L81.61,465.47 L78.21,463.53 L77.73,462.40 L78.21,460.78 L77.40,456.90 L74.49,452.22 L72.07,448.01 L74.98,446.07 L78.21,446.07 L79.99,446.72 L84.19,446.56 L87.91,443.00 L89.04,439.93 L92.76,437.50 L94.38,438.47 L97.13,437.83 L100.84,435.73 L101.98,435.56 L102.95,436.37 L107.47,436.21 L110.22,433.14 L111.35,433.14 L114.91,435.56 L116.85,437.67 L116.36,438.80 L117.01,439.93 L118.63,438.31 L122.51,438.64 L122.83,442.35 L124.77,443.81 L131.88,444.46 L138.19,448.66 L139.64,447.69 L144.82,450.28 L146.92,449.63 L148.86,448.82 L153.71,450.76 L158.07,453.67 z M42.97,482.61 L45.07,487.94 L44.91,488.91 L42.00,488.59 L40.22,484.55 L38.44,483.09 L36.02,483.09 L35.86,480.51 L37.63,478.08 L38.77,480.51 L40.22,481.96 z M40.38,516.07 L44.10,516.88 L47.82,517.85 L48.63,518.82 L47.01,522.54 L43.94,522.38 L40.54,518.82 z M19.69,502.01 L20.82,504.59 L21.95,506.21 L20.82,507.02 L18.72,503.95 L18.72,502.01 z M5.95,575.08 L9.34,572.81 L12.74,571.84 L15.32,572.17 L15.81,573.78 L17.75,574.27 L19.69,572.33 L19.37,570.71 L22.11,570.07 L25.02,572.65 L23.89,574.43 L19.53,575.56 L16.78,575.08 L13.06,573.95 L8.70,575.40 L7.08,575.72 z M54.93,570.55 L56.55,572.49 L58.65,570.87 L57.20,569.58 z M57.84,573.62 L58.97,571.36 L61.07,571.68 L60.27,573.62 z M81.44,571.68 L82.90,573.46 L83.87,572.33 L83.06,570.39 z M90.17,559.23 L91.31,565.05 L94.22,565.86 L99.23,562.95 L103.59,560.37 L101.98,557.94 L102.46,555.52 L100.36,556.81 L97.45,556.00 L99.07,554.87 L101.01,555.68 L104.89,553.90 L105.37,552.45 L102.95,551.64 L103.75,549.70 L101.01,551.64 L96.32,555.19 L91.47,558.10 z M132.53,539.35 L134.95,537.90 L133.98,536.12 L132.21,537.09 z">
+      <desc id="AK-label">Alaska</desc>
+      <metadata>
+        <metadata role="datavalue" data-name="d-total">116,454</metadata>
+        <metadata role="datavalue" data-name="r-total">163,387</metadata>
+        <metadata role="datavalue" data-name="other-total">38,767</metadata>
+        <metadata role="datavalue" data-name="d-percent">36.6%</metadata>
+        <metadata role="datavalue" data-name="r-percent">51.3%</metadata>
+        <metadata role="datavalue" data-name="other-percent">12.2%</metadata>
+        <metadata role="datavalue" data-name="margin">14.7%</metadata>
+        <metadata role="datavalue" data-name="winner">Republican</metadata>
+      </metadata>
+    </path>
+    <path id="AZ" role="datapoint" class="republican weak" aria-labeledby="AZ-label" tabindex="0" d="M137.74,387.50 L135.11,389.65 L134.79,391.11 L135.28,392.08 L154.19,402.75 L166.32,410.35 L181.03,418.91 L197.84,428.94 L210.13,431.36 L235.25,434.07 L237.78,421.56 L241.54,394.32 L248.50,341.44 L252.76,310.47 L228.16,306.79 L200.96,302.22 L167.53,295.90 L164.61,313.99 L164.15,314.45 L162.43,317.08 L159.92,316.97 L158.66,314.22 L155.92,313.88 L155.00,312.74 L154.09,312.74 L153.17,313.31 L151.23,314.34 L151.12,321.31 L150.89,323.02 L150.32,335.60 L148.83,337.77 L148.26,341.09 L151.00,346.00 L152.26,351.83 L153.06,352.86 L154.09,353.43 L153.97,355.72 L152.37,357.09 L148.94,358.80 L147.00,360.75 L145.52,364.40 L144.94,369.32 L142.09,372.06 L140.03,372.75 L139.91,378.58 L139.46,380.29 L139.91,381.09 L143.57,381.67 L143.00,384.41 L141.51,386.58 z">
+      <desc id="AZ-label">Arizona</desc>
+      <metadata>
+        <metadata role="datavalue" data-name="d-total">1,161,167</metadata>
+        <metadata role="datavalue" data-name="r-total">1,252,401</metadata>
+        <metadata role="datavalue" data-name="other-total">159,597</metadata>
+        <metadata role="datavalue" data-name="d-percent">45.1%</metadata>
+        <metadata role="datavalue" data-name="r-percent">48.7%</metadata>
+        <metadata role="datavalue" data-name="other-percent">6.2%</metadata>
+        <metadata role="datavalue" data-name="margin">3.5%</metadata>
+        <metadata role="datavalue" data-name="winner">Republican</metadata>
+      </metadata>
+    </path>
+    <path id="AR" role="datapoint" class="republican strong" aria-labeledby="AR-label" tabindex="0" d="M590.95,344.95 L587.10,345.89 L580.93,345.43 L581.61,342.46 L584.81,339.71 L585.27,337.43 L583.44,334.45 L572.47,334.91 L551.66,335.83 L528.34,336.51 L505.02,336.97 L506.62,343.83 L506.62,352.06 L508.00,363.03 L508.23,400.87 L510.51,402.81 L513.48,401.44 L516.23,402.58 L516.66,412.91 L539.54,412.77 L558.41,411.96 L568.53,411.77 L569.67,409.68 L569.39,406.13 L567.56,403.16 L569.16,401.67 L567.56,399.16 L568.25,396.65 L569.61,391.04 L572.13,388.98 L571.45,386.70 L575.10,381.32 L577.85,379.96 L577.73,378.46 L577.39,376.64 L580.25,371.04 L582.65,369.78 L583.03,366.35 L584.80,365.11 L585.66,360.88 L584.32,356.87 L588.36,354.49 L588.91,352.47 L590.15,348.20 z">
+      <desc id="AR-label">Arkansas</desc>
+      <metadata>
+        <metadata role="datavalue" data-name="d-total">380,494</metadata>
+        <metadata role="datavalue" data-name="r-total">684,872</metadata>
+        <metadata role="datavalue" data-name="other-total">65,269</metadata>
+        <metadata role="datavalue" data-name="d-percent">33.7%</metadata>
+        <metadata role="datavalue" data-name="r-percent">60.6%</metadata>
+        <metadata role="datavalue" data-name="other-percent">5.8%</metadata>
+        <metadata role="datavalue" data-name="margin">26.9%</metadata>
+        <metadata role="datavalue" data-name="winner">Republican</metadata>
+      </metadata>
+    </path>
+    <path id="CA" role="datapoint" class="democratic strong" aria-labeledby="CA-label" tabindex="0" d="M136.74,386.75 L140.55,386.26 L142.04,384.25 L142.77,382.31 L139.59,382.22 L138.49,380.45 L139.27,378.74 L139.23,372.59 L141.44,371.26 L144.14,368.68 L144.55,363.76 L146.20,360.27 L148.14,358.16 L151.41,356.45 L152.69,355.72 L153.45,354.23 L152.58,353.34 L151.62,351.83 L150.68,346.48 L147.78,341.25 L147.87,338.46 L145.67,335.21 L130.67,311.98 L111.24,283.27 L88.81,250.23 L76.11,230.69 L77.91,223.48 L84.72,197.53 L92.84,166.10 L80.47,162.76 L66.98,159.33 L54.41,155.21 L46.86,153.16 L35.43,150.19 L28.38,147.77 L26.80,152.50 L26.64,159.93 L21.47,171.74 L18.40,174.32 L18.07,175.45 L16.29,176.26 L14.84,180.47 L14.03,183.70 L16.78,187.90 L18.40,192.10 L19.53,195.66 L19.20,202.13 L17.43,205.20 L16.78,211.02 L15.81,214.74 L17.59,218.62 L20.34,223.14 L22.60,227.99 L23.89,232.03 L23.57,235.27 L23.25,235.75 L23.25,237.85 L28.90,244.16 L28.42,246.58 L27.77,248.85 L27.13,250.79 L27.29,259.03 L29.39,262.75 L31.33,265.34 L34.08,265.82 L35.05,268.57 L33.92,272.13 L31.81,273.74 L30.68,273.74 L29.87,277.62 L30.36,280.53 L33.59,284.90 L35.21,290.23 L36.66,294.92 L37.96,297.99 L41.35,303.81 L42.81,306.40 L43.29,309.31 L44.91,310.28 L44.91,312.70 L44.10,314.64 L42.32,321.76 L41.84,323.70 L44.26,326.44 L48.46,326.93 L52.99,328.71 L56.87,330.81 L59.78,330.81 L62.69,333.88 L65.28,338.73 L66.41,340.99 L70.29,343.10 L75.14,343.90 L76.59,346.01 L77.24,349.24 L75.79,349.89 L76.11,350.86 L79.34,351.66 L82.09,351.83 L85.00,356.51 L88.88,360.72 L89.69,362.98 L92.27,367.18 L92.60,370.42 L92.60,379.79 L93.08,381.57 L103.11,383.03 L122.83,385.77 z M48.79,337.03 L50.08,338.57 L49.92,339.86 L46.69,339.78 L46.12,338.57 L45.47,337.11 z M50.73,337.03 L51.94,336.39 L55.50,338.49 L58.57,339.70 L57.68,340.35 L53.15,340.10 L51.54,338.49 z M71.42,356.84 L73.20,359.18 L74.01,360.15 L75.54,360.72 L76.11,359.26 L75.14,357.48 L72.47,355.46 L71.42,355.62 z M69.97,365.48 L71.74,368.64 L72.96,370.58 L71.50,370.82 L70.21,369.61 C 70.21,369.61 69.48,368.15 69.48,367.75 C 69.48,367.34 69.48,365.57 69.48,365.57 z">
+      <desc id="CA-label">California</desc>
+      <metadata>
+        <metadata role="datavalue" data-name="d-total">8,753,788</metadata>
+        <metadata role="datavalue" data-name="r-total">4,483,810</metadata>
+        <metadata role="datavalue" data-name="other-total">943,997</metadata>
+        <metadata role="datavalue" data-name="d-percent">61.7%</metadata>
+        <metadata role="datavalue" data-name="r-percent">31.6%</metadata>
+        <metadata role="datavalue" data-name="other-percent">6.7%</metadata>
+        <metadata role="datavalue" data-name="margin">30.1%</metadata>
+        <metadata role="datavalue" data-name="winner">Democratic</metadata>
+      </metadata>
+    </path>
+    <path id="CO" role="datapoint" class="democratic weak" aria-labeledby="CO-label" tabindex="0" d="M378.62,256.79 L380.06,235.51 L347.96,232.45 L323.50,229.75 L286.23,225.63 L265.54,223.12 L262.91,245.29 L259.71,267.70 L255.96,295.68 L254.45,306.79 L254.20,309.55 L288.13,313.35 L325.87,317.62 L357.83,320.78 L374.44,321.63 Z">
+      <desc id="CO-label">Colorado</desc>
+      <metadata>
+        <metadata role="datavalue" data-name="d-total">1,338,870</metadata>
+        <metadata role="datavalue" data-name="r-total">1,202,484</metadata>
+        <metadata role="datavalue" data-name="other-total">238,866</metadata>
+        <metadata role="datavalue" data-name="d-percent">48.2%</metadata>
+        <metadata role="datavalue" data-name="r-percent">43.3%</metadata>
+        <metadata role="datavalue" data-name="other-percent">8.6%</metadata>
+        <metadata role="datavalue" data-name="margin">4.9%</metadata>
+        <metadata role="datavalue" data-name="winner">Democratic</metadata>
+      </metadata>
+    </path>
+    <path id="CT" role="datapoint" class="democratic strong" aria-labeledby="CT-label" tabindex="0" d="M873.19,180.05 L872.56,175.84 L871.75,171.48 L870.14,165.49 L865.98,166.40 L844.16,171.17 L844.81,174.48 L846.26,181.76 L846.26,189.84 L845.13,192.10 L846.96,194.21 L851.92,190.81 L855.47,187.58 L857.41,185.48 L858.22,186.12 L860.97,184.67 L866.14,183.54 z">
+      <desc id="CT-label">Connecticut</desc>
+      <metadata>
+        <metadata role="datavalue" data-name="d-total">897,572</metadata>
+        <metadata role="datavalue" data-name="r-total">673,215</metadata>
+        <metadata role="datavalue" data-name="other-total">74,133</metadata>
+        <metadata role="datavalue" data-name="d-percent">54.6%</metadata>
+        <metadata role="datavalue" data-name="r-percent">40.9%</metadata>
+        <metadata role="datavalue" data-name="other-percent">4.5%</metadata>
+        <metadata role="datavalue" data-name="margin">13.6%</metadata>
+        <metadata role="datavalue" data-name="winner">Democratic</metadata>
+      </metadata>
+    </path>
+    <path id="DE" role="datapoint" class="democratic strong" aria-labeledby="DE-label" tabindex="0" d="M822.35,230.42 L822.94,228.32 L822.96,227.11 L821.69,227.02 L819.59,228.64 L818.13,230.09 L819.59,234.30 L821.85,239.96 L823.95,249.65 L825.57,255.96 L830.58,255.80 L836.72,254.59 L834.46,247.23 L833.49,247.72 L829.93,245.29 L828.15,240.60 L826.21,237.05 L823.95,236.08 L821.85,232.52 z">
+      <desc id="DE-label">Delaware</desc>
+      <metadata>
+        <metadata role="datavalue" data-name="d-total">235,603</metadata>
+        <metadata role="datavalue" data-name="r-total">185,127</metadata>
+        <metadata role="datavalue" data-name="other-total">20,860</metadata>
+        <metadata role="datavalue" data-name="d-percent">53.4%</metadata>
+        <metadata role="datavalue" data-name="r-percent">41.9%</metadata>
+        <metadata role="datavalue" data-name="other-percent">4.7%</metadata>
+        <metadata role="datavalue" data-name="margin">11.4%</metadata>
+        <metadata role="datavalue" data-name="winner">Democratic</metadata>
+      </metadata>
+    </path>
+    <path id="DC" role="datapoint" class="democratic strong" aria-labeledby="DC-label" tabindex="0" d="M801.75,253.84 L800.67,252.20 L799.66,251.36 L800.76,249.74 L802.99,251.25 z">
+      <desc id="DC-label">District of Columbia</desc>
+      <metadata>
+        <metadata role="datavalue" data-name="d-total">282,830</metadata>
+        <metadata role="datavalue" data-name="r-total">12,723</metadata>
+        <metadata role="datavalue" data-name="other-total">15,715</metadata>
+        <metadata role="datavalue" data-name="d-percent">90.9%</metadata>
+        <metadata role="datavalue" data-name="r-percent">4.1%</metadata>
+        <metadata role="datavalue" data-name="other-percent">5.0%</metadata>
+        <metadata role="datavalue" data-name="margin">86.8%</metadata>
+        <metadata role="datavalue" data-name="winner">Democratic</metadata>
+      </metadata>
+    </path>
+    <path id="FL" role="datapoint" class="republican weak" aria-labeledby="FL-label" tabindex="0" d="M755.39,445.50 L757.66,452.82 L761.39,462.56 L766.72,471.94 L770.44,478.24 L775.29,483.74 L779.33,487.46 L780.95,490.37 L779.82,491.66 L779.01,492.95 L781.92,500.39 L784.83,503.30 L787.41,508.64 L790.97,514.46 L795.50,522.70 L796.79,530.30 L797.28,542.26 L797.92,544.04 L797.60,547.43 L795.17,548.73 L795.50,550.67 L794.85,552.61 L795.17,555.03 L795.66,556.97 L792.91,560.21 L789.84,561.66 L785.96,561.82 L784.51,563.44 L782.08,564.41 L780.79,563.92 L779.66,562.95 L779.33,560.04 L778.52,556.65 L775.13,551.48 L771.57,549.21 L767.69,548.89 L766.88,550.18 L763.81,545.82 L763.17,542.26 L760.58,538.22 L758.80,537.09 L757.18,539.19 L755.41,538.87 L753.30,533.85 L750.39,529.98 L747.48,524.64 L744.90,521.57 L741.34,517.85 L743.44,515.43 L746.68,509.93 L746.51,508.31 L741.99,507.34 L740.37,507.99 L740.70,508.64 L743.28,509.61 L741.83,514.13 L741.02,514.62 L739.24,510.58 L737.95,505.73 L737.62,502.98 L739.08,498.29 L739.08,488.75 L736.01,485.03 L734.71,481.96 L729.54,480.67 L727.60,480.02 L725.98,477.44 L722.59,475.82 L721.46,472.42 L718.71,471.45 L716.28,467.74 L712.08,466.28 L709.17,464.83 L706.58,464.83 L702.54,465.63 L702.38,467.57 L703.19,468.54 L702.70,469.68 L699.63,469.51 L695.92,473.07 L692.36,475.01 L688.48,475.01 L685.25,476.30 L684.92,473.56 L683.31,471.62 L680.40,470.48 L678.78,469.03 L670.70,465.15 L663.10,463.37 L658.73,464.02 L652.75,464.50 L646.77,466.60 L643.29,467.22 L643.05,459.17 L640.47,457.23 L638.69,455.45 L639.01,452.38 L649.20,451.08 L674.74,448.17 L681.53,447.53 L686.96,447.81 L689.55,451.69 L691.01,453.14 L699.10,453.66 L709.92,453.01 L731.44,451.72 L736.88,451.04 L741.46,451.07 L741.62,453.98 L745.44,454.79 L745.77,449.98 L744.15,445.46 L745.11,444.72 L750.22,445.18 z M767.94,577.91 L770.36,577.26 L771.66,577.02 L773.11,574.67 L775.45,573.06 L776.75,573.54 L778.45,573.87 L778.85,574.92 L775.37,576.13 L771.17,577.58 L768.83,578.80 z M781.44,572.90 L782.65,573.95 L785.40,571.84 L790.73,567.64 L794.45,563.76 L796.96,557.13 L797.93,555.44 L798.09,552.04 L797.36,552.53 L796.39,555.36 L794.94,559.96 L791.70,565.22 L787.34,569.42 L783.94,571.36 z">
+      <desc id="FL-label">Florida</desc>
+      <metadata>
+        <metadata role="datavalue" data-name="d-total">4,504,975</metadata>
+        <metadata role="datavalue" data-name="r-total">4,617,886</metadata>
+        <metadata role="datavalue" data-name="other-total">297,178</metadata>
+        <metadata role="datavalue" data-name="d-percent">47.8%</metadata>
+        <metadata role="datavalue" data-name="r-percent">49.0%</metadata>
+        <metadata role="datavalue" data-name="other-percent">3.2%</metadata>
+        <metadata role="datavalue" data-name="margin">1.2%</metadata>
+        <metadata role="datavalue" data-name="winner">Republican</metadata>
+      </metadata>
+    </path>
+    <path id="GA" role="datapoint" class="republican moderate" aria-labeledby="GA-label" tabindex="0" d="M689.61,357.97 L684.76,358.78 L676.36,359.91 L667.79,360.80 L667.79,362.98 L667.95,365.08 L668.60,368.48 L671.99,376.40 L674.42,386.26 L675.87,392.40 L677.49,397.25 L678.94,404.20 L681.04,410.51 L683.63,413.90 L684.12,417.30 L686.05,418.11 L686.22,420.21 L684.44,425.06 L683.95,428.29 L683.79,430.23 L685.41,434.59 L685.73,439.93 L684.92,442.35 L685.57,443.16 L687.02,443.97 L687.67,447.37 L690.26,451.25 L691.71,452.70 L699.63,452.86 L710.45,452.22 L731.97,450.92 L737.41,450.25 L741.99,450.28 L742.15,453.19 L744.74,453.99 L745.06,449.63 L743.44,445.10 L744.58,443.49 L750.40,444.29 L755.37,444.61 L754.60,438.31 L756.86,428.29 L758.32,424.09 L757.83,421.50 L761.17,415.26 L760.66,413.90 L758.74,414.61 L756.16,413.32 L755.51,411.21 L754.22,407.66 L751.95,405.56 L749.37,404.91 L747.75,400.06 L744.82,393.72 L740.62,391.79 L738.52,389.85 L737.23,387.26 L735.12,385.32 L732.86,384.03 L730.60,381.12 L727.53,378.85 L723.00,377.07 L722.51,375.62 L720.09,372.71 L719.60,371.25 L716.21,366.35 L712.82,366.51 L708.69,363.46 L707.39,362.17 L707.07,360.39 L707.88,358.45 L710.23,357.22 L709.09,356.00 L709.17,355.70 L703.35,356.67 L696.40,357.48 z">
+      <desc id="GA-label">Georgia</desc>
+      <metadata>
+        <metadata role="datavalue" data-name="d-total">1,877,963</metadata>
+        <metadata role="datavalue" data-name="r-total">2,089,104</metadata>
+        <metadata role="datavalue" data-name="other-total">125,306</metadata>
+        <metadata role="datavalue" data-name="d-percent">45.9%</metadata>
+        <metadata role="datavalue" data-name="r-percent">51.0%</metadata>
+        <metadata role="datavalue" data-name="other-percent">3.1%</metadata>
+        <metadata role="datavalue" data-name="margin">5.2%</metadata>
+        <metadata role="datavalue" data-name="winner">Republican</metadata>
+      </metadata>
+    </path>
+    <path id="HI" role="datapoint" class="democratic strong" aria-labeledby="HI-label" tabindex="0" d="M233.08,519.30 L235.02,515.75 L237.29,515.42 L237.61,516.23 L235.51,519.30 z M243.27,515.59 L249.41,518.17 L251.51,517.85 L253.13,513.97 L252.48,510.57 L248.28,510.09 L244.24,511.87 z M273.98,525.61 L277.70,531.11 L280.13,530.78 L281.26,530.30 L282.71,531.59 L286.43,531.43 L287.40,529.97 L284.49,528.20 L282.55,524.48 L280.45,520.92 L274.63,523.83 z M294.19,534.50 L295.48,532.56 L300.17,533.53 L300.82,533.05 L306.96,533.69 L306.64,534.99 L304.05,536.44 L299.69,536.12 z M299.53,539.67 L301.47,543.55 L304.54,542.42 L304.86,540.81 L303.24,538.70 L299.53,538.38 z M306.48,538.54 L308.74,535.63 L313.43,538.06 L317.79,539.19 L322.16,541.94 L322.16,543.88 L318.60,545.66 L313.75,546.63 L311.33,545.17 z M323.13,554.06 L324.74,552.77 L328.14,554.38 L335.74,557.94 L339.13,560.04 L340.75,562.47 L342.69,566.83 L346.73,569.42 L346.41,570.71 L342.53,573.95 L338.32,575.40 L336.87,574.75 L333.80,576.53 L331.37,579.77 L329.11,582.68 L327.33,582.51 L323.77,579.93 L323.45,575.40 L324.10,572.98 L322.48,567.32 L320.38,565.54 L320.22,562.95 L322.48,561.98 L324.58,558.91 L325.07,557.94 L323.45,556.16 z">
+      <desc id="HI-label">Hawaii</desc>
+      <metadata>
+        <metadata role="datavalue" data-name="d-total">266,891</metadata>
+        <metadata role="datavalue" data-name="r-total">128,847</metadata>
+        <metadata role="datavalue" data-name="other-total">33,199</metadata>
+        <metadata role="datavalue" data-name="d-percent">62.2%</metadata>
+        <metadata role="datavalue" data-name="r-percent">30.0%</metadata>
+        <metadata role="datavalue" data-name="other-percent">7.7%</metadata>
+        <metadata role="datavalue" data-name="margin">32.2%</metadata>
+        <metadata role="datavalue" data-name="winner">Democratic</metadata>
+      </metadata>
+    </path>
+    <path id="ID" role="datapoint" class="republican strong" aria-labeledby="ID-label" tabindex="0" d="M162.11,180.95 C 139.50,176.61 147.97,178.11 140.97,176.60 L145.40,159.10 L149.74,141.38 L151.12,137.15 L153.63,131.21 L152.37,128.92 L149.86,129.04 L149.06,128.01 L149.52,126.87 L149.86,123.78 L154.32,118.29 L156.15,117.84 L157.29,116.69 L157.86,113.49 L158.78,112.81 L162.66,106.98 L166.55,102.63 L166.78,98.86 L163.35,96.23 L162.03,91.83 L162.43,82.17 L166.09,65.71 L170.55,44.90 L174.32,31.42 L175.08,27.61 L188.08,30.14 L183.92,51.65 L186.87,59.35 L185.82,63.93 L187.81,68.50 L191.01,70.19 L195.47,80.00 L198.16,83.82 L198.78,84.96 L202.21,86.10 L202.67,88.64 L195.74,105.44 L196.06,108.76 L198.74,111.64 L200.62,112.12 L205.42,108.51 L205.78,108.01 L205.94,108.85 L206.19,112.99 L208.77,125.88 L212.23,128.56 L212.66,129.40 L214.81,131.85 L214.03,134.64 L214.72,138.39 L216.66,139.30 L218.79,137.66 L221.37,137.18 L224.73,138.78 L227.25,138.18 L231.04,138.02 L235.02,139.62 L237.76,139.33 L238.70,137.00 L241.19,135.35 L241.92,137.04 L242.54,139.28 L244.85,141.82 L241.08,165.80 L235.93,194.81 L231.77,194.49 L223.59,192.96 L213.78,191.13 L201.62,188.75 L189.09,186.25 L180.61,184.41 L171.35,182.74 z">
+      <desc id="ID-label">Idaho</desc>
+      <metadata>
+        <metadata role="datavalue" data-name="d-total">189,765</metadata>
+        <metadata role="datavalue" data-name="r-total">409,055</metadata>
+        <metadata role="datavalue" data-name="other-total">91,435</metadata>
+        <metadata role="datavalue" data-name="d-percent">27.5%</metadata>
+        <metadata role="datavalue" data-name="r-percent">59.3%</metadata>
+        <metadata role="datavalue" data-name="other-percent">13.2%</metadata>
+        <metadata role="datavalue" data-name="margin">31.8%</metadata>
+        <metadata role="datavalue" data-name="winner">Republican</metadata>
+      </metadata>
+    </path>
+    <path id="IL" role="datapoint" class="democratic strong" aria-labeledby="IL-label" tabindex="0" d="M617.80,301.60 L617.80,297.99 L618.06,293.12 L620.43,289.99 L622.21,286.22 L624.80,282.36 L624.43,277.11 L622.42,273.56 L622.33,270.22 L623.02,264.95 L622.20,257.77 L621.13,241.99 L619.84,226.97 L618.91,215.34 L618.64,214.41 L617.83,211.83 L616.54,208.11 L614.92,206.33 L613.47,203.74 L613.23,198.26 L603.33,199.57 L576.13,201.28 L567.44,200.85 L567.67,203.23 L569.95,203.91 L570.87,205.05 L571.32,206.88 L575.21,210.31 L575.90,212.60 L575.21,216.03 L573.38,219.69 L572.70,222.20 L570.41,224.03 L568.58,224.72 L563.32,226.09 L562.64,227.92 L561.95,229.97 L562.64,231.35 L564.47,232.95 L564.24,237.06 L562.41,238.66 L561.72,240.26 L561.72,243.01 L559.89,243.46 L558.29,244.61 L558.06,245.98 L558.29,248.04 L556.58,249.35 L555.55,252.15 L556.01,255.81 L558.29,263.12 L565.61,270.67 L571.10,274.33 L570.87,278.67 L571.78,280.04 L578.18,280.50 L580.93,281.87 L580.24,285.53 L577.95,291.47 L577.27,294.67 L579.56,298.56 L585.96,303.82 L590.53,304.51 L592.59,309.53 L594.64,312.74 L593.73,315.71 L595.33,319.82 L597.16,321.88 L599.10,321.09 L599.79,318.93 L601.83,317.49 L605.06,316.39 L608.15,317.57 L611.03,318.63 L611.82,318.42 L611.75,317.18 L610.69,314.42 L611.12,312.04 L613.40,310.47 L615.76,309.48 L616.93,309.06 L616.34,307.74 L615.58,305.57 L616.83,304.31 z">
+      <desc id="IL-label">Illinois</desc>
+      <metadata>
+        <metadata role="datavalue" data-name="d-total">3,090,729</metadata>
+        <metadata role="datavalue" data-name="r-total">2,146,015</metadata>
+        <metadata role="datavalue" data-name="other-total">299,680</metadata>
+        <metadata role="datavalue" data-name="d-percent">55.8%</metadata>
+        <metadata role="datavalue" data-name="r-percent">38.8%</metadata>
+        <metadata role="datavalue" data-name="other-percent">5.4%</metadata>
+        <metadata role="datavalue" data-name="margin">17.1%</metadata>
+        <metadata role="datavalue" data-name="winner">Democratic</metadata>
+      </metadata>
+    </path>
+    <path id="IN" role="datapoint" class="republican strong" aria-labeledby="IN-label" tabindex="0" d="M618.42,300.85 L618.48,297.99 L618.97,293.47 L621.23,290.56 L623.01,286.68 L625.59,282.47 L625.11,276.65 L623.33,273.90 L623.01,270.67 L623.82,265.17 L623.33,258.22 L622.04,242.22 L620.74,226.86 L619.77,215.14 L622.84,216.03 L624.30,217.00 L625.43,216.68 L627.53,214.74 L630.36,213.12 L635.46,212.96 L657.44,210.69 L663.02,210.16 L664.52,226.12 L668.77,262.96 L669.37,268.73 L669.00,270.99 L670.23,272.79 L670.32,274.16 L667.80,275.76 L664.26,277.31 L661.06,277.86 L660.46,282.73 L655.89,286.04 L653.09,290.05 L653.41,292.43 L652.83,293.96 L649.51,293.96 L647.92,292.35 L645.43,293.61 L642.74,295.11 L642.91,298.17 L641.71,298.43 L641.24,297.41 L639.08,295.90 L635.83,297.25 L634.28,300.25 L632.84,299.44 L631.38,297.84 L626.92,298.33 L621.33,299.30 z">
+      <desc id="IN-label">Indiana</desc>
+      <metadata>
+        <metadata role="datavalue" data-name="d-total">1,033,126</metadata>
+        <metadata role="datavalue" data-name="r-total">1,557,286</metadata>
+        <metadata role="datavalue" data-name="other-total">144,546</metadata>
+        <metadata role="datavalue" data-name="d-percent">37.8%</metadata>
+        <metadata role="datavalue" data-name="r-percent">56.9%</metadata>
+        <metadata role="datavalue" data-name="other-percent">5.3%</metadata>
+        <metadata role="datavalue" data-name="margin">19.2%</metadata>
+        <metadata role="datavalue" data-name="winner">Republican</metadata>
+      </metadata>
+    </path>
+    <path id="IA" role="datapoint" class="republican moderate" aria-labeledby="IA-label" tabindex="0" d="M566.59,201.62 L566.76,203.57 L569.05,204.71 L570.19,205.96 L570.53,207.22 L574.42,210.43 L575.10,212.60 L574.30,215.46 L572.82,219.01 L572.02,221.75 L569.84,223.35 L568.13,223.92 L562.64,225.41 L561.96,227.69 L561.16,229.97 L561.73,231.35 L563.44,233.06 L563.44,236.72 L561.27,238.32 L560.81,239.81 L560.81,242.32 L559.33,242.78 L557.61,244.15 L557.16,245.64 L557.61,247.35 L556.24,248.56 L553.94,245.87 L552.46,243.24 L544.12,244.04 L533.95,244.61 L508.91,245.30 L495.88,245.53 L486.50,245.76 L485.19,245.88 L483.53,241.41 L483.31,234.78 L481.70,230.66 L481.02,225.40 L478.73,221.74 L477.82,216.94 L475.07,209.40 L473.93,204.03 L472.56,201.85 L470.96,199.11 L472.79,194.77 L474.16,189.05 L471.42,186.99 L470.96,184.25 L471.87,181.73 L473.59,181.73 L485.13,181.73 L534.75,181.05 L554.62,180.36 L556.47,183.11 L558.31,185.73 L558.76,186.54 L556.93,189.28 L557.39,193.51 L559.90,197.39 L562.87,199.22 L565.27,199.45 z">
+      <desc id="IA-label">Iowa</desc>
+      <metadata>
+        <metadata role="datavalue" data-name="d-total">653,669</metadata>
+        <metadata role="datavalue" data-name="r-total">800,983</metadata>
+        <metadata role="datavalue" data-name="other-total">111,379</metadata>
+        <metadata role="datavalue" data-name="d-percent">41.7%</metadata>
+        <metadata role="datavalue" data-name="r-percent">51.1%</metadata>
+        <metadata role="datavalue" data-name="other-percent">7.1%</metadata>
+        <metadata role="datavalue" data-name="margin">9.4%</metadata>
+        <metadata role="datavalue" data-name="winner">Republican</metadata>
+      </metadata>
+    </path>
+    <path id="KS" role="datapoint" class="republican strong" aria-labeledby="KS-label" tabindex="0" d="M503.38,325.13 L490.76,325.33 L444.67,324.87 L400.11,322.81 L375.48,321.56 L379.62,256.84 L401.46,257.64 L441.92,259.01 L486.05,259.47 L491.14,259.47 L494.39,262.69 L497.16,262.92 L498.05,264.00 L498.05,266.00 L496.22,267.60 L495.76,270.21 L497.98,273.80 L500.50,276.93 L503.01,278.92 L504.06,290.10 z">
+      <desc id="KS-label">Kansas</desc>
+      <metadata>
+        <metadata role="datavalue" data-name="d-total">427,005</metadata>
+        <metadata role="datavalue" data-name="r-total">671,018</metadata>
+        <metadata role="datavalue" data-name="other-total">86,379</metadata>
+        <metadata role="datavalue" data-name="d-percent">36.1%</metadata>
+        <metadata role="datavalue" data-name="r-percent">56.7%</metadata>
+        <metadata role="datavalue" data-name="other-percent">7.3%</metadata>
+        <metadata role="datavalue" data-name="margin">20.6%</metadata>
+        <metadata role="datavalue" data-name="winner">Republican</metadata>
+      </metadata>
+    </path>
+    <path id="KY" role="datapoint" class="republican strong" aria-labeledby="KY-label" tabindex="0" d="M721.78,297.81 L719.45,300.50 L715.25,304.05 L710.95,309.95 L709.17,311.73 L709.17,313.83 L705.29,315.94 L699.63,319.33 L696.11,319.72 L644.25,324.61 L628.49,326.39 L623.87,326.91 L620.00,326.88 L619.77,331.10 L611.59,331.24 L604.64,331.89 L594.21,332.09 L596.12,331.87 L598.30,330.11 L600.36,328.97 L600.59,325.77 L601.50,323.94 L599.90,321.40 L600.70,319.49 L602.96,317.71 L605.06,317.07 L607.81,318.36 L611.37,319.65 L612.50,319.33 L612.66,317.07 L611.37,314.64 L611.69,312.38 L613.63,310.92 L616.22,310.28 L617.83,309.63 L617.03,307.85 L616.38,305.91 L617.51,305.10 L618.56,301.79 L621.55,300.09 L627.37,299.12 L630.93,298.64 L632.38,300.58 L634.16,301.39 L635.94,298.15 L638.85,296.70 L640.79,298.31 L641.60,299.45 L643.70,298.96 L643.54,295.57 L646.45,293.95 L647.58,293.14 L648.71,294.76 L653.40,294.76 L654.21,292.66 L653.88,290.39 L656.79,286.84 L661.48,282.96 L661.97,278.43 L664.72,278.11 L668.60,276.33 L671.34,274.39 L671.02,272.45 L669.57,270.99 L670.13,268.81 L674.25,268.57 L676.68,267.76 L679.59,269.38 L681.21,273.74 L687.02,274.07 L688.80,275.84 L690.90,276.01 L693.33,274.55 L696.40,275.04 L697.69,276.49 L700.44,273.90 L702.22,272.61 L703.84,272.61 L704.48,275.36 L706.26,276.33 L708.68,278.54 L708.85,284.04 L709.65,285.66 L712.24,287.11 L712.89,289.38 L715.80,293.09 L718.38,295.84 z">
+      <desc id="KY-label">Kentucky</desc>
+      <metadata>
+        <metadata role="datavalue" data-name="d-total">628,854</metadata>
+        <metadata role="datavalue" data-name="r-total">1,202,971</metadata>
+        <metadata role="datavalue" data-name="other-total">92,324</metadata>
+        <metadata role="datavalue" data-name="d-percent">32.7%</metadata>
+        <metadata role="datavalue" data-name="r-percent">62.5%</metadata>
+        <metadata role="datavalue" data-name="other-percent">4.8%</metadata>
+        <metadata role="datavalue" data-name="margin">29.8%</metadata>
+        <metadata role="datavalue" data-name="winner">Republican</metadata>
+      </metadata>
+    </path>
+    <path id="LA" role="datapoint" class="republican strong" aria-labeledby="LA-label" tabindex="0" d="M602.20,472.99 L601.17,470.37 L600.02,467.28 L596.71,463.74 L597.62,456.99 L597.51,455.85 L596.24,456.19 L588.01,457.10 L562.99,457.56 L562.30,455.17 L563.21,446.71 L566.53,440.77 L571.56,432.08 L570.99,429.68 L572.24,429.00 L572.70,427.04 L570.42,424.99 L570.31,423.05 L568.47,418.70 L568.02,412.76 L558.29,412.87 L539.09,413.79 L516.88,413.82 L516.91,423.39 L517.60,432.76 L518.28,436.65 L520.80,440.76 L521.71,445.79 L526.06,451.28 L526.29,454.48 L526.97,455.17 L526.29,463.63 L523.31,468.66 L524.91,470.71 L524.23,473.23 L523.54,480.54 L522.17,483.75 L522.29,487.36 L526.98,485.84 L535.06,485.52 L545.41,489.07 L551.88,490.21 L555.59,488.75 L558.83,489.88 L562.06,490.85 L562.87,488.75 L559.64,487.62 L557.05,488.10 L554.30,486.49 C 554.30,486.49 554.46,485.20 555.11,485.03 C 555.76,484.87 558.18,484.06 558.18,484.06 L559.96,485.52 L561.74,484.55 L564.97,485.20 L566.43,487.62 L566.75,489.88 L571.27,490.21 L573.05,491.98 L572.24,493.60 L570.95,494.41 L572.57,496.03 L580.97,499.58 L584.53,498.29 L585.50,495.86 L588.09,495.22 L589.87,493.76 L591.16,494.73 L591.97,497.64 L589.70,498.45 L590.35,499.10 L593.75,497.80 L596.01,494.41 L596.82,493.92 L594.72,493.60 L595.52,491.98 L595.36,490.53 L597.46,490.04 L598.60,488.75 L599.24,489.56 C 599.24,489.56 599.08,492.63 599.89,492.63 C 600.70,492.63 604.09,493.28 604.09,493.28 L608.13,495.22 L609.10,496.67 L612.01,496.67 L613.14,497.64 L615.41,494.57 L615.41,493.12 L614.11,493.12 L610.72,490.37 L604.90,489.56 L601.67,487.30 L602.80,484.55 L605.06,484.87 L605.22,484.23 L603.45,483.26 L603.45,482.77 L606.68,482.77 L608.46,479.70 L607.16,477.76 L606.84,475.01 L605.39,475.17 L603.45,477.27 L602.80,479.86 L599.73,479.21 L598.76,477.44 L600.54,475.50 L602.56,473.72 z">
+      <desc id="LA-label">Louisiana</desc>
+      <metadata>
+        <metadata role="datavalue" data-name="d-total">780,154</metadata>
+        <metadata role="datavalue" data-name="r-total">1,178,638</metadata>
+        <metadata role="datavalue" data-name="other-total">70,240</metadata>
+        <metadata role="datavalue" data-name="d-percent">38.4%</metadata>
+        <metadata role="datavalue" data-name="r-percent">58.1%</metadata>
+        <metadata role="datavalue" data-name="other-percent">3.5%</metadata>
+        <metadata role="datavalue" data-name="margin">19.6%</metadata>
+        <metadata role="datavalue" data-name="winner">Republican</metadata>
+      </metadata>
+    </path>
+    <path id="ME" role="datapoint" class="democratic weak" aria-labeledby="ME-label" tabindex="0" d="M923.21,77.33 L925.15,79.43 L927.41,83.15 L927.41,85.09 L925.31,89.77 L923.37,90.42 L919.98,93.49 L915.13,98.99 C 915.13,98.99 914.48,98.99 913.83,98.99 C 913.19,98.99 912.86,96.89 912.86,96.89 L911.09,97.05 L910.12,98.50 L907.69,99.96 L906.72,101.41 L908.34,102.87 L907.85,103.51 L907.37,106.26 L905.43,106.10 L905.43,104.48 L905.10,103.19 L903.65,103.51 L901.87,100.28 L899.77,101.57 L901.06,103.03 L901.39,104.16 L900.58,105.45 L900.90,108.53 L901.06,110.14 L899.45,112.73 L896.54,113.21 L896.21,116.12 L890.88,119.20 L889.58,119.68 L887.97,118.23 L884.90,121.78 L885.87,125.02 L884.41,126.31 L884.25,130.67 L883.13,136.93 L880.66,135.78 L880.18,132.71 L876.30,131.57 L875.98,128.83 L868.70,105.38 L864.50,91.75 L865.92,91.63 L867.44,92.04 L867.44,89.45 L868.25,83.95 L870.83,79.27 L872.29,75.22 L870.35,72.80 L870.35,66.82 L871.16,65.85 L871.96,63.10 L871.80,61.64 L871.64,56.79 L873.42,51.95 L876.33,43.05 L878.43,38.85 L879.72,38.85 L881.02,39.01 L881.02,40.14 L882.31,42.41 L885.06,43.05 L885.87,42.25 L885.87,41.28 L889.91,38.37 L891.69,36.59 L893.14,36.75 L899.12,39.17 L901.06,40.14 L910.12,70.05 L916.10,70.05 L916.91,71.99 L917.07,76.84 L919.98,79.10 L920.78,79.10 L920.95,78.62 L920.46,77.49 z M902.28,107.47 L903.81,105.94 L905.19,106.99 L905.75,109.41 L904.06,110.30 z M908.99,101.57 L910.77,103.43 C 910.77,103.43 912.06,103.51 912.06,103.19 C 912.06,102.87 912.30,101.17 912.30,101.17 L913.19,100.36 L912.38,98.58 L910.36,99.31 z">
+      <desc id="ME-label">Maine</desc>
+      <metadata>
+        <metadata role="datavalue" data-name="d-total">357,735</metadata>
+        <metadata role="datavalue" data-name="r-total">335,593</metadata>
+        <metadata role="datavalue" data-name="other-total">54,599</metadata>
+        <metadata role="datavalue" data-name="d-percent">47.8%</metadata>
+        <metadata role="datavalue" data-name="r-percent">44.9%</metadata>
+        <metadata role="datavalue" data-name="other-percent">7.3%</metadata>
+        <metadata role="datavalue" data-name="margin">3.0%</metadata>
+        <metadata role="datavalue" data-name="winner">Democratic</metadata>
+      </metadata>
+    </path>
+    <path id="MD" role="datapoint" class="democratic strong" aria-labeledby="MD-label" tabindex="0" d="M836.95,255.30 L830.81,256.59 L825.00,256.75 L823.16,249.65 L821.06,239.96 L818.79,234.30 L817.50,229.90 L810.00,231.52 L795.12,234.34 L757.67,241.90 L758.80,246.91 L759.77,252.56 L760.10,252.24 L762.20,249.82 L764.46,247.20 L766.89,246.58 L768.34,245.13 L770.12,242.54 L771.41,243.19 L774.32,242.87 L776.91,240.76 L778.92,239.31 L780.76,238.83 L782.40,239.96 L785.31,241.41 L787.25,243.19 L788.47,244.72 L792.59,246.42 L792.59,249.33 L798.09,250.63 L799.23,251.17 L800.64,249.14 L803.52,251.11 L802.25,253.59 L801.48,257.58 L799.70,260.16 L799.70,262.26 L800.35,264.04 L805.41,265.40 L809.72,265.34 L812.80,266.31 L814.90,266.63 L815.87,264.53 L814.41,262.43 L814.41,260.65 L811.99,258.55 L809.89,253.05 L811.18,247.72 L811.02,245.61 L809.72,244.32 C 809.72,244.32 811.18,242.70 811.18,242.06 C 811.18,241.41 811.66,239.96 811.66,239.96 L813.60,238.66 L815.54,237.05 L816.03,238.02 L814.57,239.63 L813.28,243.35 L813.60,244.48 L815.38,244.81 L815.87,250.30 L813.77,251.27 L814.09,254.83 L814.57,254.67 L815.71,252.73 L817.32,254.51 L815.71,255.80 L815.38,259.19 L817.97,262.59 L821.85,263.07 L823.47,262.27 L826.70,266.45 L828.06,266.98 L834.71,264.19 L836.72,260.16 z M820.32,264.28 L821.45,266.79 L821.61,268.57 L822.74,270.43 C 822.74,270.43 823.63,269.54 823.63,269.22 C 823.63,268.89 822.90,266.14 822.90,266.14 L822.17,263.80 z">
+      <desc id="MD-label">Maryland</desc>
+      <metadata>
+        <metadata role="datavalue" data-name="d-total">1,677,928</metadata>
+        <metadata role="datavalue" data-name="r-total">943,169</metadata>
+        <metadata role="datavalue" data-name="other-total">160,349</metadata>
+        <metadata role="datavalue" data-name="d-percent">60.3%</metadata>
+        <metadata role="datavalue" data-name="r-percent">33.9%</metadata>
+        <metadata role="datavalue" data-name="other-percent">5.8%</metadata>
+        <metadata role="datavalue" data-name="margin">26.4%</metadata>
+        <metadata role="datavalue" data-name="winner">Democratic</metadata>
+      </metadata>
+    </path>
+    <path id="MA" role="datapoint" class="democratic strong" aria-labeledby="MA-label" tabindex="0" d="M899.97,173.85 L902.14,173.16 L902.60,171.45 L903.63,171.56 L904.66,173.85 L903.40,174.30 L899.51,174.42 z M890.60,174.65 L892.88,172.02 L894.49,172.02 L896.31,173.50 L893.91,174.53 L891.74,175.56 z M855.80,152.66 L873.26,148.46 L875.52,147.81 L877.62,144.58 L881.36,142.91 L884.25,147.32 L881.82,152.50 L881.50,153.95 L883.44,156.54 L884.57,155.73 L886.35,155.73 L888.61,158.32 L892.49,164.30 L896.05,164.78 L898.31,163.81 L900.09,162.04 L899.28,159.29 L897.18,157.67 L895.73,158.48 L894.76,157.19 L895.24,156.70 L897.34,156.54 L899.12,157.35 L901.06,159.77 L902.03,162.68 L902.36,165.11 L898.15,166.56 L894.27,168.50 L890.39,173.03 L888.45,174.48 L888.45,173.51 L890.88,172.06 L891.36,170.28 L890.55,167.21 L887.64,168.66 L886.84,170.12 L887.32,172.38 L885.25,173.38 L882.51,168.86 L879.11,164.49 L877.04,162.68 L870.51,164.55 L865.42,165.61 L843.59,170.37 L843.19,165.43 L843.84,154.84 L849.01,153.95 z">
+      <desc id="MA-label">Massachusetts</desc>
+      <metadata>
+        <metadata role="datavalue" data-name="d-total">1,995,196</metadata>
+        <metadata role="datavalue" data-name="r-total">1,090,893</metadata>
+        <metadata role="datavalue" data-name="other-total">238,957</metadata>
+        <metadata role="datavalue" data-name="d-percent">60.0%</metadata>
+        <metadata role="datavalue" data-name="r-percent">32.8%</metadata>
+        <metadata role="datavalue" data-name="other-percent">7.2%</metadata>
+        <metadata role="datavalue" data-name="margin">27.2%</metadata>
+        <metadata role="datavalue" data-name="winner">Democratic</metadata>
+      </metadata>
+    </path>
+    <path id="MI" role="datapoint" class="republican weak" aria-labeledby="MI-label" tabindex="0" d="M581.61,82.05 L583.44,80.00 L585.62,79.20 L590.99,75.31 L593.27,74.74 L593.73,75.20 L588.59,80.34 L585.27,82.28 L583.21,83.20 z M667.79,114.18 L668.44,116.69 L671.67,116.85 L672.96,115.64 C 672.96,115.64 672.88,114.18 672.56,114.02 C 672.23,113.86 670.94,112.16 670.94,112.16 L668.76,112.40 L667.14,112.57 L666.82,113.70 z M697.86,177.23 L694.62,168.99 L692.36,159.93 L689.93,156.70 L687.35,154.92 L685.73,156.05 L681.85,157.83 L679.91,162.84 L677.16,166.56 L676.03,167.21 L674.58,166.56 C 674.58,166.56 671.99,165.11 672.15,164.46 C 672.31,163.81 672.64,159.45 672.64,159.45 L676.03,158.16 L676.84,154.76 L677.49,152.17 L679.91,150.56 L679.59,140.53 L677.97,138.27 L676.68,137.46 L675.87,135.36 L676.68,134.55 L678.29,134.88 L678.46,133.26 L676.03,131.00 L674.74,128.41 L672.15,128.41 L667.62,126.96 L662.13,123.56 L659.38,123.56 L658.73,124.21 L657.76,123.72 L654.69,121.46 L651.78,123.24 L648.87,125.50 L649.20,129.06 L650.17,129.38 L652.27,129.87 L652.75,130.67 L650.17,131.48 L647.58,131.81 L646.12,133.58 L645.80,135.69 L646.12,137.30 L646.45,142.80 L642.89,144.90 L642.24,144.74 L642.24,140.53 L643.54,138.11 L644.18,135.69 L643.38,134.88 L641.44,135.69 L640.47,139.89 L637.72,141.02 L635.94,142.96 L635.78,143.93 L636.42,144.74 L635.78,147.32 L633.51,147.81 L633.51,148.94 L634.32,151.37 L633.19,157.51 L631.57,161.55 L632.22,166.24 L632.71,167.37 L631.90,169.80 L631.57,170.60 L631.25,173.35 L634.81,179.33 L637.72,185.80 L639.17,190.65 L638.36,195.34 L637.39,201.32 L634.97,206.49 L634.65,209.24 L631.39,212.33 L635.80,212.16 L657.21,209.90 L664.49,208.91 L664.59,210.58 L671.44,209.37 L681.74,207.86 L685.59,207.40 L685.73,206.82 L685.89,205.36 L687.99,201.64 L689.99,199.90 L689.77,194.85 L691.37,193.26 L692.46,192.91 L692.68,189.36 L694.22,186.33 L695.27,186.93 L695.43,187.58 L696.24,187.74 L698.18,186.77 z M567.49,111.21 L568.20,110.63 L570.95,109.82 L574.51,107.56 L574.51,106.59 L575.15,105.94 L581.14,104.97 L583.56,103.03 L587.93,100.93 L588.09,99.63 L590.03,96.72 L591.81,95.92 L593.10,94.14 L595.36,91.88 L599.73,89.45 L604.42,88.97 L605.55,90.10 L605.22,91.07 L601.51,92.04 L600.05,95.11 L597.79,95.92 L597.30,98.34 L594.88,101.57 L594.55,104.16 L595.36,104.65 L596.33,103.51 L599.89,100.60 L601.18,101.90 L603.45,101.90 L606.68,102.87 L608.13,104.00 L609.59,107.07 L612.34,109.82 L616.22,109.66 L617.67,108.69 L619.29,109.98 L620.90,110.47 L622.20,109.66 L623.33,109.66 L624.95,108.69 L628.99,105.13 L632.38,104.00 L639.01,103.68 L643.54,101.74 L646.12,100.44 L647.58,100.60 L647.58,106.26 L648.06,106.59 L650.97,107.39 L652.91,106.91 L659.06,105.29 L660.19,104.16 L661.64,104.65 L661.64,111.60 L664.88,114.67 L666.17,115.32 L667.46,116.29 L666.17,116.61 L665.36,116.29 L661.64,115.80 L659.54,116.45 L657.28,116.29 L654.05,117.74 L652.27,117.74 L646.45,116.45 L641.27,116.61 L639.33,119.20 L632.38,119.84 L629.96,120.65 L628.83,123.72 L627.53,124.85 L627.05,124.69 L625.59,123.08 L621.07,125.50 L620.42,125.50 L619.29,123.88 L618.48,124.05 L616.54,128.41 L615.57,132.45 L612.39,139.45 L611.21,138.42 L609.84,137.39 L607.90,127.10 L604.36,125.73 L602.30,123.44 L590.18,120.70 L587.33,119.67 L579.10,117.50 L571.21,116.35 z">
+      <desc id="MI-label">Michigan</desc>
+      <metadata>
+        <metadata role="datavalue" data-name="d-total">2,268,839</metadata>
+        <metadata role="datavalue" data-name="r-total">2,279,543</metadata>
+        <metadata role="datavalue" data-name="other-total">250,902</metadata>
+        <metadata role="datavalue" data-name="d-percent">47.3%</metadata>
+        <metadata role="datavalue" data-name="r-percent">47.5%</metadata>
+        <metadata role="datavalue" data-name="other-percent">5.2%</metadata>
+        <metadata role="datavalue" data-name="margin">0.2%</metadata>
+        <metadata role="datavalue" data-name="winner">Republican</metadata>
+      </metadata>
+    </path>
+    <path id="MN" role="datapoint" class="democratic weak" aria-labeledby="MN-label" tabindex="0" d="M471.87,128.47 L471.42,120.01 L469.59,112.69 L467.76,99.20 L467.30,89.37 L465.47,85.94 L463.87,80.91 L463.87,70.62 L464.56,66.74 L462.74,61.29 L492.87,61.32 L493.19,53.08 L493.84,52.91 L496.10,53.40 L498.04,54.21 L498.85,59.70 L500.31,65.85 L501.92,67.46 L506.77,67.46 L507.10,68.92 L513.40,69.24 L513.40,71.34 L518.25,71.34 L518.57,70.05 L519.71,68.92 L521.97,68.27 L523.26,69.24 L526.17,69.24 L530.05,71.83 L535.39,74.25 L537.81,74.74 L538.30,73.77 L539.75,73.28 L540.24,76.19 L542.82,77.49 L543.31,77.00 L544.60,77.16 L544.60,79.27 L547.19,80.24 L550.26,80.24 L551.88,79.43 L555.11,76.19 L557.70,75.71 L558.50,77.49 L558.99,78.78 L559.96,78.78 L560.93,77.97 L569.82,77.65 L571.60,80.72 L572.24,80.72 L572.96,79.64 L577.40,79.27 L576.79,81.55 L572.85,83.38 L563.60,87.44 L558.83,89.45 L555.76,92.04 L553.33,95.59 L551.07,99.47 L549.29,100.28 L544.76,105.29 L543.47,105.45 L539.63,108.39 L536.81,111.55 L536.58,114.52 L536.81,122.30 L535.21,123.90 L529.95,128.01 L528.12,133.73 L530.64,137.38 L531.10,139.90 L529.95,142.87 L529.72,146.53 L530.18,153.61 L533.61,157.72 L536.58,157.72 L539.09,160.01 L542.29,161.38 L545.95,166.41 L553.04,171.44 L554.87,173.50 L555.11,179.00 L534.52,179.69 L474.27,180.15 L473.93,144.47 L473.47,141.50 L469.36,138.07 L468.22,136.24 L468.22,134.64 L470.27,133.04 L471.65,131.67 z">
+      <desc id="MN-label">Minnesota</desc>
+      <metadata>
+        <metadata role="datavalue" data-name="d-total">1,367,716</metadata>
+        <metadata role="datavalue" data-name="r-total">1,322,951</metadata>
+        <metadata role="datavalue" data-name="other-total">254,146</metadata>
+        <metadata role="datavalue" data-name="d-percent">46.4%</metadata>
+        <metadata role="datavalue" data-name="r-percent">44.9%</metadata>
+        <metadata role="datavalue" data-name="other-percent">8.6%</metadata>
+        <metadata role="datavalue" data-name="margin">1.5%</metadata>
+        <metadata role="datavalue" data-name="winner">Democratic</metadata>
+      </metadata>
+    </path>
+    <path id="MS" role="datapoint" class="republican strong" aria-labeledby="MS-label" tabindex="0" d="M624.55,466.96 L624.30,468.22 L619.13,468.22 L617.67,467.41 L615.57,467.09 L608.78,469.03 L607.00,468.22 L604.42,472.42 L603.31,473.20 L602.19,470.71 L601.05,466.83 L597.62,463.63 L598.76,456.08 L598.07,455.17 L596.24,455.40 L588.01,456.08 L563.78,456.77 L563.32,455.17 L564.01,447.17 L567.44,440.99 L572.70,431.85 L571.78,429.79 L572.93,429.79 L573.61,426.59 L571.32,424.76 L571.55,422.93 L569.50,418.36 L569.21,413.02 L570.58,410.36 L570.18,406.01 L568.81,403.04 L570.18,401.67 L568.81,399.61 L569.27,397.78 L570.18,391.61 L573.15,388.87 L572.47,386.81 L576.13,381.55 L578.87,380.64 L578.87,378.12 L578.18,376.75 L580.93,371.49 L583.67,370.35 L583.78,366.94 L592.45,366.86 L616.54,364.92 L621.12,364.69 L621.13,371.06 L621.29,387.71 L620.48,418.75 L620.32,432.82 L623.07,451.57 z">
+      <desc id="MS-label">Mississippi</desc>
+      <metadata>
+        <metadata role="datavalue" data-name="d-total">485,131</metadata>
+        <metadata role="datavalue" data-name="r-total">700,714</metadata>
+        <metadata role="datavalue" data-name="other-total">23,512</metadata>
+        <metadata role="datavalue" data-name="d-percent">40.1%</metadata>
+        <metadata role="datavalue" data-name="r-percent">57.9%</metadata>
+        <metadata role="datavalue" data-name="other-percent">1.9%</metadata>
+        <metadata role="datavalue" data-name="margin">17.8%</metadata>
+        <metadata role="datavalue" data-name="winner">Republican</metadata>
+      </metadata>
+    </path>
+    <path id="MO" role="datapoint" class="republican strong" aria-labeledby="MO-label" tabindex="0" d="M555.78,249.52 L553.26,246.44 L552.12,244.15 L544.35,244.83 L534.52,245.29 L509.14,246.21 L495.65,246.44 L487.76,246.55 L485.48,246.66 L486.73,249.18 L486.51,251.46 L489.02,255.35 L492.11,259.47 L495.19,262.21 L497.48,262.44 L498.85,263.35 L498.85,266.33 L497.02,267.93 L496.57,270.21 L498.62,273.64 L501.14,276.61 L503.65,278.44 L505.02,290.10 L504.34,325.42 L504.57,330.11 L505.02,335.49 L528.46,335.38 L551.66,334.69 L572.47,333.89 L584.12,333.66 L586.29,337.09 L585.61,340.39 L582.52,342.80 L581.95,344.63 L587.33,345.09 L591.22,344.41 L592.94,338.91 L593.59,333.06 L595.91,331.03 L597.62,329.54 L599.68,328.51 L599.79,325.65 L600.37,323.94 L599.34,322.19 L596.59,322.33 L594.42,319.71 L593.05,315.48 L593.85,312.96 L591.91,309.53 L590.08,304.96 L585.28,304.16 L578.31,298.56 L576.59,294.45 L577.39,291.25 L579.45,285.19 L579.91,282.33 L577.96,281.29 L571.10,280.50 L570.07,278.78 L569.96,274.55 L564.47,271.12 L557.50,263.35 L555.21,256.04 L554.98,251.81 z">
+      <desc id="MO-label">Missouri</desc>
+      <metadata>
+        <metadata role="datavalue" data-name="d-total">1,071,068</metadata>
+        <metadata role="datavalue" data-name="r-total">1,594,511</metadata>
+        <metadata role="datavalue" data-name="other-total">143,026</metadata>
+        <metadata role="datavalue" data-name="d-percent">38.1%</metadata>
+        <metadata role="datavalue" data-name="r-percent">56.8%</metadata>
+        <metadata role="datavalue" data-name="other-percent">5.1%</metadata>
+        <metadata role="datavalue" data-name="margin">18.6%</metadata>
+        <metadata role="datavalue" data-name="winner">Republican</metadata>
+      </metadata>
+    </path>
+    <path id="MT" role="datapoint" class="republican strong" aria-labeledby="MT-label" tabindex="0" d="M356.67,122.27 L357.31,111.12 L359.57,86.33 C 360.03,81.30 360.66,77.86 360.94,70.92 L361.88,56.37 L331.21,53.56 L301.95,50.01 L272.69,45.96 L240.36,40.63 L221.93,37.23 L189.20,30.30 L184.72,51.65 L188.15,59.19 L186.78,63.77 L188.61,68.34 L191.81,69.71 L196.43,80.48 L199.13,83.66 L199.58,84.80 L203.01,85.94 L203.47,88.00 L196.38,105.60 L196.38,108.12 L198.90,111.32 L199.81,111.32 L204.61,108.35 L205.30,107.20 L206.90,107.89 L206.67,113.15 L209.42,125.72 L212.39,128.24 L213.30,128.92 L215.13,131.21 L214.67,134.64 L215.36,138.07 L216.50,138.98 L218.79,136.70 L221.53,136.70 L224.73,138.30 L227.25,137.38 L231.36,137.38 L235.02,138.98 L237.76,138.53 L238.22,135.55 L241.19,134.87 L242.57,136.24 L243.02,139.44 L244.80,140.80 L246.34,129.24 L267.03,132.21 L295.22,136.17 L311.77,138.06 L343.22,141.52 L354.21,143.04 L355.26,127.62 z">
+      <desc id="MT-label">Montana</desc>
+      <metadata>
+        <metadata role="datavalue" data-name="d-total">177,709</metadata>
+        <metadata role="datavalue" data-name="r-total">279,240</metadata>
+        <metadata role="datavalue" data-name="other-total">40,198</metadata>
+        <metadata role="datavalue" data-name="d-percent">35.7%</metadata>
+        <metadata role="datavalue" data-name="r-percent">56.2%</metadata>
+        <metadata role="datavalue" data-name="other-percent">8.1%</metadata>
+        <metadata role="datavalue" data-name="margin">20.4%</metadata>
+        <metadata role="datavalue" data-name="winner">Republican</metadata>
+      </metadata>
+    </path>
+    <path id="NE" role="datapoint" class="republican strong" aria-labeledby="NE-label" tabindex="0" d="M484.24,246.98 L485.61,249.66 L485.70,251.79 L488.06,255.51 L490.78,258.66 L485.73,258.66 L442.25,257.73 L401.46,256.84 L380.27,255.87 L381.34,234.55 L347.96,231.80 L352.30,187.79 L367.85,188.82 L387.97,189.97 L405.80,191.11 L429.58,192.25 L440.32,191.79 L442.38,194.08 L447.18,197.05 L448.33,197.97 L452.67,196.60 L456.56,196.14 L459.30,195.91 L461.13,197.28 L466.16,198.88 L469.13,200.48 L469.59,202.08 L470.50,204.14 L472.33,204.14 L473.13,204.19 L474.11,209.40 L476.86,217.42 L478.09,222.06 L480.22,225.88 L480.74,230.82 L482.18,235.10 L482.73,241.57 Z">
+      <desc id="NE-label">Nebraska</desc>
+      <metadata>
+        <metadata role="datavalue" data-name="d-total">284,494</metadata>
+        <metadata role="datavalue" data-name="r-total">495,961</metadata>
+        <metadata role="datavalue" data-name="other-total">63,772</metadata>
+        <metadata role="datavalue" data-name="d-percent">33.7%</metadata>
+        <metadata role="datavalue" data-name="r-percent">58.7%</metadata>
+        <metadata role="datavalue" data-name="other-percent">7.6%</metadata>
+        <metadata role="datavalue" data-name="margin">25.0%</metadata>
+        <metadata role="datavalue" data-name="winner">Republican</metadata>
+      </metadata>
+    </path>
+    <path id="NV" role="datapoint" class="democratic weak" aria-labeledby="NV-label" tabindex="0" d="M140.65,177.57 L161.63,182.08 L171.35,184.02 L180.61,185.85 L187.22,187.48 L186.67,193.35 L183.12,210.68 L179.03,230.66 L177.08,240.38 L174.91,253.66 L171.76,270.07 L168.24,285.76 L166.27,295.94 L163.80,312.71 L163.35,313.81 L162.27,316.28 L160.40,316.16 L159.30,313.42 L156.56,312.92 L155.16,311.93 L153.13,312.25 L152.21,312.99 L150.91,314.34 L150.47,321.31 L149.92,323.02 L149.51,335.12 L148.19,336.83 L146.32,334.57 L131.80,311.82 L112.36,282.79 L89.62,248.95 L77.24,230.37 L78.87,223.80 L85.84,197.85 L93.73,166.51 L127.34,174.65 L141.06,177.62">
+      <desc id="NV-label">Nevada</desc>
+      <metadata>
+        <metadata role="datavalue" data-name="d-total">539,260</metadata>
+        <metadata role="datavalue" data-name="r-total">512,058</metadata>
+        <metadata role="datavalue" data-name="other-total">74,067</metadata>
+        <metadata role="datavalue" data-name="d-percent">47.9%</metadata>
+        <metadata role="datavalue" data-name="r-percent">45.5%</metadata>
+        <metadata role="datavalue" data-name="other-percent">6.6%</metadata>
+        <metadata role="datavalue" data-name="margin">2.4%</metadata>
+        <metadata role="datavalue" data-name="winner">Democratic</metadata>
+      </metadata>
+    </path>
+    <path id="NH" role="datapoint" class="democratic weak" aria-labeledby="NH-label" tabindex="0" d="M880.79,142.42 L881.66,141.34 L882.75,138.05 L880.21,137.14 L879.73,134.07 L875.85,132.94 L875.52,130.19 L868.25,106.75 L863.65,92.20 L862.75,92.20 L862.10,93.82 L861.46,93.33 L860.49,92.36 L859.03,94.30 L858.98,99.33 L859.29,105.00 L861.23,107.75 L861.23,111.79 L857.52,116.85 L854.93,117.98 L854.93,119.12 L856.06,120.89 L856.06,129.46 L855.25,138.68 L855.09,143.53 L856.06,144.82 L855.90,149.35 L855.41,151.12 L856.87,152.01 L873.26,147.32 L875.52,146.67 L877.06,144.12 z">
+      <desc id="NH-label">New Hampshire</desc>
+      <metadata>
+        <metadata role="datavalue" data-name="d-total">348,526</metadata>
+        <metadata role="datavalue" data-name="r-total">345,790</metadata>
+        <metadata role="datavalue" data-name="other-total">49,842</metadata>
+        <metadata role="datavalue" data-name="d-percent">46.8%</metadata>
+        <metadata role="datavalue" data-name="r-percent">46.5%</metadata>
+        <metadata role="datavalue" data-name="other-percent">6.7%</metadata>
+        <metadata role="datavalue" data-name="margin">0.4%</metadata>
+        <metadata role="datavalue" data-name="winner">Democratic</metadata>
+      </metadata>
+    </path>
+    <path id="NJ" role="datapoint" class="democratic strong" aria-labeledby="NJ-label" tabindex="0" d="M828.16,190.33 L826.05,192.75 L826.05,195.82 L824.11,198.89 L823.95,200.51 L825.25,201.80 L825.08,204.23 L822.82,205.36 L823.63,208.11 L823.79,209.24 L826.54,209.56 L827.51,212.15 L831.07,214.57 L833.49,216.19 L833.49,217.00 L830.26,220.07 L828.64,222.33 L827.19,225.08 L824.92,226.38 L823.71,227.10 L823.47,228.32 L822.86,230.92 L823.95,233.17 L827.18,236.08 L832.03,238.34 L836.07,238.99 L836.24,240.44 L835.43,241.41 L835.75,244.16 L836.56,244.16 L838.66,241.73 L839.47,236.88 L842.22,232.84 L845.29,226.38 L846.42,220.88 L845.77,219.75 L845.61,210.37 L844.00,206.98 L842.86,207.79 L840.12,208.11 L839.63,207.62 L840.76,206.65 L842.86,204.71 L842.93,203.62 L842.54,200.19 L843.03,197.44 L842.87,195.34 L840.28,194.21 L835.75,193.24 L831.87,192.10 z">
+      <desc id="NJ-label">New Jersey</desc>
+      <metadata>
+        <metadata role="datavalue" data-name="d-total">2,148,278</metadata>
+        <metadata role="datavalue" data-name="r-total">1,601,933</metadata>
+        <metadata role="datavalue" data-name="other-total">123,835</metadata>
+        <metadata role="datavalue" data-name="d-percent">55.5%</metadata>
+        <metadata role="datavalue" data-name="r-percent">41.4%</metadata>
+        <metadata role="datavalue" data-name="other-percent">3.2%</metadata>
+        <metadata role="datavalue" data-name="margin">14.1%</metadata>
+        <metadata role="datavalue" data-name="winner">Democratic</metadata>
+      </metadata>
+    </path>
+    <path id="NM" role="datapoint" class="democratic moderate" aria-labeledby="NM-label" tabindex="0" d="M282.72,431.04 L282.07,424.92 L290.71,425.44 L320.23,428.51 L348.62,429.95 L350.59,407.61 L354.31,351.74 L355.43,332.35 L357.45,332.70 L357.43,321.62 L325.23,319.22 L288.29,314.79 L253.83,310.68 L249.63,341.44 L242.66,394.64 L238.91,421.56 L236.86,434.87 L252.32,436.86 L253.61,426.84 L270.26,429.42 z">
+      <desc id="NM-label">New Mexico</desc>
+      <metadata>
+        <metadata role="datavalue" data-name="d-total">385,234</metadata>
+        <metadata role="datavalue" data-name="r-total">319,666</metadata>
+        <metadata role="datavalue" data-name="other-total">93,418</metadata>
+        <metadata role="datavalue" data-name="d-percent">48.3%</metadata>
+        <metadata role="datavalue" data-name="r-percent">40.0%</metadata>
+        <metadata role="datavalue" data-name="other-percent">11.7%</metadata>
+        <metadata role="datavalue" data-name="margin">8.2%</metadata>
+        <metadata role="datavalue" data-name="winner">Democratic</metadata>
+      </metadata>
+    </path>
+    <path id="NY" role="datapoint" class="democratic strong" aria-labeledby="NY-label" tabindex="0" d="M828.61,189.42 L827.48,188.45 L824.89,188.29 L822.63,186.35 L821.00,180.22 L817.54,180.31 L815.10,177.60 L795.71,181.98 L752.71,190.71 L745.18,191.94 L744.44,185.47 L745.87,184.34 L747.16,183.21 L748.13,181.60 L749.91,180.47 L751.85,178.69 L752.33,177.07 L754.44,174.32 L755.57,173.35 L755.41,172.38 L754.11,169.31 L752.33,169.15 L750.39,163.01 L753.30,161.23 L757.67,159.77 L761.71,158.48 L764.94,157.99 L771.25,157.83 L773.19,159.13 L774.81,159.29 L776.91,157.99 L779.49,156.86 L784.67,156.38 L786.77,154.60 L788.55,151.37 L790.16,149.43 L792.26,149.43 L794.20,148.29 L794.37,146.03 L792.91,143.93 L792.59,142.47 L793.72,140.37 L793.72,138.92 L791.94,138.92 L790.16,138.11 L789.35,136.98 L789.19,134.39 L795.01,128.90 L795.66,128.09 L797.11,125.18 L800.02,120.65 L802.77,116.93 L804.87,114.51 L807.29,112.68 L810.37,111.44 L815.87,110.14 L819.10,110.30 L823.63,108.85 L831.19,106.78 L831.71,111.76 L834.14,118.22 L834.95,123.40 L833.98,127.28 L836.56,131.80 L837.37,133.91 L836.56,136.82 L839.47,138.11 L840.12,138.43 L843.19,149.42 L842.65,154.48 L842.17,165.32 L842.98,170.81 L843.79,174.37 L845.24,181.64 L845.24,189.73 L844.11,191.99 L845.95,193.98 L846.74,195.66 L844.80,197.44 L845.13,198.73 L846.42,198.41 L847.88,197.12 L850.14,194.53 L851.27,193.88 L852.89,194.53 L855.15,194.69 L863.07,190.81 L865.98,188.06 L867.28,186.61 L871.48,188.22 L868.08,191.78 L864.20,194.69 L857.09,200.03 L854.50,201.00 L848.68,202.94 L844.64,204.07 L843.47,203.53 L843.22,199.85 L843.71,197.10 L843.55,195.00 L840.73,193.30 L836.21,192.33 L832.33,191.20 z">
+      <desc id="NY-label">New York</desc>
+      <metadata>
+        <metadata role="datavalue" data-name="d-total">4,556,124</metadata>
+        <metadata role="datavalue" data-name="r-total">2,819,534</metadata>
+        <metadata role="datavalue" data-name="other-total">345,795</metadata>
+        <metadata role="datavalue" data-name="d-percent">59.0%</metadata>
+        <metadata role="datavalue" data-name="r-percent">36.5%</metadata>
+        <metadata role="datavalue" data-name="other-percent">4.5%</metadata>
+        <metadata role="datavalue" data-name="margin">22.5%</metadata>
+        <metadata role="datavalue" data-name="winner">Democratic</metadata>
+      </metadata>
+    </path>
+    <path id="NC" role="datapoint" class="republican weak" aria-labeledby="NC-label" tabindex="0" d="M832.10,298.47 L833.81,303.17 L837.37,309.63 L839.79,312.06 L840.44,314.32 L838.01,314.48 L838.82,315.13 L838.50,319.33 L835.91,320.62 L835.27,322.73 L833.97,325.64 L830.25,327.25 L827.83,326.93 L826.38,326.77 L824.76,325.47 L825.08,326.77 L825.08,327.74 L827.02,327.74 L827.83,329.03 L825.89,335.34 L830.09,335.34 L830.74,336.95 L833.00,334.69 L834.30,334.20 L832.36,337.76 L829.29,342.61 L827.99,342.61 L826.86,342.13 L824.11,342.77 L818.94,345.20 L812.47,350.53 L809.08,355.22 L807.14,361.69 L806.65,364.11 L801.96,364.60 L796.51,365.93 L786.56,357.73 L773.96,350.13 L771.05,349.32 L758.44,350.78 L754.16,351.53 L752.54,348.30 L749.57,346.18 L733.08,346.66 L725.81,347.47 L716.76,352.00 L710.61,354.59 L709.00,354.91 L703.18,355.88 L696.22,356.69 L689.43,357.17 L689.93,353.12 L691.71,351.66 L694.46,351.02 L695.11,347.30 L699.31,344.55 L703.19,343.09 L707.39,339.54 L711.76,337.44 L712.41,334.37 L716.29,330.49 L716.93,330.32 C 716.93,330.32 716.93,331.46 717.74,331.46 C 718.55,331.46 719.68,331.78 719.68,331.78 L721.94,328.22 L724.05,327.58 L726.31,327.90 L727.93,324.34 L730.83,321.76 L731.32,319.65 L731.32,315.69 L735.85,316.42 L742.98,315.13 L758.80,313.19 L775.94,310.60 L795.86,306.60 L815.59,302.44 L826.96,299.64 z M836.00,331.45 L838.58,328.95 L841.74,326.36 L843.27,325.72 L843.43,323.69 L842.79,317.55 L841.33,315.21 L840.69,313.35 L841.41,313.11 L844.16,318.60 L844.57,323.05 L844.40,326.44 L841.01,327.98 L838.18,330.40 L837.05,331.62 z">
+      <desc id="NC-label">North Carolina</desc>
+      <metadata>
+        <metadata role="datavalue" data-name="d-total">2,189,316</metadata>
+        <metadata role="datavalue" data-name="r-total">2,362,631</metadata>
+        <metadata role="datavalue" data-name="other-total">189,617</metadata>
+        <metadata role="datavalue" data-name="d-percent">46.2%</metadata>
+        <metadata role="datavalue" data-name="r-percent">49.8%</metadata>
+        <metadata role="datavalue" data-name="other-percent">4.0%</metadata>
+        <metadata role="datavalue" data-name="margin">3.7%</metadata>
+        <metadata role="datavalue" data-name="winner">Republican</metadata>
+      </metadata>
+    </path>
+    <path id="ND" role="datapoint" class="republican strong" aria-labeledby="ND-label" tabindex="0" d="M471.30,127.66 L470.94,120.17 L468.95,112.85 L467.12,99.20 L466.66,89.37 L464.67,86.26 L463.07,80.91 L463.07,70.62 L463.76,66.74 L461.64,61.24 L433.22,60.67 L414.63,60.03 L388.11,58.73 L363.17,56.85 L361.91,71.08 L360.53,86.17 L358.28,111.12 L357.79,122.14 L414.61,125.90 z">
+      <desc id="ND-label">North Dakota</desc>
+      <metadata>
+        <metadata role="datavalue" data-name="d-total">93,758</metadata>
+        <metadata role="datavalue" data-name="r-total">216,794</metadata>
+        <metadata role="datavalue" data-name="other-total">33,808</metadata>
+        <metadata role="datavalue" data-name="d-percent">27.2%</metadata>
+        <metadata role="datavalue" data-name="r-percent">63.0%</metadata>
+        <metadata role="datavalue" data-name="other-percent">9.8%</metadata>
+        <metadata role="datavalue" data-name="margin">35.7%</metadata>
+        <metadata role="datavalue" data-name="winner">Republican</metadata>
+      </metadata>
+    </path>
+    <path id="OH" role="datapoint" class="republican moderate" aria-labeledby="OH-label" tabindex="0" d="M731.43,195.00 L725.34,199.06 L721.46,201.32 L718.06,205.04 L714.02,208.92 L710.79,209.73 L707.88,210.21 L702.38,212.80 L700.28,212.96 L696.89,209.89 L691.71,210.53 L689.13,209.08 L686.74,207.73 L681.85,208.43 L671.67,210.05 L663.91,211.26 L665.20,225.89 L666.98,239.63 L669.57,263.07 L670.13,267.90 L674.25,267.78 L676.68,266.97 L680.04,268.47 L682.11,272.83 L687.25,272.82 L689.14,274.94 L690.90,274.87 L693.44,273.53 L695.95,273.90 L697.92,275.36 L699.65,273.22 L701.99,271.93 L704.06,271.25 L704.71,274.00 L706.49,274.97 L709.97,277.31 L712.15,277.23 L713.29,276.08 L713.23,274.70 L714.84,273.24 L715.01,268.23 C 715.01,268.23 715.98,264.35 715.98,264.35 L717.50,262.91 L719.02,263.81 L719.84,265.02 L721.05,264.85 L720.63,262.44 L720.07,261.79 L720.07,259.37 L721.04,258.08 L723.30,254.68 L724.59,253.23 L726.69,253.71 L728.96,252.09 L732.03,248.70 L734.29,244.82 L734.50,239.39 L734.99,234.38 L734.99,229.69 L733.86,226.62 L734.83,225.16 L735.75,224.21 L734.34,214.36 z">
+      <desc id="OH-label">Ohio</desc>
+      <metadata>
+        <metadata role="datavalue" data-name="d-total">2,394,164</metadata>
+        <metadata role="datavalue" data-name="r-total">2,841,005</metadata>
+        <metadata role="datavalue" data-name="other-total">261,318</metadata>
+        <metadata role="datavalue" data-name="d-percent">43.6%</metadata>
+        <metadata role="datavalue" data-name="r-percent">51.7%</metadata>
+        <metadata role="datavalue" data-name="other-percent">4.8%</metadata>
+        <metadata role="datavalue" data-name="margin">8.1%</metadata>
+        <metadata role="datavalue" data-name="winner">Republican</metadata>
+      </metadata>
+    </path>
+    <path id="OK" role="datapoint" class="republican strong" aria-labeledby="OK-label" tabindex="0" d="M375.34,322.57 L364.65,322.11 L358.22,321.62 L358.48,321.82 L357.77,332.25 L379.74,333.65 L411.79,334.96 L409.46,359.37 L409.00,377.21 L409.23,378.81 L413.58,382.47 L415.63,383.61 L416.32,383.38 L417.00,381.32 L418.38,383.15 L420.43,383.15 L420.43,381.78 L423.18,383.15 L422.72,387.04 L426.84,387.27 L429.35,388.41 L433.47,389.10 L435.98,390.92 L438.27,388.87 L441.70,389.55 L444.21,392.98 L445.13,392.98 L445.13,395.27 L447.41,395.95 L449.70,393.67 L451.53,394.35 L454.04,394.35 L454.96,396.87 L459.76,398.70 L461.13,398.01 L462.96,393.90 L464.10,393.90 L465.24,395.95 L469.36,396.64 L473.02,398.01 L475.99,398.93 L477.82,398.01 L478.50,395.50 L482.85,395.50 L484.91,396.41 L487.65,394.35 L488.79,394.35 L489.48,395.95 L493.59,395.95 L495.19,393.90 L497.02,394.35 L499.08,396.87 L502.28,398.70 L505.48,399.61 L507.42,400.73 L507.03,363.51 L505.66,352.54 L505.50,343.67 L504.06,337.13 L503.28,329.95 L503.22,326.13 L491.08,326.45 L444.67,326.00 L399.63,323.94 z">
+      <desc id="OK-label">Oklahoma</desc>
+      <metadata>
+        <metadata role="datavalue" data-name="d-total">420,375</metadata>
+        <metadata role="datavalue" data-name="r-total">949,136</metadata>
+        <metadata role="datavalue" data-name="other-total">83,481</metadata>
+        <metadata role="datavalue" data-name="d-percent">28.9%</metadata>
+        <metadata role="datavalue" data-name="r-percent">65.3%</metadata>
+        <metadata role="datavalue" data-name="other-percent">5.7%</metadata>
+        <metadata role="datavalue" data-name="margin">36.4%</metadata>
+        <metadata role="datavalue" data-name="winner">Republican</metadata>
+      </metadata>
+    </path>
+    <path id="OR" role="datapoint" class="democratic strong" aria-labeledby="OR-label" tabindex="0" d="M140.30,176.68 L144.60,158.78 L149.26,140.90 L150.31,136.67 L152.67,131.05 L152.05,129.89 L149.54,129.84 L148.26,128.17 L148.71,126.71 L149.22,123.46 L153.68,117.97 L155.50,116.87 L156.65,115.73 L158.13,112.16 L162.18,106.49 L165.75,102.63 L165.97,99.18 L162.71,96.71 L161.50,92.20 L148.26,88.46 L133.17,84.91 L117.74,85.03 L117.28,83.66 L111.79,85.71 L107.34,85.14 L104.93,83.54 L103.68,84.23 L98.99,84.00 L97.28,82.63 L92.02,80.57 L91.22,80.68 L86.87,79.20 L84.93,81.03 L78.76,80.68 L72.81,76.57 L73.50,75.77 L73.73,68.00 L71.44,64.11 L67.33,63.54 L66.64,61.02 L64.29,60.56 L58.49,62.61 L56.22,69.08 L52.99,79.10 L49.76,85.57 L44.75,99.63 L38.28,113.21 L30.20,125.82 L28.26,128.73 L27.45,137.30 L26.16,143.28 L28.86,146.81 L35.59,149.06 L47.19,152.35 L55.05,154.89 L67.46,158.53 L80.79,162.12 L93.96,165.68 Z">
+      <desc id="OR-label">Oregon</desc>
+      <metadata>
+        <metadata role="datavalue" data-name="d-total">1,002,106</metadata>
+        <metadata role="datavalue" data-name="r-total">782,403</metadata>
+        <metadata role="datavalue" data-name="other-total">216,827</metadata>
+        <metadata role="datavalue" data-name="d-percent">50.1%</metadata>
+        <metadata role="datavalue" data-name="r-percent">39.1%</metadata>
+        <metadata role="datavalue" data-name="other-percent">10.8%</metadata>
+        <metadata role="datavalue" data-name="margin">11.0%</metadata>
+        <metadata role="datavalue" data-name="winner">Democratic</metadata>
+      </metadata>
+    </path>
+    <path id="PA" role="datapoint" class="republican weak" aria-labeledby="PA-label" tabindex="0" d="M822.20,226.45 L823.33,225.81 L825.60,225.20 L827.05,222.45 L828.67,220.18 L831.90,217.11 L831.90,216.30 L829.48,214.69 L825.92,212.26 L824.95,209.68 L822.20,209.35 L822.04,208.22 L821.23,205.47 L823.50,204.34 L823.66,201.92 L822.36,200.62 L822.53,199.01 L824.47,195.94 L824.47,192.86 L826.81,190.44 L827.02,189.36 L824.44,189.19 L822.17,187.25 L819.75,181.92 L816.74,180.99 L814.41,178.85 L795.82,182.89 L752.82,191.62 L743.93,193.07 L743.43,185.99 L737.95,191.62 L736.65,192.10 L732.45,195.11 L735.36,214.25 L737.84,223.98 L741.42,243.24 L744.68,242.60 L756.63,241.10 L794.56,233.44 L809.43,230.61 L817.73,228.99 L818.00,228.75 L820.10,227.14 z">
+      <desc id="PA-label">Pennsylvania</desc>
+      <metadata>
+        <metadata role="datavalue" data-name="d-total">2,926,441</metadata>
+        <metadata role="datavalue" data-name="r-total">2,970,733</metadata>
+        <metadata role="datavalue" data-name="other-total">218,228</metadata>
+        <metadata role="datavalue" data-name="d-percent">47.9%</metadata>
+        <metadata role="datavalue" data-name="r-percent">48.6%</metadata>
+        <metadata role="datavalue" data-name="other-percent">3.6%</metadata>
+        <metadata role="datavalue" data-name="margin">0.7%</metadata>
+        <metadata role="datavalue" data-name="winner">Republican</metadata>
+      </metadata>
+    </path>
+    <path id="RI" role="datapoint" class="democratic strong" aria-labeledby="RI-label" tabindex="0" d="M874.07,179.82 L873.58,175.61 L872.77,171.25 L871.08,165.35 L876.82,163.81 L878.43,164.94 L881.83,169.31 L884.74,173.76 L881.82,175.29 L880.53,175.13 L879.40,176.91 L876.97,178.85 z">
+      <desc id="RI-label">Rhode Island</desc>
+      <metadata>
+        <metadata role="datavalue" data-name="d-total">252,525</metadata>
+        <metadata role="datavalue" data-name="r-total">180,543</metadata>
+        <metadata role="datavalue" data-name="other-total">31,076</metadata>
+        <metadata role="datavalue" data-name="d-percent">54.4%</metadata>
+        <metadata role="datavalue" data-name="r-percent">38.9%</metadata>
+        <metadata role="datavalue" data-name="other-percent">6.7%</metadata>
+        <metadata role="datavalue" data-name="margin">15.5%</metadata>
+        <metadata role="datavalue" data-name="winner">Democratic</metadata>
+      </metadata>
+    </path>
+    <path id="SC" role="datapoint" class="republican strong" aria-labeledby="SC-label" tabindex="0" d="M761.23,412.93 L759.45,413.90 L756.86,412.61 L756.22,410.51 L754.92,406.95 L752.66,404.85 L750.07,404.20 L748.46,399.35 L745.71,393.37 L741.50,391.43 L739.40,389.49 L738.11,386.91 L736.01,384.97 L733.74,383.67 L731.48,380.76 L728.41,378.50 L723.88,376.72 L723.40,375.27 L720.97,372.36 L720.49,370.90 L717.09,365.73 L713.70,365.89 L709.66,363.46 L708.36,362.17 L708.04,360.39 L708.85,358.45 L711.11,357.48 L710.79,355.38 L716.93,352.79 L725.99,348.27 L733.26,347.46 L749.75,346.97 L752.01,348.91 L753.63,352.15 L757.99,351.66 L770.60,350.21 L773.51,351.02 L786.12,358.61 L796.23,366.74 L790.81,372.19 L788.22,378.34 L787.74,384.64 L786.12,385.45 L784.99,388.20 L782.57,388.85 L780.46,392.40 L777.72,395.15 L775.45,398.55 L773.84,399.35 L770.28,402.75 L767.37,402.91 L768.34,406.14 L763.33,411.64 z">
+      <desc id="SC-label">South Carolina</desc>
+      <metadata>
+        <metadata role="datavalue" data-name="d-total">855,373</metadata>
+        <metadata role="datavalue" data-name="r-total">1,155,389</metadata>
+        <metadata role="datavalue" data-name="other-total">92,265</metadata>
+        <metadata role="datavalue" data-name="d-percent">40.7%</metadata>
+        <metadata role="datavalue" data-name="r-percent">54.9%</metadata>
+        <metadata role="datavalue" data-name="other-percent">4.4%</metadata>
+        <metadata role="datavalue" data-name="margin">14.3%</metadata>
+        <metadata role="datavalue" data-name="winner">Republican</metadata>
+      </metadata>
+    </path>
+    <path id="SD" role="datapoint" class="republican strong" aria-labeledby="SD-label" tabindex="0" d="M472.79,203.18 L471.84,202.10 L470.32,198.47 L472.15,194.77 L473.20,189.21 L470.61,187.15 L470.32,184.41 L470.91,181.41 L473.06,180.61 L473.36,174.88 L473.29,144.79 L472.67,141.82 L468.56,138.23 L467.57,136.24 L467.57,134.32 L469.47,133.04 L471.00,131.19 L471.19,128.47 L413.80,126.87 L357.63,122.98 L356.86,128.26 L355.25,144.13 L353.90,162.07 L352.30,186.67 L368.33,187.70 L387.97,188.84 L405.96,190.15 L429.74,191.45 L440.48,190.67 L443.34,192.96 L447.66,195.93 L448.65,196.68 L452.19,195.79 L456.24,195.50 L458.98,195.43 L462.09,196.64 L466.64,198.08 L469.77,199.84 L470.39,201.76 L471.30,203.66 L472.01,203.18 z">
+      <desc id="SD-label">South Dakota</desc>
+      <metadata>
+        <metadata role="datavalue" data-name="d-total">117,458</metadata>
+        <metadata role="datavalue" data-name="r-total">227,721</metadata>
+        <metadata role="datavalue" data-name="other-total">24,914</metadata>
+        <metadata role="datavalue" data-name="d-percent">31.7%</metadata>
+        <metadata role="datavalue" data-name="r-percent">61.5%</metadata>
+        <metadata role="datavalue" data-name="other-percent">6.7%</metadata>
+        <metadata role="datavalue" data-name="margin">29.8%</metadata>
+        <metadata role="datavalue" data-name="winner">Republican</metadata>
+      </metadata>
+    </path>
+    <path id="TN" role="datapoint" class="republican strong" aria-labeledby="TN-label" tabindex="0" d="M697.05,320.62 L645.15,325.64 L629.40,327.41 L624.77,327.93 L620.91,327.90 L620.91,331.78 L612.50,332.26 L605.55,332.91 L594.45,332.96 L594.19,338.80 L592.05,345.07 L591.05,348.09 L589.71,352.47 L589.38,355.06 L585.34,357.32 L586.80,360.88 L585.83,365.24 L584.86,366.03 L592.11,365.84 L616.20,363.90 L621.54,363.74 L629.62,363.25 L657.42,360.66 L667.59,359.86 L676.01,358.89 L684.42,357.75 L689.27,356.95 L689.14,352.44 L690.92,350.98 L693.67,350.34 L694.31,346.62 L698.52,343.87 L702.40,342.41 L706.60,338.86 L710.96,336.76 L711.84,333.23 L716.17,329.35 L716.82,329.19 C 716.82,329.19 716.82,330.32 717.63,330.32 C 718.44,330.32 719.57,330.64 719.57,330.64 L721.83,327.09 L723.93,326.44 L726.19,326.76 L727.81,323.21 L729.93,320.96 L730.53,319.99 L730.70,316.06 L729.22,315.77 L726.79,317.71 L718.87,317.88 L706.88,319.78 z">
+      <desc id="TN-label">Tennessee</desc>
+      <metadata>
+        <metadata role="datavalue" data-name="d-total">870,695</metadata>
+        <metadata role="datavalue" data-name="r-total">1,522,925</metadata>
+        <metadata role="datavalue" data-name="other-total">114,407</metadata>
+        <metadata role="datavalue" data-name="d-percent">34.7%</metadata>
+        <metadata role="datavalue" data-name="r-percent">60.7%</metadata>
+        <metadata role="datavalue" data-name="other-percent">4.6%</metadata>
+        <metadata role="datavalue" data-name="margin">26.0%</metadata>
+        <metadata role="datavalue" data-name="winner">Republican</metadata>
+      </metadata>
+    </path>
+    <path id="TX" role="datapoint" class="republican moderate" aria-labeledby="TX-label" tabindex="0" d="M357.05,333.37 L379.74,334.45 L410.83,335.60 L408.50,359.05 L408.20,377.21 L408.27,379.29 L412.61,383.11 L414.35,383.93 L416.16,384.18 L416.84,382.93 L417.73,383.79 L419.47,384.27 L421.08,383.54 L422.21,383.95 L421.92,387.36 L426.19,388.39 L428.87,389.21 L432.82,389.74 L435.02,391.57 L438.27,389.99 L441.05,390.36 L443.09,393.14 L444.16,393.46 L444.00,395.43 L447.09,396.60 L449.86,394.79 L451.37,395.16 L453.72,395.32 L454.15,397.19 L458.79,399.18 L461.45,398.97 L463.44,394.86 L463.78,394.86 L464.92,396.76 L469.36,397.76 L472.70,398.97 L475.99,399.73 L478.14,398.97 L478.99,396.46 L482.69,396.46 L484.58,397.21 L487.65,395.64 L488.31,395.64 L488.68,396.76 L492.95,396.76 L495.35,395.50 L497.02,395.80 L498.44,397.67 L501.32,399.34 L504.84,400.41 L507.58,401.83 L510.03,403.45 L513.32,402.56 L515.26,403.55 L515.78,413.69 L516.11,423.39 L516.80,432.92 L517.32,436.97 L520.00,441.57 L521.07,445.63 L524.93,451.92 L525.48,454.80 L526.01,455.81 L525.32,463.31 L522.67,467.69 L523.63,470.55 L523.27,473.07 L522.42,480.38 L521.05,483.10 L521.65,487.49 L515.99,489.07 L506.13,493.60 L505.16,495.54 L502.57,497.48 L500.47,498.94 L499.17,499.74 L493.52,505.08 L490.77,507.18 L485.43,510.41 L479.78,512.84 L473.47,516.23 L471.69,517.69 L465.87,521.25 L462.48,521.89 L458.60,527.39 L454.56,527.71 L453.59,529.65 L455.85,531.59 L454.39,537.09 L453.10,541.61 L451.97,545.49 L451.16,550.02 L451.97,552.45 L453.75,559.40 L454.72,565.54 L456.50,568.29 L455.53,569.74 L452.45,571.68 L446.80,567.80 L441.30,566.67 L440.01,567.16 L436.77,566.51 L432.57,563.44 L427.40,562.31 L419.80,558.91 L417.70,555.03 L416.40,548.57 L413.17,546.63 L412.52,544.36 L413.17,543.72 L413.49,540.32 L412.20,539.67 L411.55,538.70 L412.85,534.34 L411.23,532.08 L408.00,530.78 L404.60,526.42 L401.05,519.79 L396.84,517.20 L397.00,515.26 L391.67,502.98 L390.86,498.77 L389.08,496.83 L388.92,495.38 L382.94,490.04 L380.35,486.97 L380.35,485.84 L377.77,483.74 L370.98,482.61 L363.54,481.96 L360.47,479.70 L355.94,481.48 L352.39,482.93 L350.12,486.17 L349.15,489.88 L344.79,496.03 L342.36,498.45 L339.78,497.48 L338.00,496.35 L336.06,495.70 L332.18,493.44 L332.18,492.79 L330.40,490.85 L325.23,488.75 L317.79,480.99 L315.53,476.30 L315.53,468.22 L312.29,461.75 L311.81,459.01 L310.19,458.04 L309.06,455.93 L304.05,453.83 L302.76,452.22 L295.64,444.29 L294.35,441.06 L289.66,438.80 L288.21,434.43 L285.62,431.52 L283.68,431.04 L283.03,426.36 L291.03,427.05 L320.07,429.79 L349.10,431.39 L351.39,407.61 L355.28,352.06 L356.88,333.31 L358.25,333.34 M457.23,567.32 L456.66,560.20 L453.91,553.01 L453.35,545.98 L454.88,537.73 L458.20,530.86 L461.67,525.45 L464.82,521.89 L465.47,522.13 L460.70,528.76 L456.34,535.31 L454.32,541.94 L453.99,547.11 L454.88,553.25 L457.47,560.45 L457.95,565.62 L458.11,567.08 L457.23,567.32 z">
+      <desc id="TX-label">Texas</desc>
+      <metadata>
+        <metadata role="datavalue" data-name="d-total">3,877,868</metadata>
+        <metadata role="datavalue" data-name="r-total">4,685,047</metadata>
+        <metadata role="datavalue" data-name="other-total">406,311</metadata>
+        <metadata role="datavalue" data-name="d-percent">43.2%</metadata>
+        <metadata role="datavalue" data-name="r-percent">52.2%</metadata>
+        <metadata role="datavalue" data-name="other-percent">4.5%</metadata>
+        <metadata role="datavalue" data-name="margin">9.0%</metadata>
+        <metadata role="datavalue" data-name="winner">Republican</metadata>
+      </metadata>
+    </path>
+    <path id="UT" role="datapoint" class="republican strong" aria-labeledby="UT-label" tabindex="0" d="M252.97,309.30 L228.32,305.83 L201.76,300.94 L167.93,294.92 L169.52,285.76 L172.72,270.55 L176.04,253.98 L178.21,240.38 L180.15,231.46 L183.92,211.00 L187.47,193.51 L188.58,187.94 L201.30,190.19 L213.30,192.25 L223.59,194.08 L231.93,195.45 L235.61,195.93 L234.13,206.56 L231.82,219.73 L239.62,220.66 L256.03,222.47 L264.24,223.32 L262.11,245.29 L258.91,267.86 L255.16,295.68 L253.49,306.79 z">
+      <desc id="UT-label">Utah</desc>
+      <metadata>
+        <metadata role="datavalue" data-name="d-total">310,676</metadata>
+        <metadata role="datavalue" data-name="r-total">515,231</metadata>
+        <metadata role="datavalue" data-name="other-total">305,523</metadata>
+        <metadata role="datavalue" data-name="d-percent">27.5%</metadata>
+        <metadata role="datavalue" data-name="r-percent">45.5%</metadata>
+        <metadata role="datavalue" data-name="other-percent">27.0%</metadata>
+        <metadata role="datavalue" data-name="margin">18.1%</metadata>
+        <metadata role="datavalue" data-name="winner">Republican</metadata>
+      </metadata>
+    </path>
+    <path id="VT" role="datapoint" class="democratic strong" aria-labeledby="VT-label" tabindex="0" d="M844.34,153.72 L843.53,148.06 L841.14,138.09 L840.49,137.77 L837.58,136.48 L838.39,133.57 L837.58,131.46 L834.88,126.82 L835.85,122.94 L835.04,117.77 L832.62,111.30 L831.81,106.38 L858.06,99.63 L858.39,105.45 L860.33,108.20 L860.33,112.24 L856.61,116.28 L854.02,117.42 L854.02,118.55 L855.15,120.33 L855.15,128.89 L854.34,138.11 L854.18,142.96 L855.15,144.25 L854.99,148.78 L854.51,150.56 L855.17,152.12 L848.22,153.50 z">
+      <desc id="VT-label">Vermont</desc>
+      <metadata>
+        <metadata role="datavalue" data-name="d-total">178,573</metadata>
+        <metadata role="datavalue" data-name="r-total">95,369</metadata>
+        <metadata role="datavalue" data-name="other-total">41,125</metadata>
+        <metadata role="datavalue" data-name="d-percent">56.7%</metadata>
+        <metadata role="datavalue" data-name="r-percent">30.3%</metadata>
+        <metadata role="datavalue" data-name="other-percent">13.1%</metadata>
+        <metadata role="datavalue" data-name="margin">26.4%</metadata>
+        <metadata role="datavalue" data-name="winner">Democratic</metadata>
+      </metadata>
+    </path>
+    <path id="VA" role="datapoint" class="democratic moderate" aria-labeledby="VA-label" tabindex="0" d="M828.90,269.24 L828.76,267.29 L835.21,264.74 L834.44,267.96 L831.52,271.74 L831.10,276.33 L831.56,279.72 L829.74,284.70 L827.57,286.61 L826.10,281.97 L826.55,276.52 L828.13,272.34 z M831.18,297.54 L773.01,310.12 L735.58,315.40 L728.90,315.02 L726.32,316.95 L718.98,317.17 L710.60,318.15 L701.67,319.10 L710.15,314.15 L710.14,312.07 L711.66,309.93 L722.21,298.43 L726.16,302.90 L729.94,303.87 L732.48,302.73 L734.72,301.42 L737.26,302.76 L741.17,301.33 L743.05,296.78 L745.65,297.32 L748.50,295.19 L750.30,295.68 L753.13,292.00 L753.48,289.92 L752.52,288.64 L753.52,286.78 L758.79,274.50 L759.41,268.76 L760.64,268.24 L762.82,270.68 L766.75,270.38 L768.68,262.81 L771.48,262.25 L772.53,259.51 L775.11,257.16 L776.37,254.82 L777.88,251.47 L777.96,246.40 L787.78,250.22 C 788.46,250.56 788.44,245.44 788.44,245.44 L792.49,246.81 L792.03,249.44 L800.18,252.38 L801.48,254.18 L800.61,257.86 L799.35,259.18 L798.84,260.93 L799.33,263.33 L801.29,264.61 L805.21,266.06 L808.16,267.02 L813.02,267.97 L815.17,270.06 L818.36,270.46 L819.23,271.66 L818.79,276.35 L820.16,277.45 L819.68,279.38 L820.91,280.17 L820.69,281.56 L818.00,281.46 L818.09,283.08 L820.37,284.62 L820.49,286.03 L822.26,287.82 L822.75,290.34 L820.20,291.72 L821.77,293.22 L827.57,291.53 z">
+      <desc id="VA-label">Virginia</desc>
+      <metadata>
+        <metadata role="datavalue" data-name="d-total">1,981,473</metadata>
+        <metadata role="datavalue" data-name="r-total">1,769,443</metadata>
+        <metadata role="datavalue" data-name="other-total">231,836</metadata>
+        <metadata role="datavalue" data-name="d-percent">49.8%</metadata>
+        <metadata role="datavalue" data-name="r-percent">44.4%</metadata>
+        <metadata role="datavalue" data-name="other-percent">5.8%</metadata>
+        <metadata role="datavalue" data-name="margin">5.3%</metadata>
+        <metadata role="datavalue" data-name="winner">Democratic</metadata>
+      </metadata>
+    </path>
+    <path id="WA" role="datapoint" class="democratic strong" aria-labeledby="WA-label" tabindex="0" d="M93.57,6.36 L97.93,7.81 L107.63,10.56 L116.20,12.50 L136.25,18.16 L159.20,23.82 L174.36,27.21 L173.36,31.09 L169.27,44.90 L164.81,65.71 L161.63,81.85 L161.28,91.23 L148.10,87.33 L132.53,83.95 L118.86,84.55 L117.28,83.01 L111.95,84.91 L107.98,84.66 L105.26,82.90 L103.68,83.43 L99.47,83.20 L97.60,81.82 L92.82,80.09 L91.38,79.88 L86.39,78.56 L84.61,80.06 L78.92,79.72 L74.10,75.93 L74.30,75.13 L74.37,67.19 L72.24,63.31 L68.13,62.57 L67.76,60.22 L65.25,59.59 L62.37,59.06 L60.59,60.03 L58.33,57.12 L58.65,54.21 L61.40,53.88 L63.01,49.84 L60.43,48.71 L60.59,44.99 L64.95,44.35 L62.21,41.60 L60.75,34.49 L61.40,31.58 L61.40,23.65 L59.62,20.42 L61.88,11.04 L63.98,11.53 L66.41,14.44 L69.16,17.03 L72.39,18.97 L76.92,21.07 L79.99,21.71 L82.90,23.17 L86.29,24.14 L88.56,23.98 L88.56,21.55 L89.85,20.42 L91.95,19.13 L92.27,20.26 L92.60,22.04 L90.34,22.52 L90.01,24.62 L91.79,26.08 L92.92,28.50 L93.57,30.44 L95.02,30.28 L95.18,28.99 L94.21,27.70 L93.73,24.46 L94.54,22.68 L93.89,21.23 L93.89,18.97 L95.67,15.41 L94.54,12.82 L92.11,7.97 L92.44,7.17 z M84.11,12.34 L86.13,12.17 L86.62,13.55 L88.15,11.93 L90.50,11.93 L91.31,13.47 L89.77,15.16 L90.42,15.97 L89.69,17.99 L88.31,18.40 C 88.31,18.40 87.43,18.48 87.43,18.16 C 87.43,17.83 88.88,15.57 88.88,15.57 L87.18,15.00 L86.86,16.46 L86.13,17.10 L84.60,14.84 z">
+      <desc id="WA-label">Washington</desc>
+      <metadata>
+        <metadata role="datavalue" data-name="d-total">1,742,718</metadata>
+        <metadata role="datavalue" data-name="r-total">1,221,747</metadata>
+        <metadata role="datavalue" data-name="other-total">401,179</metadata>
+        <metadata role="datavalue" data-name="d-percent">51.8%</metadata>
+        <metadata role="datavalue" data-name="r-percent">36.3%</metadata>
+        <metadata role="datavalue" data-name="other-percent">11.9%</metadata>
+        <metadata role="datavalue" data-name="margin">15.5%</metadata>
+        <metadata role="datavalue" data-name="winner">Democratic</metadata>
+      </metadata>
+    </path>
+    <path id="WV" role="datapoint" class="republican strong" aria-labeledby="WV-label" tabindex="0" d="M756.56,241.96 L757.67,246.91 L758.75,253.81 L762.31,251.06 L764.57,247.99 L767.11,247.38 L768.57,245.92 L770.35,243.34 L771.53,243.98 L774.44,243.66 L777.02,241.56 L779.03,240.10 L780.87,239.62 L782.18,240.64 L784.41,241.75 L786.35,243.53 L787.72,244.82 L787.58,249.49 L781.92,246.42 L777.39,244.64 L777.23,249.98 L776.75,252.08 L775.13,254.83 L774.48,256.44 L771.41,258.87 L770.93,261.13 L767.53,261.46 L767.21,264.53 L766.08,270.02 L763.49,270.02 L762.20,269.22 L760.58,266.47 L758.80,266.63 L758.48,270.99 L756.38,277.62 L751.37,288.45 L752.17,289.75 L752.01,292.50 L749.91,294.44 L748.46,294.11 L745.22,296.54 L742.64,295.57 L740.86,300.25 C 740.86,300.25 737.14,301.06 736.49,301.22 C 735.85,301.39 734.07,299.93 734.07,299.93 L731.64,302.19 L729.06,302.84 L726.15,302.03 L724.85,300.74 L722.66,297.72 L719.52,295.73 L716.93,292.98 L714.02,289.26 L713.38,287.00 L710.79,285.54 L709.98,283.93 L709.74,278.67 L711.92,278.59 L713.86,277.78 L714.02,275.04 L715.64,273.58 L715.80,268.57 L716.77,264.69 L718.06,264.04 L719.36,265.17 L719.84,266.95 L721.62,265.98 L722.11,264.37 L720.97,262.59 L720.97,260.16 L721.94,258.87 L724.21,255.47 L725.50,254.02 L727.60,254.50 L729.87,252.89 L732.94,249.49 L735.20,245.61 L735.52,239.96 L736.01,234.94 L736.01,230.26 L734.88,227.18 L735.85,225.73 L737.13,224.44 L740.62,244.26 L745.25,243.51 z">
+      <desc id="WV-label">West Virginia</desc>
+      <metadata>
+        <metadata role="datavalue" data-name="d-total">188,794</metadata>
+        <metadata role="datavalue" data-name="r-total">489,371</metadata>
+        <metadata role="datavalue" data-name="other-total">34,886</metadata>
+        <metadata role="datavalue" data-name="d-percent">26.5%</metadata>
+        <metadata role="datavalue" data-name="r-percent">68.6%</metadata>
+        <metadata role="datavalue" data-name="other-percent">4.9%</metadata>
+        <metadata role="datavalue" data-name="margin">42.2%</metadata>
+        <metadata role="datavalue" data-name="winner">Republican</metadata>
+      </metadata>
+    </path>
+    <path id="WI" role="datapoint" class="republican weak" aria-labeledby="WI-label" tabindex="0" d="M612.94,197.18 L613.31,194.21 L611.69,189.68 L611.04,183.54 L609.91,181.11 L610.88,178.04 L611.69,175.13 L613.14,172.54 L612.50,169.15 L611.85,165.59 L612.34,163.81 L614.28,161.39 L614.44,158.64 L613.63,157.35 L614.28,154.76 L614.76,151.53 L617.51,145.87 L620.42,139.08 L620.58,136.82 L620.26,135.85 L619.45,136.33 L615.25,142.64 L612.50,146.68 L610.56,148.46 L609.75,150.72 L608.30,151.53 L607.16,153.47 L605.71,153.14 L605.55,151.37 L606.84,148.94 L608.94,144.25 L610.72,142.64 L611.82,140.34 L610.19,139.44 L608.82,138.07 L607.22,127.78 L603.56,126.64 L602.19,124.35 L589.61,121.61 L587.10,120.46 L578.87,118.18 L570.64,117.03 L566.47,111.63 L565.94,112.89 L564.81,112.73 L564.16,111.60 L561.41,110.79 L560.28,110.95 L558.50,111.92 L557.53,111.27 L558.18,109.33 L560.12,106.26 L561.25,105.13 L559.31,103.68 L557.21,104.48 L554.30,106.42 L546.86,109.66 L543.95,110.30 L541.04,109.82 L540.06,108.94 L537.95,111.78 L537.72,114.52 L537.72,122.98 L536.57,124.58 L531.32,128.47 L529.03,134.41 L529.49,134.64 L532.00,136.70 L532.69,139.90 L530.86,143.10 L530.86,146.98 L531.32,153.61 L534.29,156.59 L537.72,156.59 L539.55,159.79 L542.98,160.24 L546.86,165.96 L553.95,170.08 L556.01,172.82 L556.92,180.25 L557.61,183.56 L559.89,185.16 L560.12,186.54 L558.06,189.97 L558.29,193.17 L560.81,197.05 L563.32,198.20 L566.30,198.65 L567.64,200.03 L576.81,200.03 L602.88,198.55 z">
+      <desc id="WI-label">Wisconsin</desc>
+      <metadata>
+        <metadata role="datavalue" data-name="d-total">1,382,536</metadata>
+        <metadata role="datavalue" data-name="r-total">1,405,284</metadata>
+        <metadata role="datavalue" data-name="other-total">188,330</metadata>
+        <metadata role="datavalue" data-name="d-percent">46.5%</metadata>
+        <metadata role="datavalue" data-name="r-percent">47.2%</metadata>
+        <metadata role="datavalue" data-name="other-percent">6.3%</metadata>
+        <metadata role="datavalue" data-name="margin">0.8%</metadata>
+        <metadata role="datavalue" data-name="winner">Republican</metadata>
+      </metadata>
+    </path>
+    <path id="WY" role="datapoint" class="republican strong" aria-labeledby="WY-label" tabindex="0" d="M354.25,143.77 L343.70,142.96 L311.61,139.67 L295.38,137.61 L267.03,133.50 L247.14,130.52 L245.72,141.70 L241.88,165.96 L236.62,196.37 L235.09,206.88 L233.42,218.77 L239.94,219.70 L265.82,222.20 L286.39,224.51 L323.18,228.62 L347.00,231.48 L351.50,187.29 L352.94,161.91 z">
+      <desc id="WY-label">Wyoming</desc>
+      <metadata>
+        <metadata role="datavalue" data-name="d-total">55,973</metadata>
+        <metadata role="datavalue" data-name="r-total">174,419</metadata>
+        <metadata role="datavalue" data-name="other-total">25,457</metadata>
+        <metadata role="datavalue" data-name="d-percent">21.9%</metadata>
+        <metadata role="datavalue" data-name="r-percent">68.2%</metadata>
+        <metadata role="datavalue" data-name="other-percent">10.0%</metadata>
+        <metadata role="datavalue" data-name="margin">46.3%</metadata>
+        <metadata role="datavalue" data-name="winner">Republican</metadata>
+      </metadata>
+    </path>
+  </g>
+  
+  <path class="divider" d="M211,493 V 548 L247,593 M0,425 H 144 L211,493 H 297 L350,547 V 593"/>
+
+  <defs>
+    <metadata role="template" data-template="infobox">
+      <metadata role="header" selector="desc"></metadata>
+      <metadata role="item" selector="[data-name=winner]">Winner</metadata>
+      <metadata role="item" selector="[data-name=margin]">Margin</metadata>
+      <metadata role="item" selector="[data-name=d-total]">Democratic Total</metadata>
+      <metadata role="item" selector="[data-name=r-total]">Republican Total</metadata>
+      <metadata role="item" selector="[data-name=other-total]">Other Total</metadata>
+      <metadata role="item" selector="[data-name=d-percent]">Democratic Percent</metadata>
+      <metadata role="item" selector="[data-name=r-percent]">Republican Percent</metadata>
+      <metadata role="item" selector="[data-name=other-percent]">Other Percent</metadata>
+    </metadata>    
+  </defs>  
+
+  <script type="text/javascript">
+    window.onload = function () {
+      var infobox = new infobox_obj();
+    }
+
+    function bind (scope, fn) {
+      return function () {
+        return fn.apply( scope, arguments );
+      }
+    }
+
+    function infobox_obj() {
+      this.data_template = {};
+      this.data = [];
+      this.root = document.documentElement;
+      this.box = null;
+      this.bg = null;
+      this.hilite_clone = null;
+      this.text_root = null;
+      this.text_x = 7;
+      this.text_y = 14;
+      this.dy = "1.25em";
+
+      this.coords = this.root.createSVGPoint();
+      this.offset = this.root.createSVGPoint();
+      this.offset.x = 7;
+      this.offset.y = 7;
+
+      this.box_style = "pointer-events:none;";
+      // this.bg_style = "fill:whitesmoke; stroke:whitesmoke; fill-opacity:0.9;";
+      // this.text_style = "font-family:Tahoma,sans-serif; font-size:10px; fill:rgb(90,90,90);";
+      this.bg_style = "fill:#252525; stroke:#252525; fill-opacity:0.9;";
+      this.text_style = "font-family:Tahoma,sans-serif; font-size:10px; fill:whitesmoke;";
+      this.header_style = "font-size:1.2em; font-weight:bold;";
+
+      this.init();
+    }
+
+    infobox_obj.prototype.init = function () {
+      const svg_ns = "http://www.w3.org/2000/svg";
+
+      this.box = document.createElementNS(svg_ns, "svg");
+      this.box.setAttribute("style", this.box_style );
+      this.box.setAttribute("id", "infobox");
+      // this.box.setAttribute("width", "15%" );
+      // this.box.setAttribute("height", "15%" );
+      this.box.setAttribute("width", "25%" );
+      this.box.setAttribute("height", "25%" );
+
+      this.bg = document.createElementNS(svg_ns, "rect");
+      this.bg.setAttribute("style", this.bg_style );
+      this.bg.setAttribute("width", "100%" );
+      this.bg.setAttribute("height", "100%" );
+      this.box.appendChild(this.bg);
+
+      this.text_root = document.createElementNS(svg_ns, "text");
+      this.text_root.setAttribute("aria-live", "polite" );
+      this.text_root.setAttribute("style", this.text_style );
+      this.text_root.setAttribute("x", this.text_x);
+      this.text_root.setAttribute("y", this.text_y);
+      this.box.appendChild(this.text_root);
+
+      var template = document.querySelector("[role=template]");
+      var header = document.querySelector("[role=header]");
+      this.data_template["header"] = {
+        "selector": header.getAttribute("selector"),
+        "label": header.textContent
+      };
+      var text_header = document.createElementNS(svg_ns, "tspan");
+      text_header.setAttribute("id", "infobox_header");
+      text_header.setAttribute("x", this.text_x);
+      text_header.setAttribute("style", this.header_style );
+      this.text_root.appendChild(text_header);
+
+      this.data_template["items"] = [];
+
+      var items = template.querySelectorAll("[role=item]");
+      for (var i = 0, i_len = items.length; i_len > i; ++i) {
+        var item = items[i];
+        this.data_template["items"].push(
+          {
+            "selector": item.getAttribute("selector"),
+            "label": item.textContent
+          }
+        );
+
+        var text_name = document.createElementNS(svg_ns, "tspan");
+        text_name.setAttribute("id", "infobox_name-" + i);
+        text_name.setAttribute("x", this.text_x);
+        text_name.setAttribute("dy", this.dy);
+        text_name.setAttribute("style", "font-weight:bold;");
+        text_name.textContent = item.textContent + ":";
+        this.text_root.appendChild(text_name);
+
+        var text_value = document.createElementNS(svg_ns, "tspan");
+        text_value.setAttribute("id", "infobox_value-" + i);
+        text_value.setAttribute("dx", "0.5em");
+        text_value.setAttribute("style", "font-weight:normal;");
+        text_name.appendChild(text_value);
+
+        this.dy = "1em";
+      }
+
+      var regions = document.querySelectorAll("[role=datapoint]");
+      for (var s = 0, s_len = regions.length; s_len > s; ++s) {
+        var region_el = regions[s];
+        region_el.addEventListener("focus", bind(this, this.show_info), false );
+        region_el.addEventListener("mouseenter", bind(this, this.show_info), false );
+        // region_el.addEventListener("mouseenter", bind(this, this.set_focus), false );
+        region_el.addEventListener("blur", bind(this, this.hide_info), false );
+        region_el.addEventListener("mouseleave", bind(this, this.hide_info), false );
+        region_el.addEventListener("mousemove", bind(this, this.follow_cursor), false );
+
+        var obj = [];
+        obj["header"] = region_el.querySelector( this.data_template.header.selector ).textContent;
+        for (var i = 0, i_len = this.data_template.items.length; i_len > i; ++i) {
+          var item = this.data_template.items[i];
+          obj.push(
+            {
+              "value": region_el.querySelector( item.selector ).textContent,
+              "label": item.label
+            }
+          );
+        }
+        this.data[ region_el.id ] = obj;
+      }
+
+      this.box.style.display = "none";      
+      document.documentElement.appendChild(this.box);
+    }
+
+    infobox_obj.prototype.set_focus = function ( event ) {
+      event.target.focus();
+    }
+
+    infobox_obj.prototype.show_info = function ( event ) {
+
+      var region = event.target;
+
+      // highlight clone
+      const svg_ns = "http://www.w3.org/2000/svg";
+      this.hilite_clone = document.createElementNS(svg_ns, "use");
+      this.hilite_clone.setAttributeNS("http://www.w3.org/1999/xlink", "href", "#" + region.id);
+      this.hilite_clone.setAttribute("style", "stroke:black; stroke-width:5px; pointer-events:none;");
+      this.root.insertBefore(this.hilite_clone, this.box);
+        console.log(this.hilite_clone);
+
+      var info = this.data[ region.id ];
+      var item_el = this.box.querySelector("#infobox_header");
+      item_el.textContent = info.header;
+
+      for (var i = 0, i_len = info.length; i_len > i; ++i) {
+        var item = info[i];
+        var item_el = this.box.querySelector("#infobox_value-" + i);
+        item_el.textContent = item.value;
+
+        var name_el = this.box.querySelector("#infobox_name-" + i);
+                console.log(name_el);
+                console.log(this.data_template["items"][i]);
+
+        name_el.textContent = this.data_template["items"][i].label + ": "; 
+        name_el.appendChild(item_el);
+      }
+      // this.text_root.remove()
+      // this.box.appendChild(this.text_root);
+      // this.box.replaceChild(this.text_root, this.text_root.cloneNode(true))
+      this.box.style.display = "inline";
+
+      var bbox = this.text_root.getBBox();
+      this.box.setAttribute("viewBox", "0 0 " + (bbox.width + 14) + " " + (bbox.height + 5) );
+
+
+      this.fix_coords( event );
+      // console.log(this.coords);
+      // (this.coords.x).isNaN() 
+      if ( "mouseenter" == event.type ) {
+        this.box.setAttribute("x", this.coords.x + 5 );
+        this.box.setAttribute("y", this.coords.y + 5 );
+
+        this.follow_cursor( event );
+      } else if ( "focus" == event.type ) {
+        // console.log(event.type);
+        this.move_box( event );
+      }
+
+    }
+
+    infobox_obj.prototype.move_box = function ( event ) {
+      var region = event.target;
+      var bbox = region.getBBox();
+
+      // this.coords.x = bbox.x + bbox.width;
+      // this.coords.y = bbox.y;
+      // this.coords = this.coords.matrixTransform(this.root.getScreenCTM().inverse());
+     
+      // this.box.setAttribute("x", this.coords.x);
+      // this.box.setAttribute("y", this.coords.y );
+
+      var root_vb_array = this.root.getAttribute("viewBox").split(" ");
+      var box_vb_array = this.box.getAttribute("viewBox").split(" ");
+      var box_bbox = this.box.getBBox();
+
+      var x_shift = +root_vb_array[2] - ((box_bbox.x) + +box_bbox.width);
+        // console.log("vb:" + +root_vb_array[2]);
+        // // console.log(("box: " + (box_bbox.x) + box_bbox.width));
+        // console.log("x: " + +this.box.getAttribute("x"));
+        // console.log("width: " + box_bbox.width);
+        // console.log("width: " + +this.box.getAttribute("width"));
+      var x = bbox.x + bbox.width;
+      if ( 0 > x_shift ) {
+        x = bbox.x - +box_bbox.width;
+      }
+      this.box.setAttribute("x", bbox.x + bbox.width);
+      this.box.setAttribute("y", bbox.y - 2 );
+   }
+
+    infobox_obj.prototype.follow_cursor = function ( event ) {
+      this.fix_coords( event );
+
+      var root_vb_array = this.root.getAttribute("viewBox").split(" ");
+      var box_vb_array = this.box.getAttribute("viewBox").split(" ");
+
+      var x_shift = +root_vb_array[2] - ((this.coords.x + this.offset.x) + +box_vb_array[2]);
+      var x = this.coords.x + this.offset.x;
+      if ( 0 > x_shift ) {
+        x += x_shift;
+      }
+
+      var y_shift = +root_vb_array[3] - ((this.coords.y + this.offset.y) + +box_vb_array[3]);
+      var y = this.coords.y + this.offset.y;
+      if ( 0 > y_shift ) {
+        y += y_shift;
+      }
+
+      this.box.setAttribute("x", x);
+      this.box.setAttribute("y", y );
+    }
+
+    infobox_obj.prototype.hide_info = function () {
+      this.box.style.display = "none";
+
+      this.hilite_clone.remove();
+    }
+
+    infobox_obj.prototype.fix_coords = function ( event ) {
+      this.coords.x = event.clientX;
+      this.coords.y = event.clientY;
+      this.coords = this.coords.matrixTransform(this.root.getScreenCTM().inverse());
+    }
+  </script>
+
+</svg>
