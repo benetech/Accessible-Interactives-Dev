@@ -1,0 +1,3 @@
+Ideas for Code Sprint Organization
+
+Have a UX table where people can consult a group of UX experts, the group can bounce ideas around for a bit, and then the person can leave with a suggestion from the group, work on their code or design for a while, and return later for further feedback. 

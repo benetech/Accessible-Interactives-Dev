@@ -1,0 +1,51 @@
+Basics:
+Regions must be defined in SVG.
+Data must be assignable to the regions defined by the user.
+Name-value pair is the format of the data.
+
+Low vision:
+- Position the info box appropriately to the state
+- Zoom of info box independent of zoom of map
+
+Two philosophies for low-vision users:
+- localization to the state
+- localization to the screen focus
+
+Data output:
+- must stay within the screen
+- info box must start at upper left of state's bounding box (convention is below and to the right of the cursor)--or at least be bound to it in such a way as to always stay on screen
+- info box must be stylable:
+  + font size
+  + font face
+  + background/foreground
+  + zoomable separately from the map itself
+- highlighting features for low vision
+  + aria-select triggers it
+  + customizing weight
+  + customizing color of boundary
+  + add icon in middle of the selected state
+  + states around the selected state fade back in intensity
+- zooming:
+  + part of the widget?
+  + rely on browser/system capabilities?
+
+Zooming on a mobile:
+- Allow user to orient map and info box relative to each other (above/below; side by side)
+- Low-vision users: Very visible
+
+Blind users:
+- Serial navigation in first iteration (going through a table in whatever order in which it is sorted)
+- Stretch goal: Navigable by keyboard input
+- Aria-live reads information automatically and cannot be controlled to read line by line. Doug notes that we need to make it possible to "shift focus" in the aria-live info.
+
+Goal: Not just to show information for one state, but also to show relationship to its neighbors.
+
+Is there a way to let people apply their own supersets to the data? ("Midwest"; "Northeast"; "Old South"; "Solid South"; etc.)
+
+Why not tables: Own limitations for how people can interact with them. Don't want to just sort--want people to be able to access their own way.
+
+Datasets to test ability to use with other maps:
+- https://www.census.gov/library/visualizations/2017/comm/irish_american.html
+
+
+describler: @schepazu created this as a prototype of screen reader for data visualization.
