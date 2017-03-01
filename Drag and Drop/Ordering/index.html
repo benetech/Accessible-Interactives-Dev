@@ -77,6 +77,24 @@ tmpSelect.appendChild(tmpOption)
 });
 }
 
+function moveUp() {
+listNode = getElementById("list")
+index = listNode.selectedIndex
+
+currentNode = listNode.childNodes[index]
+prevNode = currentNode.previousSibling
+listNode.insertBefore(currentNode, prevNode)
+}
+
+function moveUp() {
+listNode = getElementById("list")
+index = listNode.selectedIndex
+
+currentNode = listNode.childNodes[index]
+nextNode = currentNode.nextSibling
+listNode.insertBefore(currentNode, nextNode)
+}
+
 generateShuffledList()
 populateList("list")
 	</script>
