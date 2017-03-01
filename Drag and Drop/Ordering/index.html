@@ -105,6 +105,17 @@ say("moved "+currentNode.value+" after "+nextNode.value)
 }
 }
 
+listNode = document.getElementById("list")
+listNode.onkeypress = function(evt) {
+  if (evt.keyCode === 91) {
+    // '[' pressed
+    moveUp()
+  } else if (evt.keyCode === 93) {
+    // ']' pressed
+    moveDown()
+  }
+}
+
 generateShuffledList()
 populateList("list")
 	</script>
