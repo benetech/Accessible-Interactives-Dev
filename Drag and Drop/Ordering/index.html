@@ -82,8 +82,10 @@ listNode = document.getElementById("list")
 index = listNode.selectedIndex
 
 currentNode = listNode.childNodes[index]
-prevNode = currentNode.previousSibling
-listNode.insertBefore(currentNode, prevNode)
+if (currentNode.previousSibling) {
+  prevNode = currentNode.previousSibling
+  listNode.insertBefore(currentNode, prevNode)
+}
 }
 
 function moveDown() {
