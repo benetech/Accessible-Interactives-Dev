@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSUN</title>
+
+	<!-- SCRIPTS -->
+    <script src="lib/jquery-3.1.1.js"></script>
+    <script src="http://johnny.github.io/jquery-sortable/js/jquery-sortable-min.js"></script>
+    <script src="lib/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="scripts/app.js"></script>
+    
+
+	<!-- CSS -->
+	<link href="lib/jquery-ui-1.12.1/jquery-ui.min.css" rel="stylesheet" type="text/css" media="screen">
+	<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen">
+	<link href="styles/styles.css" rel="stylesheet" type="text/css" media="screen" />
+
+	<!-- CDN -->
+	<!-- <script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script> -->
+	<!-- <script src="https://cdn.rawgit.com/abdmob/x2js/master/xml2json.js"></script> -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+
+	<!-- SCRIPTS IN PAGE  -->
+
+</head>
+<body>
+<h1>Accessible, drag & drop, touch-friendly, sortable list</h1>
+<p>Mouse and touch: drag and drop to reorder. Keyboard and text-based: change the number input and hit enter or the update button.</p>
+<form id="sort-it">
+    <ol>
+      <li>This is item #1 
+          <label for="custom-number-1">New order:</label>
+        <input id="custom-number-1" name="custom-number-1" type="number" min="1">
+      </li>
+        
+      <li>This is item #2 
+        <label for="custom-number-2">New order:</label>
+        <input id="custom-number-2" name="custom-number-2" type="number" min="1">
+      </li>
+        
+      <li>This is item #3 
+        <label for="custom-number-3">New order:</label>
+        <input id="custom-number-3" name="custom-number-3" type="number" min="1">
+      </li>
+        
+      <li>This is item #4 
+        <label for="custom-number-4">New order:</label>
+        <input id="custom-number-4" name="custom-number-4" type="number" min="1">
+      </li>
+        
+      <li>This is item #5 
+        <label for="custom-number-5">New order:</label>
+        <input id="custom-number-5" name="custom-number-5" type="number" min="1">
+      </li>
+    </ol>
+      <input type="submit" id="manual-sort" name="manual-sort" value="Update">
+</form>
+
+<p>Requires jQuery and this plugin: http://johnny.github.io/jquery-sortable/js/jquery-sortable-min.js</p></body>
+</html>

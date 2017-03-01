@@ -1,0 +1,50 @@
+body {font-family: sans-serif;}
+
+input { font-size: 1em; } /* prevent zoom in mobile */
+
+ol { 
+  /* list style is faked with number inputs */
+  list-style: none;
+  padding: 0;
+}
+
+li { 
+    position: relative; 
+    min-height: 1em;
+    cursor: move;
+    padding: .5em .5em .5em 2.5em;
+    background: #eee;
+    border: 1px solid #ccc;
+    margin: .25em 0;
+    border-radius: .25em;
+    max-width: 14em;
+}
+    
+li input { 
+    /* Move these to visually fake the ol numbers */
+    position: absolute;
+    width: 1.75em;
+    left: .25em;
+    top: .25em;
+    border: 0;
+    text-align: center;
+    background: transparent
+}
+    
+li label { 
+  /* visually hidden offscreen so it still benefits screen readers */
+    position: absolute;
+    left: -9999px;
+}
+
+/* sortable plugin styles when dragged */
+.dragged {
+    position: absolute;
+    opacity: 0.5;
+    z-index: 2000;
+}
+
+li.placeholder {
+    position: relative;
+    background: purple; 
+}
