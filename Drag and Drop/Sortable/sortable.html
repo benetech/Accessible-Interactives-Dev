@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSUN</title>
+
+	<!-- SCRIPTS -->
+    <script src="lib/jquery-3.1.1.js"></script>
+    <script src="lib/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="scripts/app.js"></script>
+
+	<!-- CSS -->
+	<link href="lib/jquery-ui-1.12.1/jquery-ui.min.css" rel="stylesheet" type="text/css" media="screen">
+	<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen">
+	<link href="styles/styles.css" rel="stylesheet" type="text/css" media="screen" />
+
+	<!-- CDN -->
+	<!-- <script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script> -->
+	<!-- <script src="https://cdn.rawgit.com/abdmob/x2js/master/xml2json.js"></script> -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+
+	<!-- SCRIPTS IN PAGE  -->
+    <script>
+		$( function() {
+		    $( "#sortable" ).sortable();
+		    $( "#sortable" ).disableSelection();
+		});
+		
+  </script>
+
+</head>
+<body>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6">
+	    <section id="items">
+		  <h3>List of Sortable Items</h3>
+		  	<ul id="sortable">
+			  <li class="ui-state-default">Item 1</li>
+			  <li class="ui-state-default">Item 2</li>
+			  <li class="ui-state-default">Item 3</li>
+			  <li class="ui-state-default">Item 4</li>
+			  <li class="ui-state-default">Item 5</li>
+			  <li class="ui-state-default">Item 6</li>
+			  <li class="ui-state-default">Item 7</li>
+			</ul>
+		</section>
+    </div>
+	<div class="col-md-6">
+		
+	</div>
+  </div>
+</div>
+
+</body>
+</html>
