@@ -1,0 +1,43 @@
+/* STANDARD STYLES */
+body {
+	
+}
+
+li {
+	margin-bottom: 5px;
+    border: 1px solid #000;
+    width: 200px;
+    height: 30px;
+    list-style: none;
+    cursor: move;
+}
+
+.category ul {
+	border: 1px solid #000;
+	height: 100px;
+}
+
+.items ul {
+	border: 1px solid #000;
+	height: 300px;
+}
+
+.navbar {
+    border-radius: 0px;
+    border: 0px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 60px;
+    background-color: #F5F5F5;
+}
+
+
+
+
+
+
+/* BOOTSTRAP STYLES */

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSUN</title>
+
+	<!-- SCRIPTS -->
+    <script src="lib/jquery-3.1.1.js"></script>
+    <script src="lib/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="scripts/app.js"></script>
+
+	<!-- CSS -->
+	<link href="lib/jquery-ui-1.12.1/jquery-ui.min.css" rel="stylesheet" type="text/css" media="screen">
+	<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen">
+	<link href="styles/styles.css" rel="stylesheet" type="text/css" media="screen" />
+
+	<!-- CDN -->
+	<!-- <script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script> -->
+	<!-- <script src="https://cdn.rawgit.com/abdmob/x2js/master/xml2json.js"></script> -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+
+	<!-- SCRIPTS IN PAGE  -->
+    <script>
+		$( function() {
+			$('.draggable').draggable({
+		      revert: "invalid",
+		      cursor: "move",
+		    });
+		    
+		    $(".droppable").droppable({
+			    accept: '.draggable',
+			    drop: function(event, ui) {
+			        $(this).append($(ui.helper));
+			        console.log(ui);
+			        $(".draggable").addClass("item"); 
+			        $(".item").removeAttr("style");
+/*
+			        $(".item").draggable({
+			            revert: 'invalid'
+			        });
+*/
+			    }
+			});
+		    
+		} );
+		
+  </script>
+
+	</script>
+</head>
+<body>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6">
+	    <section class="items" id="items">
+		  <h3>List of Items</h3>
+		  <ul>
+		    <li class="draggable">AAAAA</li>
+		    <li class="draggable">BBBBB</li>
+		    <li class="draggable">CCCCC</li>
+		    <li class="draggable">DDDDD</li>
+		    <li class="draggable">EEEEE</li>
+		    <li class="draggable">FFFFF</li>
+		    <li class="draggable">GGGGG</li>
+		    <li class="draggable">HHHHH</li>
+		  </ul>
+		</section>
+    </div>
+	<div class="col-md-6">
+		<section class="category" id="category1">
+		  <h3>Category 1</h3>
+		  <ul class="droppable">
+		    
+		  </ul>
+		</section>
+		
+		<section class="category" id="category2">
+		  <h3>Category 2</h3>
+		  <ul class="droppable">
+		    
+		  </ul>
+		</section>
+		
+		<section class="category" id="category3">
+		  <h3>Category 3</h3>
+		  <ul class="droppable">
+		    
+		  </ul>
+		</section>
+	</div>
+  </div>
+</div>
+
+</body>
+</html>
