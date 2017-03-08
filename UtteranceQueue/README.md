@@ -10,7 +10,7 @@ in which alerts are announced.  Simply triggering a change to content of an HTML
 attribute is insufficient because aria-live behavior (specifically queing) is inconsistent across various user agents.
 There is no specification for order, queue or priority (beyond 'polite', and 'assertive' aria-live attributes).
 
-The UtteranceQueue is an attempt to solve this, by providing a way to order alerts, and queue multiple many alerts
+The UtteranceQueue is an attempt to solve this, by providing a way to order alerts, and queue many alerts
 if it is important that they all be heard.  The queue uses an event system - whenever an utterance is ready to be
 announced, the UtteranceQueue will emit an event so that the client can observe the next utterance that should be
 announced.
