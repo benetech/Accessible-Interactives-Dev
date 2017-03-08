@@ -53,4 +53,7 @@ removed from the queue when utterance 3 is added.  Utterance 4 has a predicate f
 it is time for utterance 4 to be announced, the predicate function will prevent an event from triggering that suggests
 the utterance should be announced.
 
+Please see https://github.com/benetech/Accessible-Interactives-Dev/blob/master/UtteranceQueue/UtteranceQueueExample.html
+for an example usage in an HTML app.
+
 
