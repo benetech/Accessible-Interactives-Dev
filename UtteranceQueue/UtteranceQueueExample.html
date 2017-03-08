@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="Emitter.js"></script>
+    <script type="text/javascript" src="UtteranceQueue.js"></script>
+    <title>Utterance Queue Example</title>
+  </head>
+  <body>
+    <h1>Utterance Queue Example</h1>
+
+    <h2>Random utterance added to queue every second:</h2>
+    <p id='rand-sent'>Will update when we add sentence to queue</p>
+
+    <h2>Queue length:</h2>
+    <p id='queue-length'></p>
+
+    <h2>aria-live element, will update when sentence gets to front of queue:</h2>
+    <p id='live-element' aria-live="assertive"></p>
+
+    <h2>Content below updates when an item is skipped or removed from queue</h2>
+    <p id='predicate-failed'></p>
+    <p id='same-type-found'></p>
+  </body>
+
+  <script type="text/javascript">
+
+    var utteranceQueue = new UtteranceQueue();
+
+    function autorun() {
+      // list of very random sentences
+      var randomSentences = [
+        'The quick brown fox jumps over the lazy dog.',
+        'Last Friday in three week’s time I saw a spotted striped blue worm shake hands with a legless lizard.',
+        'Writing a list of random sentences is harder than I initially thought it would be.',
+      ];
+
+      var randomTypes = {
+        0: 'TYPE_0',
+        1: 'TYPE_1',
+        2: 'TYPE_2'
+      };
+
+      // add a queue item to the utterance queue
+      function addToQueue() {
+        var randomInt = Math.floor( Math.random() * randomSentences.length );
+        var randomSentence = randomSentences[ randomInt ];
+        var randomBoolean = Math.random() <= 0.75; // want most to pass through
+
+        document.getElementById( 'rand-sent' ).textContent = randomSentence;
+        var queueItem = {
+          utterance: randomSentence,
+          type: randomTypes[ randomInt ],
+          condition: function() { return randomBoolean; }
+        }
+        utteranceQueue.add( queueItem );
+        document.getElementById( 'queue-length' ).textContent = utteranceQueue.queue.length;
+      }
+
+      utteranceQueue.utteranceChangedEmitter.addListener( function( utterance ) {
+        document.getElementById( 'live-element' ).textContent = utterance;
+      } );
+
+      var predicateFailedCount = 0;
+      utteranceQueue.predicateFailedEmitter.addListener( function( utterance ) {
+        predicateFailedCount++;
+        document.getElementById( 'predicate-failed' ).textContent = 'Utterance skipped - client predicate failed ' + '(' + predicateFailedCount + ')';
+      } );
+
+      var sameTypeFoundCount = 0;
+      utteranceQueue.typeSameEmitter.addListener( function( utterance ) {
+        sameTypeFoundCount++;
+        document.getElementById( 'same-type-found' ).textContent = 'Same type item removed from queue ' + '(' + sameTypeFoundCount + ')';
+      } );
+
+      // alert a random sentence every second
+      setInterval( addToQueue, 1000 );
+
+    }
+
+    if ( window.addEventListener ) window.addEventListener( "load", autorun, false );
+    else if ( window.attachEvent ) window.attachEvent( "onload", autorun );
+    else window.onload = autorun;
+  </script>
+</html>
