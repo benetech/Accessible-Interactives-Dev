@@ -7,8 +7,8 @@ An queueing system for alerts that might come from a highly interactive applicat
 In an accessible interactive web application, it is conceivable that a single interaction can trigger
 many updates at once. It is also likely that clients will want to control the order
 in which alerts are announced.  Simply triggering a change to content of an HTML element with the "aria-live"
-attribute is insufficient because aria-live behavior (specifically queuing) is inconsistent across various user agents.
-There is no specification for order, queueu or priority (beyond 'polite', and 'assertive' aria-live attributes).
+attribute is insufficient because aria-live behavior (specifically queing) is inconsistent across various user agents.
+There is no specification for order, queue or priority (beyond 'polite', and 'assertive' aria-live attributes).
 
 The UtteranceQueue is an attempt to solve this, by providing a way to order alerts, and queue multiple many alerts
 if it is important that they all be heard.  The queue uses an event system - whenever an utterance is ready to be
@@ -18,9 +18,9 @@ announced.
 In addition to queuing alerts, the client can specify an utterance "type", and a predicate function. When type is
 specified for an utterance added to the queue, the queue will remove all utterances that are already in the queue that
 have the same type. This feature prevents the user from being overwhelmed with a multitude of alerts that cover the
-same information. The predicate function is a function for an utterance is called right before an utterance is about
-to be removed from the front of the queue. If the function returns false, the utterance will be removed from the queue
-silently without triggering an event.
+same information. The predicate function is called right before the event is fired that signals an utterance made it
+to the front of the queue. If the function returns false, the utterance will be removed from the queue silently without
+triggering any event.
 
 ### Example Usage
 
