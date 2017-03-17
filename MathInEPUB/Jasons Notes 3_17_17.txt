@@ -1,0 +1,38 @@
+The example from the code sprint is as follows (see my discussion below the code).
+XHTML fragment:
+ 
+<img src="eq3.svg" aria-hidden="true" alt="alt hidden left-parenthesis b right-parenthesis mu left-parenthesis upper A right-parenthesis less-than-or-equal-to mu left-parenthesis upper B right-parenthesis if upper A subset-of upper B semicolon"/>
+ 
+<span class="mwe-math-mathml-a11y">
+<math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mtext>(b) </mtext><mi>μ</mi><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo><mo>≤</mo><mi>μ</mi><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo><mspace width="1em"></mspace><mtext>if </mtext><mi>A</mi><mo>⊂</mo><mi>B</mi><mo>;</mo></mrow></math>
+</span>
+ 
+CSS:
+.mwe-math-mathml-a11y {
+    clip: rect( 1px,1px,1px,1px );
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+ 
+As discussed at the meeting, the disastrous case for the user of this example occurs where JavaScript = unsupported, MathML = unsupported, aria-hidden = supported – the screen reader user gets either nothing, or spurious text from inside the MathML elements.
+ 
+So we follow Sina and move aria-hidden to the SPAN element. In fact, I would favor dropping the SPAN element altogether, giving a structure that looks like:
+<img […]> <math […]>[…]</math>
+In which case, aria-hidden=”true” goes directly on the MATH element.
+ 
+The purpose of the CSS in the example was to hide the MathML visually, while leaving it available to the accessibility API. I assume this is why display: none was not used. The only possible advantage, it seems to me, in doing this occurs where JavaScript = unsupported, aria-hidden = unsupported, MathML = supported, in which case the user gets both the alt attribute of the image and the MathML – but at least they can still navigate the MathML if their screen reader allows it, which it would in that case. I’m going to claim that this case is extremely unlikely in practice. Thus, there’s a small query whether we should switch to display: none or not, but I lean toward using it unless there are further reasons against.
+ 
+Note that the disastrous case for the Code Sprint example is clearly handled: the user receives the alt text from the image.
+ 
+The problematic case for the revised example is: JavaScript = unsupported, aria-hidden = supported, MathML = supported. The user receives the alt text rather than their screen reader’s MathML rendering. Since this is better than the disastrous case above, it’s a tolerable graceful degradation – the best of a series of bad options.
+ 
+Then all the JavaScript needs to do is (1) detect whether MathML is likely to be supported. If so, put aria-hidden=”true” on the IMG element and make alt=”” (in case aria-hidden isn’t supported). Otherwise (i.e., MathML is not supported), remove the math element from the DOM (in case aria-hidden is unsupported). Note that “MathML is unsupported” means that it won’t be passed to the accessibility API and hence to an AT that can handle it. We can’t test for this directly, so we’ll have to detect platform/user agent/reading system (or some combination of these) and decide appropriately.
+ 
+I may well have committed a few blunders in the above – corrections and clarifications are welcome. Once we have the description right, we can write a prototype of the JavaScript and rework the markup example.
+ 
+Regards,
+ 
+Jason.
