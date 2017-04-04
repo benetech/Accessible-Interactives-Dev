@@ -1,0 +1,22 @@
+.MathMLNoDisplay {
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: polygon(0px 0px,  0px 0px,  0px 0px,  0px 0px);
+	position: absolute !important;
+	white-space: nowrap;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+/* turn off MathML display on kindles */
+@media amzn-kf8 {
+   math {
+     display: none;
+   }
+}
+
+@media amzn-mobi {
+   math {
+     display: none;
+   }
+}
