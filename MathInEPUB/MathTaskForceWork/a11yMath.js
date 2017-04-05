@@ -60,7 +60,7 @@ function MakeMathAccessible() {
 	};
 	var changeImage = function(element) {
 		if (element.getAttribute("role")=="math") {
-			element.setAttribute("alt", " ");
+			element.setAttribute("alt", "");
 			element.setAttribute("aria-hidden", "true");
 		}
 	};
