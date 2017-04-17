@@ -10,10 +10,6 @@
     <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
     <item id="a11yMath.js" href="Misc/a11yMath.js" media-type="application/javascript"/>
     <item id="a11yMath.css" href="Styles/a11yMath.css" media-type="text/css"/>
-    <item id="epub-image-x2nex1.svg" href="Images/epub-image-x2nex1.svg" media-type="image/svg+xml"/>
-    <item id="epub-image-x2y2.svg" href="Images/epub-image-x2y2.svg" media-type="image/svg+xml"/>
-    <item id="epub-image-2pointform.svg" href="Images/epub-image-2pointform.svg" media-type="image/svg+xml"/>
-    <item id="epub-image-x1y1.svg" href="Images/epub-image-x1y1.svg" media-type="image/svg+xml"/>
     <item id="Section1.xhtml" href="Text/Section1.xhtml" media-type="application/xhtml+xml"/>
   </manifest>
   <spine toc="ncx">
