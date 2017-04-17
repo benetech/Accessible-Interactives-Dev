@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<title>MathML Sample (Images)</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8"/>
+<link rel="stylesheet" type="text/css" href="../Styles/a11yMath.css"/>
+<script type="text/javascript" src="../Misc/a11yMath.js"> </script>
+</head>
+
+<body lang="EN-US" onload="MakeMathAccessible()">
+<h1> Sample page with Math encoded as HTML Math</h1>
+<h2> HTML Math Description</h2>
+<p>
+This page uses &lt;i&gt;, &lt;sup&gt;, and &lt;sub&gt; tags along with non-breaking spaces to encode math. This technique is only useful for very simple math. It's advantage is that it renders quickly, works everywhere, and matches the fonts family and sizes on the page although the math typography is not great.
+</p>
+<h2>Additional requirements to make the math accessible</h2>
+<p>
+In order to make this accessible, three separate elements are used as shown:
+<div>
+    <pre>
+&lt;math xmlns="http://www.w3.org/1998/Math/MathML" class="MathMLNoDisplay" aria-hidden="true"&gt; ...MathML... &lt;/math&gt;
+&lt;span class="MathMLNoDisplay"&gt; ...text to speak... &lt;span&gt;
+&lt;span role="math" aria-hidden="true" &gt; ...HTML Math... &lt;/span&gt;
+    </pre>
+</div>   
+Although the order is not important, we use an ordering to simplify the description.
+<ol>
+<li>The first item is the MathML equivalent of the HTML Math. This element allows for full accessibility when possible. The element is clipped and invisible to both display and speech. When MathML and JS are supported, this element has aria-hidden changed to 'false' so that the reading system uses it.</li>
+<li>A span element containing the text to speak follows the MathML. It is hidden from display but not speech. When MathML and JS are supported, this element is changed so it is not spoken.</li>
+<li>The HTML math is last. It must be wrapped in a span tag with role="math". It is visible to display but not speech.</li>
+</ol>
+
+<p>
+If the math is linear (does not use &lt;sup&gt; or &lt;sub&gt;), then the only the third element (the HTML math) can be used. This might ease the burden for publishers. However, additional screen reader support or additional JavaScript (basically, to recreate the MathML) is needed for conversion to braille.
+</p>
+<p>
+If there is <em>no</em> JavaScript support, then we presume there is no MathML support and have the cases:
+</p>
+<ul>
+<li>ARIA supported: the second element is read and the third element is displayed</li>
+<li><em>No</em> ARIA support (Kindle only?): we get triple reading, the middle of which is right.
+<i>It is possible that the EPUB-to-MOBI conversion tool strips the MathML so that we only get a double reading.</i> The style sheet for Kindle's should remove the MathML from the reading and display so we just get a double reading.</li>
+</ul>
+
+<h2>Math sample text</h2>
+<p>
+The formula for a line that runs through the points
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" class="MathMLNoDisplay" aria-hidden="true">
+  <mo>(</mo>
+    <msub> <mi>x</mi><mn>1</mn></msub>
+	 <mo>,</mo>
+    <msub> <mi>y</mi><mn>1</mn></msub>
+  <mo>)</mo>
+</math>
+<span class="MathMLNoDisplay"> x sub 1 y sub 1 </span>
+<span role="math" aria-hidden="true">(<i>x</i><sub>1</sub>,&#160;<i>y</i><sub>1</sub>)</span>
+and 
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" class="MathMLNoDisplay" aria-hidden="true">
+  <mo>(</mo>
+    <msub> <mi>x</mi><mn>2</mn> </msub>
+	 <mo>,</mo>
+    <msub> <mi>y</mi><mn>2</mn> </msub>
+  <mo>)</mo>
+</math>
+<span class="MathMLNoDisplay"> x sub 2, y sub 2 </span>
+<span role='math' aria-hidden="true">(<i>x</i><sub>2</sub>,&#160;<i>y</i><sub>2</sub>)</span>
+is:
+</p>
+<!-- too complicated for HTML Math - fall back to MathML + image or CSS Math -->
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block" class="MathMLNoDisplay" aria-hidden="true">
+    <mrow>
+      <mstyle displaystyle="true">
+        <mi>y</mi>
+        <mo>&#x2212;<!-- − --></mo>
+        <msub>
+          <mi>y</mi>
+          <mrow>
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mrow>
+          <mfrac>
+            <mrow>
+              <msub>
+                <mi>y</mi>
+                <mrow>
+                  <mn>2</mn>
+                </mrow>
+              </msub>
+              <mo>&#x2212;<!-- − --></mo>
+              <msub>
+                <mi>y</mi>
+                <mrow>
+                  <mn>1</mn>
+                </mrow>
+              </msub>
+            </mrow>
+            <mrow>
+              <msub>
+                <mi>x</mi>
+                <mrow>
+                  <mn>2</mn>
+                </mrow>
+              </msub>
+              <mo>&#x2212;<!-- − --></mo>
+              <msub>
+                <mi>x</mi>
+                <mrow>
+                  <mn>1</mn>
+                </mrow>
+              </msub>
+            </mrow>
+          </mfrac>
+        </mrow>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo>&#x2212;<!-- − --></mo>
+        <msub>
+          <mi>x</mi>
+          <mrow>
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+</math>
+<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/dfcda9b4fd5d89e93c01ae08d9cd60add391954f" style="vertical-align: -2.171ex; width:27.295ex; height:5.176ex;" role="math" alt="y minus y sub 1 equals the fraction with numerator y sub 2 minus y sub 1 and denominator x sub 2 minus x sub 1, times open paren x minus x sub 1 close paren" />
+<p>
+where
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" class="MathMLNoDisplay" aria-hidden="true">
+  <msub> <mi>x</mi><mn>2</mn> </msub>
+  <mo>&#x2260;<!-- not equals --></mo>
+  <msub> <mi>x</mi><mn>1</mn> </msub>
+</math>
+<span class="MathMLNoDisplay"> x sub 2 not equal to x sub 1 </span>
+<span role="math" aria-hidden="true"><i>x</i><sub>2</sub>&#160;&#x2260;&#160;<i>x</i><sub>1</sub></span>.
+</p>
+
+</body>
+</html>

@@ -18,29 +18,32 @@ This page uses &lt;i&gt;, &lt;sup&gt;, and &lt;sub&gt; tags along with non-break
 <h2>Additional requirements to make the math accessible</h2>
 <p>
 In order to make this accessible, three separate elements are used as shown:
-<pre>
+<div>
+    <pre>
 &lt;math xmlns="http://www.w3.org/1998/Math/MathML" class="MathMLNoDisplay" aria-hidden="true"&gt; ...MathML... &lt;/math&gt;
 &lt;span class="MathMLNoDisplay"&gt; ...text to speak... &lt;span&gt;
 &lt;span role="math" aria-hidden="true" &gt; ...HTML Math... &lt;/span&gt;
-</pre>
+    </pre>
+</div>   
 Although the order is not important, we use an ordering to simplify the description.
 <ol>
 <li>The first item is the MathML equivalent of the HTML Math. This element allows for full accessibility when possible. The element is clipped and invisible to both display and speech. When MathML and JS are supported, this element has aria-hidden changed to 'false' so that the reading system uses it.</li>
 <li>A span element containing the text to speak follows the MathML. It is hidden from display but not speech. When MathML and JS are supported, this element is changed so it is not spoken.</li>
 <li>The HTML math is last. It must be wrapped in a span tag with role="math". It is visible to display but not speech.</li>
 </ol>
-</p>
+
 <p>
 If the math is linear (does not use &lt;sup&gt; or &lt;sub&gt;), then the only the third element (the HTML math) can be used. This might ease the burden for publishers. However, additional screen reader support or additional JavaScript (basically, to recreate the MathML) is needed for conversion to braille.
 </p>
 <p>
 If there is <em>no</em> JavaScript support, then we presume there is no MathML support and have the cases:
+</p>
 <ul>
 <li>ARIA supported: the second element is read and the third element is displayed</li>
 <li><em>No</em> ARIA support (Kindle only?): we get triple reading, the middle of which is right.
 <i>It is possible that the EPUB-to-MOBI conversion tool strips the MathML so that we only get a double reading.</i> The style sheet for Kindle's should remove the MathML from the reading and display so we just get a double reading.</li>
 </ul>
-</p>
+
 <h2>Math sample text</h2>
 <p>
 The formula for a line that runs through the points
