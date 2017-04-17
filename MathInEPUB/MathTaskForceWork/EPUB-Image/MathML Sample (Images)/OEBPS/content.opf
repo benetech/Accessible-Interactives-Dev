@@ -1,8 +1,10 @@
-<package version="3.0" unique-identifier="pub-id" xmlns="http://www.idpf.org/2007/opf">
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="u9uFUdyoTzapXFLDJ2nodZC">
     <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:opf="http://www.idpf.org/2007/opf">
-<dc:language>en</dc:language>
+    <dc:language>en</dc:language>
     <dc:title>MathML Sample (Images)</dc:title>
     <dc:date xmlns:opf="http://www.idpf.org/2007/opf" opf:event="modification">2017-04-17</dc:date>
+    <dc:identifier id="u9uFUdyoTzapXFLDJ2nodZC" opf:scheme="uuid">u9uFUdyoTzapXFLDJ2nodZC</dc:identifier>
   </metadata>
   <manifest>
     <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
