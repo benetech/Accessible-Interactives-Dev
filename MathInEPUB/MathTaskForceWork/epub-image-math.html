@@ -18,24 +18,28 @@ This page uses &lt;img&gt; elements to encode math. The <i>alt</i> attribute sho
 <h2>Additional requirements to make the math accessible</h2>
 <p>
 In order to make this accessible, two separate elements are used as shown:
-<pre>
+    </p>
+    <div>
+      <pre>
 &lt;math xmlns="http://www.w3.org/1998/Math/MathML" class="MathMLNoDisplay" aria-hidden="true"&gt; ...MathML... &lt;/math&gt;
 &lt;img src="..."  role="math" style="vertical-align: ...amount to shift...;" alt="...text to speak..." &gt;
-</pre>
-Although the order is not important, we use an ordering to simplify the description.
-<ol>
+    </pre>
+  </div>
+  <p>Although the order is not important, we use an ordering to simplify the description.</p>
+  <ol>
 <li>The first item is the MathML equivalent of the HTML Math. This element allows for full accessibility when possible. The element is clipped and invisible to both display and speech. When MathML and JS are supported, this element has aria-hidden changed to 'false' so that the reading system uses it.</li>
 <li>An image element with 'alt' sent and 'vertical-align' set (typically to a negative value in 'ex's). By default, this image is visible and the alt text is spoken. When MathML and JS are supported, this element is changed to be hidden and have alt text be an empty string so it is not spoken.</li>
 </ol>
-</p>
+
 <p>
 If there is <em>no</em> JavaScript support, then we presume there is no MathML support and have the cases:
+    </p>
 <ul>
 <li>ARIA supported: the first element is neither read nor displayed and the third element is both displayed and read.</li>
 <li><em>No</em> ARIA support (Kindle only?): we get double reading, with garbage read for the MathML.
 <i>It is possible that the EPUB-to-MOBI conversion tool strips the MathML so that we only get a single reading.</i> The style sheet for Kindle's should remove the MathML from the reading and display this should work as intended.</li>
 </ul>
-</p>
+
 <p>
 Note: when reading alt text, some screen readers will say something like "graphic" or "image" before reading the alt text. If the alt text is long, it may stop in the middle of the reading and repeat "graphic" before reading more. E.g., NVDA reads the long equation below as "graphic y minus y sub 1 ... and denominator x". Hitting down arrow again resumes reading with "graphic 2 minus x sub 1 ...".
 </p>
@@ -49,7 +53,7 @@ The formula for a line that runs through the points
     <msub> <mi>y</mi><mn>1</mn></msub>
   <mo>)</mo>
 </math>
-<img src="epub-image-x1y1.svg" style="vertical-align: -0.844ex;" role="math" alt="x sub 1 y sub 1">
+<img src="epub-image-x1y1.svg" style="vertical-align: -0.844ex;" role="math" alt="x sub 1 y sub 1"/>
 and
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" class="MathMLNoDisplay" aria-hidden="true">
   <mo>(</mo>
@@ -58,7 +62,7 @@ and
     <msub> <mi>y</mi><mn>2</mn> </msub>
   <mo>)</mo>
 </math>
-<img src="epub-image-x2y2.svg" style="vertical-align: -0.844ex;" role="math" alt="x sub 2 y sub 2">
+<img src="epub-image-x2y2.svg" style="vertical-align: -0.844ex;" role="math" alt="x sub 2 y sub 2"/>
 is:
 </p>
 <!-- too complicated for HTML Math - fall back to an image -->
@@ -66,7 +70,7 @@ is:
     <mrow>
       <mstyle displaystyle="true">
         <mi>y</mi>
-        <mo>&#x2212;<!-- − --></mo>
+        <mo>−<!-- − --></mo>
         <msub>
           <mi>y</mi>
           <mrow>
@@ -83,7 +87,7 @@ is:
                   <mn>2</mn>
                 </mrow>
               </msub>
-              <mo>&#x2212;<!-- − --></mo>
+              <mo>−<!-- − --></mo>
               <msub>
                 <mi>y</mi>
                 <mrow>
@@ -98,7 +102,7 @@ is:
                   <mn>2</mn>
                 </mrow>
               </msub>
-              <mo>&#x2212;<!-- − --></mo>
+              <mo>−<!-- − --></mo>
               <msub>
                 <mi>x</mi>
                 <mrow>
@@ -110,7 +114,7 @@ is:
         </mrow>
         <mo stretchy="false">(</mo>
         <mi>x</mi>
-        <mo>&#x2212;<!-- − --></mo>
+        <mo>−<!-- − --></mo>
         <msub>
           <mi>x</mi>
           <mrow>
@@ -121,12 +125,12 @@ is:
       </mstyle>
     </mrow>
 </math>
-<img src="epub-image-2pointform.svg"  style="vertical-align: -2.103ex;" role="math" alt="y minus y sub 1, equals, the fraction with numerator y sub 2 minus y sub 1, and denominator x sub 2 minus x sub 1, times open paren x minus x sub 1 close paren" />
+<img src="epub-image-2pointform.svg" style="vertical-align: -2.103ex;" role="math" alt="y minus y sub 1, equals, the fraction with numerator y sub 2 minus y sub 1, and denominator x sub 2 minus x sub 1, times open paren x minus x sub 1 close paren"/>
 <p>
 where
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" class="MathMLNoDisplay" aria-hidden="true">
   <msub> <mi>x</mi><mn>2</mn> </msub>
-  <mo>&#x2260;<!-- not equals --></mo>
+  <mo>≠<!-- not equals --></mo>
   <msub> <mi>x</mi><mn>1</mn> </msub>
 </math>
 <img src="epub-image-x2nex1.svg" style="vertical-align: -0.704ex;" role="math" alt="x sub 2 not equal to x sub 1"/>.

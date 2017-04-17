@@ -7,8 +7,8 @@
 </head>
 
 <body lang="EN-US" onload="MakeMathAccessible()">
-<h1> Sample page with Math encoded as HTML Math</h1>
-<h2> HTML Math Description</h2>
+<h1> Sample page with Math encoded as Images</h1>
+<h2> Image Math Description</h2>
 <p>
 This page uses &lt;img&gt; elements to encode math. The <i>alt</i> attribute should describe the math as a fallback description. The vertical-align CSS property should be set as a style on each &lt;img&gt; tag to make sure the image properly aligns with the surrounding text for inline math. It is preferable to use SVG rather than a raster format such as png so that the image scales nicely when the page is zoomed.
 </p>
@@ -16,10 +16,11 @@ This page uses &lt;img&gt; elements to encode math. The <i>alt</i> attribute sho
 <p>
 In order to make this accessible, two separate elements are used as shown:
     </p>
-<div>
-  <pre>&lt;math xmlns="http://www.w3.org/1998/Math/MathML" class="MathMLNoDisplay" aria-hidden="true"&gt; ...MathML... &lt;/math&gt;
+    <div>
+      <pre>
+&lt;math xmlns="http://www.w3.org/1998/Math/MathML" class="MathMLNoDisplay" aria-hidden="true"&gt; ...MathML... &lt;/math&gt;
 &lt;img src="..."  role="math" style="vertical-align: ...amount to shift...;" alt="...text to speak..." &gt;
-  </pre>
+    </pre>
   </div>
   <p>Although the order is not important, we use an ordering to simplify the description.</p>
   <ol>
@@ -33,7 +34,7 @@ If there is <em>no</em> JavaScript support, then we presume there is no MathML s
 <ul>
 <li>ARIA supported: the first element is neither read nor displayed and the third element is both displayed and read.</li>
 <li><em>No</em> ARIA support (Kindle only?): we get double reading, with garbage read for the MathML.
-<i>It is possible that the EPUB-to-MOBI conversion tool strips the MathML so that we only get a single reading.</i></li>
+<i>It is possible that the EPUB-to-MOBI conversion tool strips the MathML so that we only get a single reading.</i> The style sheet for Kindle's should remove the MathML from the reading and display this should work as intended.</li>
 </ul>
 
 <p>
@@ -129,7 +130,8 @@ where
   <mo>≠<!-- not equals --></mo>
   <msub> <mi>x</mi><mn>1</mn> </msub>
 </math>
-<img src="../Images/epub-image-x2nex1.svg" style="vertical-align: -0.704ex;" role="math" alt="x sub 2 not equal to x sub 1."/>
-    </p>
+<img src="../Images/epub-image-x2nex1.svg" style="vertical-align: -0.704ex;" role="math" alt="x sub 2 not equal to x sub 1"/>.
+</p>
 
-</body></html>
+</body>
+</html>
