@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" version="3.0"
+  unique-identifier="u9uFUdyoTzapXFLDJ2nDeFFE">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+    <dc:language>en</dc:language>
+    <dc:title>MathML Sample (HTML)</dc:title>
+    <dc:date>2017-04-17</dc:date>
+    <dc:identifier id="u9uFUdyoTzapXFLDJ2nDeFFE">u9uFUdyoTzapXFLDJ2nDeFFE</dc:identifier>
+    <meta property="dcterms:modified">2017-04-28T00:00:00Z</meta>
+  </metadata>
+  <manifest>
+    <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+    <item id="a11yMath.js" href="Misc/a11yMath.js" media-type="application/javascript"/>
+    <item id="a11yMath.css" href="Styles/a11yMath.css" media-type="text/css"/>
+    <item id="epub-html-math.xhtml" href="Text/epub-html-math.xhtml"
+      media-type="application/xhtml+xml" properties="scripted mathml svg"/>
+    <item href="Text/nav.xhtml" id="nav" media-type="application/xhtml+xml" properties="nav"/>
+    <item id="formula.svg" href="Images/formula.svg" media-type="image/svg+xml"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="nav"/>
+    <itemref idref="epub-html-math.xhtml"/>
+  </spine>
+</package>

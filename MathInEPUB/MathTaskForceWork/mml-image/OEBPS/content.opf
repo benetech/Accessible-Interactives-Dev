@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" version="3.0"
+  unique-identifier="u9uFUdyoTzapXFLDJ2nEeE">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+    <dc:language>en</dc:language>
+    <dc:title>MathML Sample (Image)</dc:title>
+    <dc:date>2017-04-17</dc:date>
+    <dc:identifier id="u9uFUdyoTzapXFLDJ2nEeE">u9uFUdyoTzapXFLDJ2nEeE</dc:identifier>
+    <meta property="dcterms:modified">2017-04-28T00:00:00Z</meta>
+  </metadata>
+  <manifest>
+    <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+    <item id="a11yMath.js" href="Misc/a11yMath.js" media-type="application/javascript"/>
+    <item id="a11yMath.css" href="Styles/a11yMath.css" media-type="text/css"/>
+    <item id="epub-image-math.xhtml" href="Text/epub-image-math.xhtml"
+      media-type="application/xhtml+xml" properties="scripted mathml svg"/>
+    <item href="Text/nav.xhtml" id="nav" media-type="application/xhtml+xml" properties="nav"/>
+    <item id="epub-image-2pointform.svg" href="Images/epub-image-2pointform.svg" media-type="image/svg+xml"/>
+   <item id="epub-image-x1y1.svg" href="Images/epub-image-x1y1.svg" media-type="image/svg+xml"/>
+   <item id="epub-image-x2nex1.svg" href="Images/epub-image-x2nex1.svg" media-type="image/svg+xml"/>
+   <item id="epub-image-x2y2.svg" href="Images/epub-image-x2y2.svg" media-type="image/svg+xml"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="nav"/>
+    <itemref idref="epub-image-math.xhtml"/>
+  </spine>
+</package>
