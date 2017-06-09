@@ -19,6 +19,8 @@
    <item id="epub-image-x1y1.svg" href="Images/epub-image-x1y1.svg" media-type="image/svg+xml"/>
    <item id="epub-image-x2nex1.svg" href="Images/epub-image-x2nex1.svg" media-type="image/svg+xml"/>
    <item id="epub-image-x2y2.svg" href="Images/epub-image-x2y2.svg" media-type="image/svg+xml"/>
+   <item id="epub-image-complex1.svg" href="Images/epub-image-complex1.svg" media-type="image/svg+xml"/>
+   <item id="epub-image-complex2.svg" href="Images/epub-image-complex2.svg" media-type="image/svg+xml"/>
   </manifest>
   <spine toc="ncx">
     <itemref idref="nav"/>
