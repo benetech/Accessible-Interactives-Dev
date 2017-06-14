@@ -1,60 +1,17 @@
-// Test if MathML is supported
-// Two options (see https://tinyurl.com/moy3hcx):
-// 1. use "hasFeature" and correct for fact that Chrome says "yes"
-// 2. append MathML containing an mspace of a certain height, check that height, then remove the element"
-//
-// Regardless of the technique above, we still have to check if MathJax is in the page because the math
-//   won't be ready to be rendered by MathJax on page load.
-// This still isn't fool proof because other JS such as KaTeX might be doing the rendering
+// Test if MathML is supported by Reading System
+// This is a hueristic:
+// There are probably cases where this should return false because the screen readers we
+//   know about (NVDA, JAWS, VoiceOver, TalkBack, ChomeVox) all handle MathML.
+// So the basic assumption is that MathML is accessible if JS runs.
+// Cases where this isn't true:
+//		Linux (none of the above screen readers work there)
+//		?? Non Safari on MacOS
 function CanUseMathML() {
-	// This is a hueristic:
-	// There are probably cases where this should return false because the screen readers we
-	//   know about (NVDA, JAWS, VoiceOver, TalkBalk, ChomeVox) all handle MathML.
-	// So the basic assumption is that MathML is accessible if JS runs.
-	// Cases where this isn't true:
-	//		Linux (none of the above screen readers work there)
-	//		?? Non Safari on MacOS
 	var isLinux = function(){
 		var matches = navigator.userAgent.match(/Linux/);
 		return (matches!=null && matches.length==1);
 	};
 	return !isLinux();
-}
-
-// Not sure how robust the "hasFeatureMathML() implementation is, so both methods are given here
-
-//  Feature Detect for MathML as w3c specification
-//  <returns>boolean: true if mathML is supported in browser
-function HasFeatureMathML(){
-	var isChrome = function(){
-		var regex = /Chrome\/[0-9]{1,2}\.[0-9]/;
-		var matches = navigator.userAgent.match(regex);
-		return (matches!=null && matches.length==1);
-	};
-	
-	var isChromeOS = function(){
-		var matches = navigator.userAgent.match(/CrOS /);
-		return (matches!=null && matches.length==1);
-	};
-	
-
-	var MATHML_FEATURE = "org.w3c.dom.mathml"; // as per w3c specification
-	var MATHML_FEATURE_VERSION = "2.0";	       // any version number appears to work
-	if (isChromeOS())									 // ChromeOS doesn't support MathML, but ChromeVox and TextHELP do		
-		return true;
-
-	if (isChrome())
-		return false;       					       // Not natively supported in Chrome despite what hasFeature() says 
-	return document.implementation.hasFeature(MATHML_FEATURE, MATHML_FEATURE_VERSION );
-}
-
-function DisplaysMathML() {
-	var div = document.createElement("div");
-	div.innerHTML = '<math><mspace height="30px" width="20px"></mspace></math>';
-	document.body.appendChild(div);
-	var mathmlWorks = div.firstChild.firstChild.getBoundingClientRect().height === 30;
-	document.body.removeChild(document.body.lastElementChild);
-	return mathmlWorks;
 }
 
 
