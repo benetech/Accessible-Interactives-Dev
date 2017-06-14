@@ -26,7 +26,7 @@ In order to make this accessible, three separate elements are used as shown:
     </pre>
   <p>Although the order is not important, for we present an ordering to simplify the description.</p>
   <ol>
-<li>The first item is the MathML equivalent of the HTML Math. This element allows for full accessibility when possible. The element is clipped and invisible to both display and speech. When MathML and JS are supported, this element has aria-hidden changed to 'false' so that the reading system uses it.</li>
+<li>The first item is the MathML equivalent of the CSS Math. This element allows for full accessibility when possible. The element is clipped and invisible to both display and speech. When MathML and JS are supported, this element has aria-hidden changed to 'false' so that the reading system uses it.</li>
 <li>A span element containing the text to speak follows the MathML. It is hidden from display but not speech. When MathML and JS are supported, this element is changed so it is not spoken.</li>
 <li>The CSS math is last. The topmost span tag must have role="math" and aria-hidden="true". It is visible to display but not speech.</li>
 </ol>
