@@ -45,7 +45,8 @@ Note: when reading alt text, some screen readers will say something like "graphi
 <p>
 The formula for a line that runs through the points
 <span aria-hidden="true">
-    <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" class="MathMLNoDisplay">
+ <p>Math equations 1 and 2</p>   
+    <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" class="MathMLNoDisplay" alttext="x sub 1, y sub 1">
   <mo>(</mo>
     <msub> <mi>x</mi><mn>1</mn></msub>
 	 <mo>,</mo>
@@ -56,7 +57,7 @@ The formula for a line that runs through the points
 <img src="../Images/epub-image-x1y1.svg" style="vertical-align: -0.844ex;" role="math" alt="x sub 1 y sub 1"/>
 and
 <span aria-hidden="true">
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" class="MathMLNoDisplay">
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" class="MathMLNoDisplay" alttext="x sub 2 y sub 2">
   <mo>(</mo>
     <msub> <mi>x</mi><mn>2</mn> </msub>
 	 <mo>,</mo>
@@ -69,7 +70,8 @@ is:
 </p>
 <!-- too complicated for HTML Math - fall back to an image -->
 <span aria-hidden="true">
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block" class="MathMLNoDisplay">
+ <p>Math equation 3</p>   
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block" class="MathMLNoDisplay" alttext="y minus y 1 equals StartFraction y 2 minus y 1 Over x 2 minus x 1 EndFraction left-parenthesis x minus x 1 right-parenthesis">
     <mrow>
       <mstyle displaystyle="true">
         <mi>y</mi>
@@ -133,8 +135,8 @@ is:
 <p>
 where
 <span aria-hidden="true">
-    
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" class="MathMLNoDisplay">
+ <p>Math equation 4</p>       
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" class="MathMLNoDisplay" alttext="x sub 2 not-equals x sub 1">
   <msub> <mi>x</mi><mn>2</mn> </msub>
   <mo>≠<!-- not equals --></mo>
   <msub> <mi>x</mi><mn>1</mn> </msub>
@@ -143,5 +145,140 @@ where
 <img src="../Images/epub-image-x2nex1.svg" style="vertical-align: -0.704ex;" role="math" alt="x sub 2 not equal to x sub 1"/>.
 </p>
 
+<span aria-hidden="true">
+ <p>Math equation 5 - Complex</p>       
+    
+<math xmlns="http://www.w3.org/1998/Math/MathML" class="MathMLNoDisplay" alttext="upper A equals UnderUnderscript up-arrow Underscript upper U s e left-parenthesis 2 right-parenthesis period Endscripts Endscripts integral Subscript negative 1 Superscript 2 Baseline left-bracket f left-parenthesis y right-parenthesis minus g upper A left-parenthesis y right-parenthesis right-bracket d y equals integral Subscript negative 1 Superscript 2 Baseline left-bracket left-parenthesis y plus 2 right-parenthesis minus y squared right-bracket d y equals left-bracket StartFraction y squared Over 2 EndFraction plus 2 y minus StartFraction y cubed Over 3 EndFraction right-bracket Subscript negative 1 Superscript 2">
+  <mi>A</mi>
+  <munder>
+    <mo>=</mo>
+    <munder>
+      <mo mathcolor="#0000FF">&#x2191;</mo>
+      <mrow>
+        <mi mathcolor="#0000FF">Use</mi>
+        <mo mathcolor="#0000FF">&#xA0;</mo>
+        <mo mathcolor="#0000FF">(</mo>
+        <mn mathcolor="#0000FF">2</mn>
+        <mo mathcolor="#0000FF">)</mo>
+        <mo>.</mo>
+      </mrow>
+    </munder>
+  </munder>
+  <msubsup>
+    <mo>&#x222B;</mo>
+    <mrow>
+      <mo>-</mo>
+      <mn>1</mn>
+    </mrow>
+    <mn>2</mn>
+  </msubsup>
+  <mo>[</mo>
+  <mi>f</mi>
+  <mo>(</mo>
+  <mi>y</mi>
+  <mo>)</mo>
+  <mo>&#xA0;</mo>
+  <mo>-</mo>
+  <mi>g</mi>
+  <mi>A</mi>
+  <mo>(</mo>
+  <mi>y</mi>
+  <mo>)</mo>
+  <mo>]</mo>
+  <mi>d</mi>
+  <mi>y</mi>
+  <mo>=</mo>
+  <msubsup>
+    <mo>&#x222B;</mo>
+    <mrow>
+      <mo>-</mo>
+      <mn>1</mn>
+    </mrow>
+    <mn>2</mn>
+  </msubsup>
+  <mo>[</mo>
+  <mo>(</mo>
+  <mi>y</mi>
+  <mo>+</mo>
+  <mn>2</mn>
+  <mo>)</mo>
+  <mo>-</mo>
+  <msup>
+    <mi>y</mi>
+    <mn>2</mn>
+  </msup>
+  <mo>]</mo>
+  <mi>d</mi>
+  <mi>y</mi>
+  <mo>=</mo>
+  <msubsup>
+    <mfenced open="[" close="]">
+      <mrow>
+        <mfrac>
+          <msup>
+            <mi>y</mi>
+            <mn>2</mn>
+          </msup>
+          <mn>2</mn>
+        </mfrac>
+        <mo>+</mo>
+        <mn>2</mn>
+        <mi>y</mi>
+        <mo>-</mo>
+        <mfrac>
+          <msup>
+            <mi>y</mi>
+            <mn>3</mn>
+          </msup>
+          <mn>3</mn>
+        </mfrac>
+      </mrow>
+    </mfenced>
+    <mrow>
+      <mo>-</mo>
+      <mn>1</mn>
+    </mrow>
+    <mn>2</mn>
+  </msubsup>
+</math>    
+</span>    
+<img src="../Images/epub-image-complex1.svg" role="math" aria-describedby="complex1-desc"/>
+<div id="complex1-desc"><aside hidden="true">upper A equals UnderUnderscript up-arrow Underscript upper U s e left-parenthesis 2 right-parenthesis period Endscripts Endscripts integral Subscript negative 1 Superscript 2 Baseline left-bracket f left-parenthesis y right-parenthesis minus g upper A left-parenthesis y right-parenthesis right-bracket d y equals integral Subscript negative 1 Superscript 2 Baseline left-bracket left-parenthesis y plus 2 right-parenthesis minus y squared right-bracket d y equals left-bracket StartFraction y squared Over 2 EndFraction plus 2 y minus StartFraction y cubed Over 3 EndFraction right-bracket Subscript negative 1 Superscript 2
+</aside></div>
+
+ <span aria-hidden="true">
+ <p>Math equation 6</p>       
+    
+   
+<math xmlns="http://www.w3.org/1998/Math/MathML" class="MathMLNoDisplay" alttext="y equals 3 log t plus 2 ln StartFraction t Over 4 EndFraction equals 7 log Subscript 6 Baseline left-parenthesis 43 t minus 17 right-parenthesis">
+  <mi>y</mi>
+  <mo>=</mo>
+  <mn>3</mn>
+  <mi>log</mi>
+  <mi>t</mi>
+  <mo>+</mo>
+  <mn>2</mn>
+  <mi>ln</mi>
+  <mfrac>
+    <mi>t</mi>
+    <mn>4</mn>
+  </mfrac>
+  <mo>=</mo>
+  <mn>7</mn>
+  <msub>
+    <mi>log</mi>
+    <mn>6</mn>
+  </msub>
+  <mrow>
+    <mo>(</mo>
+    <mn>43</mn>
+    <mi>t</mi>
+    <mo>-</mo>
+    <mn>17</mn>
+    <mo>)</mo>
+  </mrow>
+</math>
+</span> 
+ <img src="../Images/epub-image-complex2.svg" role="math" alt="y equals 3 log t plus 2 ln StartFraction t Over 4 EndFraction equals 7 log Subscript 6 Baseline left-parenthesis 43 t minus 17 right-parenthesis"/>
 </body>
 </html>
