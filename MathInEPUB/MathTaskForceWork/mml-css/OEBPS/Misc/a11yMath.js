@@ -33,8 +33,9 @@ function MakeMathAccessible() {
 	};
 	var unsetARIAHidden = function(element) {
 		element.setAttribute("aria-hidden", "false");
-		if (element.parentNode.tagName == "span") {
-			element.parentNode.setAttribute("aria-hidden", "false");
+		var parent = element.parentNode;
+		if (parent.tagName == "div" || parent.tagName == "span") {
+			parent.setAttribute("aria-hidden", "false");
 		}
 	};
 	var changeImage = function(element) {
