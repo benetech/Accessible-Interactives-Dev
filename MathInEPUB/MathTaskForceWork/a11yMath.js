@@ -1,7 +1,7 @@
 // Test if MathML is supported by Reading System
 // This is a hueristic:
 // There are probably cases where this should return false because the screen readers we
-//   know about (NVDA, JAWS, VoiceOver, TalkBack, ChomeVox) all handle MathML.
+//   know about (NVDA, JAWS, VoiceOver, TalkBack, ChromeVox) all handle MathML.
 // So the basic assumption is that MathML is accessible if JS runs.
 // Cases where this isn't true:
 //		Linux (none of the above screen readers work there)
