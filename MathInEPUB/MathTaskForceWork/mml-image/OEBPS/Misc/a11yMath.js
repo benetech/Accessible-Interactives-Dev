@@ -19,7 +19,7 @@ function CanUseMathML() {
 // IMHO, this makes for cleaner code
 function ForEach(nodeList, callback, scope) {
   for (var i = 0; i < nodeList.length; i++) {
-	 callback(nodeList[i], i, nodeList); // passes back stuff we need
+	 callback(nodeList[i]); // passes back stuff we need
   }
 };
 
@@ -34,7 +34,7 @@ function MakeMathAccessible() {
 	var unsetARIAHidden = function(element) {
 		element.setAttribute("aria-hidden", "false");
 		var parent = element.parentNode;
-		if (parent.tagName == "div" || parent.tagName == "span") {
+		if ( (parent.tagName.localeCompare("div")==0 || parent.tagName.localeCompare("span")==0) ) {
 			parent.setAttribute("aria-hidden", "false");
 		}
 	};
