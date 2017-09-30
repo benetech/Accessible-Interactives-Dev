@@ -11,7 +11,11 @@ function CanUseMathML() {
 		var matches = navigator.userAgent.match(/Linux/);
 		return (matches!=null && matches.length==1);
 	};
-	return !isLinux();
+	var isEdge = function(){
+		var matches = window.navigator.userAgent.match(/Edge\/\d+/);
+		return (matches!=null);
+	};
+	return !isLinux() && !isEdge();
 }
 
 

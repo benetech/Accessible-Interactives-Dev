@@ -5,13 +5,17 @@
 // So the basic assumption is that MathML is accessible if JS runs.
 // Cases where this isn't true:
 //		Linux (none of the above screen readers work there)
+//		Edge -- uses UIA, and that doesn't expose MathML
 //		?? Non Safari on MacOS
 function CanUseMathML() {
 	var isLinux = function(){
-		var matches = navigator.userAgent.match(/Linux/);
+		var matches = window.navigator.userAgent.match(/Linux/);
 		return (matches!=null && matches.length==1);
+	var isEdge = function(){
+		var matches = window.navigator.userAgent.match(/Edge\/\d+/);
+		return (matches!=null);
 	};
-	return !isLinux();
+	return !isLinux() && !isEdge();
 }
 
 
