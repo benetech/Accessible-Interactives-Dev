@@ -32,10 +32,10 @@ function MakeMathAccessible() {
 		element.setAttribute("aria-hidden", "true");
 	};
 	var unsetARIAHidden = function(element) {
-		element.setAttribute("aria-hidden", "false");
+		element.removeAttribute("aria-hidden");	// use remove rather than unset due to NVDA/IE bug
 		var parent = element.parentNode;
 		if ( (parent.tagName.localeCompare("div")==0 || parent.tagName.localeCompare("span")==0) ) {
-			parent.setAttribute("aria-hidden", "false");
+			parent.removeAttribute("aria-hidden"); 	// use remove rather than unset due to NVDA/IE bug
 		}
 	};
 	var changeImage = function(element) {
