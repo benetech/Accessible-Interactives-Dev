@@ -11,6 +11,7 @@ function CanUseMathML() {
 	var isLinux = function(){
 		var matches = window.navigator.userAgent.match(/Linux/);
 		return (matches!=null && matches.length==1);
+	}
 	var isEdge = function(){
 		var matches = window.navigator.userAgent.match(/Edge\/\d+/);
 		return (matches!=null);
@@ -23,7 +24,7 @@ function CanUseMathML() {
 // IMHO, this makes for cleaner code
 function ForEach(nodeList, callback, scope) {
   for (var i = 0; i < nodeList.length; i++) {
-	 callback(nodeList[i], i, nodeList); // passes back stuff we need
+	 callback(nodeList[i]); // passes back stuff we need
   }
 };
 

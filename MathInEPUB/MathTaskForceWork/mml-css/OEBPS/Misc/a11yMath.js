@@ -5,12 +5,13 @@
 // So the basic assumption is that MathML is accessible if JS runs.
 // Cases where this isn't true:
 //		Linux (none of the above screen readers work there)
+//		Edge -- uses UIA, and that doesn't expose MathML
 //		?? Non Safari on MacOS
 function CanUseMathML() {
 	var isLinux = function(){
-		var matches = navigator.userAgent.match(/Linux/);
+		var matches = window.navigator.userAgent.match(/Linux/);
 		return (matches!=null && matches.length==1);
-	};
+	}
 	var isEdge = function(){
 		var matches = window.navigator.userAgent.match(/Edge\/\d+/);
 		return (matches!=null);
@@ -23,7 +24,7 @@ function CanUseMathML() {
 // IMHO, this makes for cleaner code
 function ForEach(nodeList, callback, scope) {
   for (var i = 0; i < nodeList.length; i++) {
-	 callback(nodeList[i], i, nodeList); // passes back stuff we need
+	 callback(nodeList[i]); // passes back stuff we need
   }
 };
 
@@ -36,10 +37,10 @@ function MakeMathAccessible() {
 		element.setAttribute("aria-hidden", "true");
 	};
 	var unsetARIAHidden = function(element) {
-		element.removeAttribute("aria-hidden");	// use remove rather than unset due to NVDA/IE bug
+		element.removeAttribute("aria-hidden");		// use remove rather than unset due to NVDA/IE bug
 		var parent = element.parentNode;
 		if ( (parent.tagName.localeCompare("div")==0 || parent.tagName.localeCompare("span")==0) ) {
-			parent.removeAttribute("aria-hidden"); 	// use remove rather than unset due to NVDA/IE bug
+			parent.removeAttribute("aria-hidden");	// use remove rather than unset due to NVDA/IE bug
 		}
 	};
 	var changeImage = function(element) {
