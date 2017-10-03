@@ -10,7 +10,7 @@
 <h1> Sample page with Math encoded as Images</h1>
 <h2> Image Math Description</h2>
 <p>
-This page uses &lt;img&gt; elements to encode math. The <i>alt</i> attribute should describe the math as a fallback description. The vertical-align CSS property should be set as a style on each &lt;img&gt; tag to make sure the image properly aligns with the surrounding text for inline math. It is preferable to use SVG rather than a raster format such as png so that the image scales nicely when the page is zoomed.
+This page uses &lt;img&gt; elements to encode math. All images that represent math should have a <i>class</i> attribue whose value includes <i>MathImageNoSR</i>. The <i>alt</i> attribute should describe the math as a fallback description. The vertical-align CSS property should be set as a style on each &lt;img&gt; tag to make sure the image properly aligns with the surrounding text for inline math. It is preferable to use SVG rather than a raster format such as png so that the image scales nicely when the page is zoomed.
 </p>
 <h2>Additional requirements to make the math accessible</h2>
 <p>
@@ -19,13 +19,13 @@ In order to make this accessible, two separate elements are used as shown:
     <div>
       <pre>
 &lt;math xmlns="http://www.w3.org/1998/Math/MathML" class="MathMLNoDisplay" aria-hidden="true"&gt; ...MathML... &lt;/math&gt;
-&lt;img src="..." style="vertical-align: ...amount to shift...;" alt="...text to speak..." &gt;
+&lt;img class="... MathImageNoSR" src="..." style="vertical-align: ...amount to shift...;" alt="...text to speak..." &gt;
     </pre>
   </div>
   <p>Although the order is not important, we use an ordering to simplify the description.</p>
   <ol>
 <li>The first item is the MathML equivalent of the image. This element allows for full accessibility when possible. The element is clipped and invisible to both display and speech. When MathML and JS are supported, this element has aria-hidden changed to 'false' so that the reading system uses it.</li>
-<li>An image element with 'alt' sent and 'vertical-align' set (typically to a negative value in 'ex's). By default, this image is visible and the alt text is spoken. When MathML and JS are supported, this element is changed to be hidden and have alt text be an empty string so it is not spoken.</li>
+<li>An image element with 'alt' set and 'vertical-align' set (typically to a negative value in 'ex's). By default, this image is visible and the alt text is spoken. When MathML and JS are supported, this element is changed to be hidden and have alt text be an empty string so it is not spoken. The JS looks for the class name <i>MathImageNoSR</i>, so it must be set on images that represent math.</li>
 </ol>
 
 <p>
@@ -52,7 +52,7 @@ The formula for a line that runs through the points
   <mo>)</mo>
 </math>
 </span>
-<img src="../Images/epub-image-x1y1.svg" style="vertical-align: -0.844ex;" alt="x sub 1 y sub 1"/>
+<img class="MathImageNoSR" src="../Images/epub-image-x1y1.svg" style="vertical-align: -0.844ex;" alt="x sub 1 y sub 1"/>
 and
 <span aria-hidden="true">
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" class="MathMLNoDisplay" alttext="x sub 2 y sub 2">
@@ -63,7 +63,7 @@ and
   <mo>)</mo>
 </math>
     </span>
-<img src="../Images/epub-image-x2y2.svg" style="vertical-align: -0.844ex;" alt="x sub 2 y sub 2"/>
+<img class="MathImageNoSR" src="../Images/epub-image-x2y2.svg" style="vertical-align: -0.844ex;" alt="x sub 2 y sub 2"/>
 is:
 </p>
 <!-- too complicated for HTML Math - fall back to an image -->
@@ -128,7 +128,7 @@ is:
     </mrow>
 </math>
     </span>
-<img src="../Images/epub-image-2pointform.svg" style="vertical-align: -2.103ex;" alt="y minus y sub 1, equals, the fraction with numerator y sub 2 minus y sub 1, and denominator x sub 2 minus x sub 1, times open paren x minus x sub 1 close paren"/>
+<img class="MathImageNoSR" src="../Images/epub-image-2pointform.svg" style="vertical-align: -2.103ex;" alt="y minus y sub 1, equals, the fraction with numerator y sub 2 minus y sub 1, and denominator x sub 2 minus x sub 1, times open paren x minus x sub 1 close paren"/>
 <p>
 where
 <span aria-hidden="true">
@@ -138,7 +138,7 @@ where
   <msub> <mi>x</mi><mn>1</mn> </msub>
 </math>
     </span>    
-<img src="../Images/epub-image-x2nex1.svg" style="vertical-align: -0.704ex;" alt="x sub 2 not equal to x sub 1"/>.
+<img class="MathImageNoSR" src="../Images/epub-image-x2nex1.svg" style="vertical-align: -0.704ex;" alt="x sub 2 not equal to x sub 1"/>.
 </p>
 
 </body>

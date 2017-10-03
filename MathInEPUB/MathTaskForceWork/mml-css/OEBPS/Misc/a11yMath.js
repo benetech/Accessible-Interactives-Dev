@@ -44,10 +44,8 @@ function MakeMathAccessible() {
 		}
 	};
 	var changeImage = function(element) {
-		if (element.getAttribute("role")=="math") {
-			element.setAttribute("alt", "");
-			element.setAttribute("aria-hidden", "true");
-		}
+		element.setAttribute("alt", "");
+		element.setAttribute("aria-hidden", "true");
 	};
 	var changeMathSpan = function(element) {
 		if (element.getAttribute("role")=="math") {
@@ -60,7 +58,7 @@ function MakeMathAccessible() {
 	};
 	
 	ForEach( document.getElementsByTagName("math"), unsetARIAHidden );
-	ForEach( document.getElementsByTagName("img"), changeImage );
+	ForEach( document.getElementsByClassName("MathImageNoSR"), changeImage );
 	
 	// used for HTML math case to remove the text from AT to avoid double speak
 	ForEach( document.getElementsByTagName("span"), changeMathSpan );
