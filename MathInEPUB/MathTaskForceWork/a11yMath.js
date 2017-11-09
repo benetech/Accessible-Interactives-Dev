@@ -1,17 +1,22 @@
 // Test if MathML is supported by Reading System
 // This is a hueristic:
 // There are probably cases where this should return false because the screen readers we
-//   know about (NVDA, JAWS, VoiceOver, TalkBack, ChromeVox) all handle MathML.
+//   know about (NVDA, JAWS, VoiceOver, TalkBack, ChomeVox) all handle MathML.
 // So the basic assumption is that MathML is accessible if JS runs.
 // Cases where this isn't true:
 //		Linux (none of the above screen readers work there)
+//		Edge -- uses UIA, and that doesn't expose MathML
 //		?? Non Safari on MacOS
 function CanUseMathML() {
 	var isLinux = function(){
-		var matches = navigator.userAgent.match(/Linux/);
+		var matches = window.navigator.userAgent.match(/Linux/);
 		return (matches!=null && matches.length==1);
+	}
+	var isEdge = function(){
+		var matches = window.navigator.userAgent.match(/Edge\/\d+/);
+		return (matches!=null);
 	};
-	return !isLinux();
+	return !isLinux() && !isEdge();
 }
 
 
@@ -19,7 +24,7 @@ function CanUseMathML() {
 // IMHO, this makes for cleaner code
 function ForEach(nodeList, callback, scope) {
   for (var i = 0; i < nodeList.length; i++) {
-	 callback(nodeList[i], i, nodeList); // passes back stuff we need
+	 callback(nodeList[i]); // passes back stuff we need
   }
 };
 
@@ -32,17 +37,15 @@ function MakeMathAccessible() {
 		element.setAttribute("aria-hidden", "true");
 	};
 	var unsetARIAHidden = function(element) {
-		element.setAttribute("aria-hidden", "false");
+		element.removeAttribute("aria-hidden");		// use remove rather than unset due to NVDA/IE bug
 		var parent = element.parentNode;
-		if (parent.tagName == "div" || parent.tagName == "span") {
-			parent.setAttribute("aria-hidden", "false");
+		if ( (parent.tagName.localeCompare("div")==0 || parent.tagName.localeCompare("span")==0) ) {
+			parent.removeAttribute("aria-hidden");	// use remove rather than unset due to NVDA/IE bug
 		}
 	};
 	var changeImage = function(element) {
-		if (element.getAttribute("role")=="math") {
-			element.setAttribute("alt", "");
-			element.setAttribute("aria-hidden", "true");
-		}
+		element.setAttribute("alt", "");
+		element.setAttribute("aria-hidden", "true");
 	};
 	var changeMathSpan = function(element) {
 		if (element.getAttribute("role")=="math") {
@@ -55,7 +58,7 @@ function MakeMathAccessible() {
 	};
 	
 	ForEach( document.getElementsByTagName("math"), unsetARIAHidden );
-	ForEach( document.getElementsByTagName("img"), changeImage );
+	ForEach( document.getElementsByClassName("MathImageNoSR"), changeImage );
 	
 	// used for HTML math case to remove the text from AT to avoid double speak
 	ForEach( document.getElementsByTagName("span"), changeMathSpan );
