@@ -7,6 +7,7 @@
 </head>
 
 <body onload="MakeExtendedDescriptionsAccessible()">
+    
 <h1>Sample page of Complex Images with extended Descriptions</h1>
 <p>
 This page has three images each of which has an off-screen extended image description.  When Javascript is not present the extended descriptions should be automatically accessible to AT always (i.e. the user will have no choice but to hear the descriptions).  These extended image descriptions however will be coded to allow AT to navigate and escape the description to the next item on the page.  When Javascript is present the extended descriptions will be hidden to AT and a toggle button to show/hide the description will be available to AT to get more information on demand.
@@ -14,9 +15,9 @@ This page has three images each of which has an off-screen extended image descri
     
 <h2>Example 1</h2>
     <figure>
-        <img class="toggle-description" src="./Images/fig1.png" alt="A sagittal view of the human brain shows and identifies the different lobes and functional areas."/>
+        <img id="987123456-img-1" class="toggle-description" src="./Images/fig1.png" alt="A sagittal view of the human brain shows and identifies the different lobes and functional areas."/>
  
-        <div class="OffScreen extended-description" role="region" aria-labelledby="additional information">
+        <div id="987123456-img-1-ExtendedDesc" class="OffScreen extended-description" role="region" aria-labelledby="additional information">
             <p>The lobes and functional areas of the human brain are as follows, from the upper front of the brain clockwise over the top of the head:</p>
             <div class="list">
                 <ul class="disc">
@@ -41,9 +42,9 @@ This page has three images each of which has an off-screen extended image descri
     </p>
 <h2>Example 2</h2>
     <figure>
-        <img class="toggle-description" src="./Images/fig2.png" alt=""/>
+        <img id="987123456-img-2" class="toggle-description" src="./Images/fig2.png" alt=""/>
  
-        <div class="OffScreen extended-description" role="region" aria-labelledby="additional information">
+        <div id="987123456-img-2-ExtendedDesc" class="OffScreen extended-description" role="region" aria-labelledby="additional information">
             <p>The color names and the ink they are printed in are summarized in the table below:</p>
             <div class="table">
                 <table>
@@ -164,9 +165,9 @@ This page has three images each of which has an off-screen extended image descri
 
  <h2>Example 3</h2>
     <figure>
-        <img class="toggle-description" src="./Images/fig3.png" alt="A table shows stimulus figures and their corresponding reproduced figures based on two word lists."/>
+        <img id="987123456-img-3" class="toggle-description" src="./Images/fig3.png" alt="A table shows stimulus figures and their corresponding reproduced figures based on two word lists."/>
         
-        <div class="OffScreen extended-description" role="region" aria-labelledby="additional information">
+        <div id="987123456-img-3-ExtendedDesc" class="OffScreen extended-description" role="region" aria-labelledby="additional information">
             <p>The stimulus figure shown for both words in a pair is the same; the respondents&apos; drawings varied depending on whether they heard the word from list 1 or list 2. For example, a stimulus drawing of two circles connected by a short, straight line resulted in two circles connected by a curved line for the respondent who heard eyeglasses, and a closed curve encompassing most of a circle, a connection to a second circle, then around and back to the starting point on the first circle by the respondent who heard the word dumbbells:</p>
             <div class="table">
                 <table>
