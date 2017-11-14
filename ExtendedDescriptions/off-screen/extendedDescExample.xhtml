@@ -14,7 +14,7 @@ This page has three images each of which has an off-screen extended image descri
 </p>
     
 <h2>Example 1</h2>
-    <p>This image has alt text and an extended description containing a paragraph and list.</p>
+    <p>This image has alt text and an extended description containing a paragraph and list, as well as a fig caption.</p>
     <figure>
         <img id="987123456-img-1" class="toggle-description" src="./Images/fig1.png" alt="A sagittal view of the human brain shows and identifies the different lobes and functional areas."/>
  
@@ -42,7 +42,7 @@ This page has three images each of which has an off-screen extended image descri
         Moving on to our second example.
     </p>
 <h2>Example 2</h2>
-    <p>This Image is sufficiently described by the caption and surrounding text and as a result has no alt-text alt=quote quote, but does have an extended description.</p>
+    <p>This Image is sufficiently described by the fig caption and surrounding text and as a result has no alt-text alt=quote quote, but does have an extended description.</p>
     <figure>
         <img id="987123456-img-2" class="toggle-description" src="./Images/fig2.png" alt=""/>
  
@@ -166,13 +166,11 @@ This page has three images each of which has an off-screen extended image descri
     </p>
 
  <h2>Example 3</h2>
-    <p>This image has an alt text description as well as an extended image description containing a table.
-    </p>
-    <figure>
-        <img id="987123456-img-3" class="toggle-description" src="./Images/fig3.png" alt="A table shows stimulus figures and their corresponding reproduced figures based on two word lists."/>
+    <p>This image has an alt text description as well as an extended image description containing a table, but does not have a fig caption.</p>
+    <img id="987123456-img-3" class="toggle-description" src="./Images/fig3.png" alt="A table shows stimulus figures and their corresponding reproduced figures based on two word lists."/>
         
-        <div id="987123456-img-3-ExtendedDesc" class="OffScreen extended-description" role="region" aria-labelledby="additional information">
-            <p>The stimulus figure shown for both words in a pair is the same; the respondents&apos; drawings varied depending on whether they heard the word from list 1 or list 2. For example, a stimulus drawing of two circles connected by a short, straight line resulted in two circles connected by a curved line for the respondent who heard eyeglasses, and a closed curve encompassing most of a circle, a connection to a second circle, then around and back to the starting point on the first circle by the respondent who heard the word dumbbells:</p>
+    <div id="987123456-img-3-ExtendedDesc" class="OffScreen extended-description" role="region" aria-labelledby="additional information">
+        <p>The stimulus figure shown for both words in a pair is the same; the respondents&apos; drawings varied depending on whether they heard the word from list 1 or list 2. For example, a stimulus drawing of two circles connected by a short, straight line resulted in two circles connected by a curved line for the respondent who heard eyeglasses, and a closed curve encompassing most of a circle, a connection to a second circle, then around and back to the starting point on the first circle by the respondent who heard the word dumbbells:</p>
             <div class="table">
                 <table>
                     <tr>
@@ -283,9 +281,7 @@ This page has three images each of which has an off-screen extended image descri
             </div>
             <p></p>
         </div>
-        
-        <figcaption>Figure 3: A table shows stimulus figures and their corresponding reproduced figures based on two word lists.</figcaption>
-    </figure>
+
     <p>
         Now we are done.
     </p>
