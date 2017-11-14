@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>ARIA details test 8</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="charset" content="utf-8" />
+
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript">
+    //<![CDATA[
+        document.addEventListener("DOMContentLoaded", function (event) {
+            var links = document.querySelectorAll("a.detailsLink");
+            for (var i = 0; i < links.length; i++) {
+                var link = links[i];
+                link.addEventListener("click", function (event) {
+                    var details = document.querySelectorAll(".details");
+                    for (var j = 0; j < details.length; j++) {
+                        var detail = details[j];
+                        var id = detail.getAttribute("id");
+                        var href = event.target.getAttribute("href");
+                        var focused = (href === ("#" + id));
+                        console.log("----");
+                        console.log(id + " / " + href + " // " + focused);
+                        if (focused) {
+                            detail.setAttribute("open", "open");
+                        } else {
+                            detail.removeAttribute("open");
+                        }
+                    }
+                });
+            }
+        });
+    //]]>
+    </script>
+</head>
+
+<body style="max-width: 40em;">
+    <h2>
+        (8) image description from CK-12 Biology textbook<br/>(<a href="https://www.bookshare.org/browse/book/178078?returnPath=L3NlYXJjaD9tb2R1bGVOYW1lPXB1YmxpYyZsaWJyYXJ5VG9TZWFyY2g9Ym9va3NoYXJlJmJvb2tzVG9TZWFyY2g9RlJFRUxZX0FWQUlMQUJMRSZxdWFsaXRpZXM9UFVCTElTSEVSJnF1YWxpdGllcz1FWENFTExFTlQmX2NvbnRhaW5zSW1hZ2VzPW9uJmNvbnRhaW5zSW1hZ2VEZXNjcmlwdGlvbnM9dHJ1ZSZfY29udGFpbnNJbWFnZURlc2NyaXB0aW9ucz1vbiZsYW5ndWFnZT1FTkdMSVNIJnNvcnRPcmRlcj1SRUxFVkFOQ0UmZGlzYWJsZVNvcnRPcmRlcj1USVRMRSZzZWFyY2g9QWR2YW5jZWQgU2VhcmNoJl9jYXRlZ29yaWVzPW9u">freely available at Bookshare</a>)
+    </h2>
+
+    <h3>Cleavage</h3>
+
+    <h4>Blastulation</h4>
+
+    <p>
+        The zygote spends the next few days traveling down the Fallopian tube. As it travels, it divides by mitosis several times
+        to form a ball of cells called a morula . The cell divisions, which are called cleavage , increase the number of
+        cells but not their overall size. More cell divisions occur, and soon a fluid-filled cavity forms inside the ball
+        of cells. At this stage, the ball of cells is called a blastocyst . The process of blastocyst formation is shown
+        in Figure below.
+    </p>
+
+    <figure id="image1">
+        <img src="test8_Blastulation.png" alt="Blastulation" aria-details="details1" />
+        <figcaption>The morula (1) continues to undergo cell divisions. As it does, cells start to migrate into separate layers, and
+            a cavity starts to develop inside the ball of cells. When cells have migrated into distinct layers, the organism
+            is called a blastocyst (2).
+        </figcaption>
+    </figure>
+    <a class="caption detailsLink" href="#details1">Read extended description</a>
+
+    <h4>Blastocyst</h4>
+
+    <p>
+        The cells of the blastocyst form an inner and an outer cell layer. This is apparent in Figure below. The inner layer of cells
+        is called the embryoblast. This layer of cells will soon develop into an embryo. The outer layer of cells is called
+        the trophoblast. This layer will develop into other structures, including the placenta, which you will read more
+        about below. </p>
+
+    <figure id="image2">
+        <img src="test8_Blastocyst.png" alt="Blastocyst" aria-details="details2" />
+        <figcaption>Figure shows the two layers of the ball shaped blastocyst. The outer layer is the trophoblast. Inside the blastocyst
+            cavity is the inner cell mass (embryoblast).
+        </figcaption>
+    </figure>
+    <a class="caption detailsLink" href="#details2">Read extended description</a>
+
+    <h3>Implantation</h3>
+
+    <p>
+        The blastocyst continues the trip down the Fallopian tube and reaches the uterus about four or five days after fertilization.
+        When the outer cells of the blastocyst contact cells lining the uterus, the blastocyst embeds in the lining. The
+        process of embedding is called implantation . It generally occurs about a week after fertilization. Once implantation
+        occurs, the blastocyst is called an embryo.
+    </p>
+
+    <p>Etc.
+    </p>
+    <p>Etc.
+    </p>
+    <p>Etc.
+    </p>
+    <p>Etc.
+    </p>
+    <p>Etc.
+    </p>
+
+    <h3>Units of Measurement</h3>
+
+    <p>The measurements that scientists use are based on the International System of Units (SI), which is a form of the metric
+        system. The term SI is shortened from the French term Le Système international d'unités . It is the world's most
+        widely used system of units, both in science and business. It is useful to scientists because it is based on multiples
+        of 10. The SI was developed in 1960 from an older metric system and is used in almost every country.
+    </p>
+
+    <table id="table1" aria-details="details3" border="1">
+        <caption>SI Base Units - <a href="#details3" class="detailsLink">Description</a></caption>
+        <thead>
+            <tr>
+                <td>
+                    <p>Name</p>
+                </td>
+                <td>
+                    <p>Symbol</p>
+                </td>
+                <td>
+                    <p>Quantity</p>
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <p>meter</p>
+                </td>
+                <td>
+                    <p>m</p>
+                </td>
+                <td>
+                    <p>length</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>kilogram</p>
+                </td>
+                <td>
+                    <p>kg</p>
+                </td>
+                <td>
+                    <p>mass</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>second</p>
+                </td>
+                <td>
+                    <p>s</p>
+                </td>
+                <td>
+                    <p>time</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>ampere</p>
+                </td>
+                <td>
+                    <p>A</p>
+                </td>
+                <td>
+                    <p>electric current</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>kelvin</p>
+                </td>
+                <td>
+                    <p>K</p>
+                </td>
+                <td>
+                    <p>thermal energy (temperature)</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>mole</p>
+                </td>
+                <td>
+                    <p>mol</p>
+                </td>
+                <td>
+                    <p>amount of substance</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>candela</p>
+                </td>
+                <td>
+                    <p>cd</p>
+                </td>
+                <td>
+                    <p>luminous intensity</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <a class="caption detailsLink" href="#details3">Description</a>
+
+    <p>A prefix may be added to SI units to make a multiple of the original unit.
+    </p>
+
+    <table id="table2" aria-details="details4" border="1">
+        <caption>SI Prefixes - <a href="#details4" class="detailsLink">Description</a></caption>
+        <thead>
+            <tr>
+                <td>
+                    <p>Name</p>
+                </td>
+                <td>
+                    <p>Symbol</p>
+                </td>
+                <td>
+                    <p>Factor of 10</p>
+                </td>
+                <td>
+                    <p>Name</p>
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <p>
+                        <em>tera-</em>
+                    </p>
+                </td>
+                <td>
+                    <p>T</p>
+                </td>
+                <td>
+                    <p>
+                        <span>1,000,000,000,000 (10</span>
+                        <sup>12</sup>
+                        <span>)</span>
+                    </p>
+                </td>
+                <td>
+                    <p>trillion (thousand billion)</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        <em>giga-</em>
+                    </p>
+                </td>
+                <td>
+                    <p>G</p>
+                </td>
+                <td>
+                    <p>
+                        <span>1,000,000,000 (10</span>
+                        <sup>9</sup>
+                        <span>)</span>
+                    </p>
+                </td>
+                <td>
+                    <p>billion (thousand million)</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        <em>mega-</em>
+                    </p>
+                </td>
+                <td>
+                    <p>M</p>
+                </td>
+                <td>
+                    <p>
+                        <span>1,000,000 (10</span>
+                        <sup>6</sup>
+                        <span>)</span>
+                    </p>
+                </td>
+                <td>
+                    <p>million</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        <em>kilo-</em>
+                    </p>
+                </td>
+                <td>
+                    <p>k</p>
+                </td>
+                <td>
+                    <p>
+                        <span>1000 (10</span>
+                        <sup>3</sup>
+                        <span>)</span>
+                    </p>
+                </td>
+                <td>
+                    <p>thousand</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        <em>hecto-</em>
+                    </p>
+                </td>
+                <td>
+                    <p>h</p>
+                </td>
+                <td>
+                    <p>
+                        <span>100 (10</span>
+                        <sup>2</sup>
+                        <span>)</span>
+                    </p>
+                </td>
+                <td>
+                    <p>hundred</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        <em>deca-</em>
+                    </p>
+                </td>
+                <td>
+                    <p>da</p>
+                </td>
+                <td>
+                    <p>
+                        <span>10 (10</span>
+                        <sup>1</sup>
+                        <span>)</span>
+                    </p>
+                </td>
+                <td>
+                    <p>ten</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        <em>deci-</em>
+                    </p>
+                </td>
+                <td>
+                    <p>d</p>
+                </td>
+                <td>
+                    <p>
+                        <span>1 (10</span>
+                        <sup>-1</sup>
+                        <span>)</span>
+                    </p>
+                </td>
+                <td>
+                    <p>tenth</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        <em>centi-</em>
+                    </p>
+                </td>
+                <td>
+                    <p>c</p>
+                </td>
+                <td>
+                    <p>
+                        <span>0.1 (10</span>
+                        <sup>-2</sup>
+                        <span>)</span>
+                    </p>
+                </td>
+                <td>
+                    <p>hundredth</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        <em>milli-</em>
+                    </p>
+                </td>
+                <td>
+                    <p>m</p>
+                </td>
+                <td>
+                    <p>
+                        <span>0.01 (10</span>
+                        <sup>-3</sup>
+                        <span>)</span>
+                    </p>
+                </td>
+                <td>
+                    <p>thousandth</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        <em>micro-</em>
+                    </p>
+                </td>
+                <td>
+                    <p>µ</p>
+                </td>
+                <td>
+                    <p>
+                        <span>0.00001 (10</span>
+                        <sup>-6</sup>
+                        <span>)</span>
+                    </p>
+                </td>
+                <td>
+                    <p>millionth</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        <em>nano-</em>
+                    </p>
+                </td>
+                <td>
+                    <p>n</p>
+                </td>
+                <td>
+                    <p>
+                        <span>0.00000001 (10</span>
+                        <sup>-9</sup>
+                        <span>)</span>
+                    </p>
+                </td>
+                <td>
+                    <p>billionth</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        <em>pico-</em>
+                    </p>
+                </td>
+                <td>
+                    <p>p</p>
+                </td>
+                <td>
+                    <p>
+                        <span>0.00000000001 (10</span>
+                        <sup>-12</sup>
+                        <span>)</span>
+                    </p>
+                </td>
+                <td>
+                    <p>trillionth</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <a class="caption detailsLink" href="#details4">Description</a>
+
+
+    <p>Etc.
+    </p>
+    <p>Etc.
+    </p>
+    <p>Etc.
+    </p>
+    <p>Etc.
+    </p>
+    <p>Etc.
+    </p>
+
+    <h3>Appendix: extended descriptions for images and tables</h3>
+
+    <details class="details" id="details1">
+        <summary>
+            "Blastulation" (click to expand)
+        </summary>
+        Further information about this "Blastulation" image is
+        <a href="https://en.wikipedia.org/wiki/File:Blastulation.png" target="_BLANK">available at Wikipedia</a> (Public
+        Domain).
+
+        <p><a href="#image1">Navigate back to the "Blastulation" image.</a></p>
+    </details>
+    <hr />
+    <details class="details" id="details2">
+        <summary>
+            "Blastocyst" (click to expand)
+        </summary>
+        The blastocyst consists of an outer layer of cells called the trophoblast, a fluid-filled cavity, and an inner cell mass
+        called the embryoblast. <br />Further information about this "Blastocyst" image is
+        <a href="http://en.wikipedia.org/wiki/Image:Blastocyst.png" target="_BLANK">available at Wikipedia</a> (GNU Free
+        Documentation License).
+
+        <p><a href="#image2">Navigate back to the "Blastocyst" image.</a></p>
+    </details>
+    <hr />
+    <details class="details" id="details3">
+        <summary>
+            "SI Base Units" (click to expand)
+        </summary>
+        The SI is not static, as the technology of measurement progresses, units are created and definitions are changed through
+        international agreement among many nations. The international system of units is made up of a seven base units. From
+        these seven base units several other units are derived.
+
+        <p><a href="#table1">Navigate back to the "SI Base Units" table.</a></p>
+    </details>
+    <hr />
+    <details class="details" id="details4">
+        <summary>
+            "SI Prefixes" (click to expand)
+        </summary>
+        An SI prefix is a name or symbol that is put before a unit of measure (or its symbol) to form a decimal or a multiple of
+        the unit. For example, kilo - is a multiple of a thousand and milli - is a multiple of a thousandth, so there are
+        one thousand millimeters in a meter, and one thousand meters in a kilometer . All prefixes are multiples of 10. The
+        prefixes are never combined; a millionth of a kilogram is a milligram not a microkilogram .
+
+        <p><a href="#table2">Navigate back to the "SI Prefixes" table.</a></p>
+    </details>
+</body>
+
+</html>

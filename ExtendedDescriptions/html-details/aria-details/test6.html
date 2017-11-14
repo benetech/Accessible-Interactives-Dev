@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+<head>
+    <title>ARIA details test 6</title>
+
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <h2>
+        (6) <code>img</code> HTML tag with an immediately-following <code>details</code> element positioned off-screen (visually hidden but
+        keyboard-focusable, therefore accessible to screen readers and other assistive technologies).
+    </h2>
+
+    <figure id="image">
+        <img src="daisy.png" alt="DAISY logo" />
+        <figcaption>My image</figcaption>
+    </figure>
+
+    <details id="details" class="offscreen">
+        <summary>
+            Description
+        </summary>
+        This is the image description (any HTML markup is valid here).
+    </details>
+
+</body>
+
+</html>

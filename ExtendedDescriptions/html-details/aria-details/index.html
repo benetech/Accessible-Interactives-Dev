@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+<head>
+    <title>ARIA details examples</title>
+
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <h1>
+        Accessible extended descriptions: HTML documents that demonstrate usage scenarios for the
+        <code>aria-details</code> attribute combined with the
+        <code>details</code> (and associated <code>summary</code>) elements.
+    </h1>
+
+    <p>
+        The source HTML and CSS code for this website is located in <a href="https://github.com/daisy/aria-details/tree/master">this GitHub repository</a>.
+        You may contribute by <a href="https://github.com/daisy/aria-details/issues">filing issues</a>, and/or
+        <a href="https://github.com/daisy/aria-details/pulls">proposing changes</a>.
+    </p>
+
+    <p>
+        Note that these examples of HTML documents do <em>not</em> represent authoritative good practices for content production.
+        This is merely braintorming material to support the ongoing discussion regarding accessible extended descriptions
+        for images and other complex information structures (such as HTML tables). Also note that these examples are intentionally
+        poorly-styled (no fancy CSS), in order to put emphasis on structure and semantics. The goal is to express a generic
+        model that provides flexibility in terms of actual aesthetics. Eventually, this research work may lead to a more
+        formal recommendation for content creators / publishers.
+    </p>
+    <p>
+        The <code>details</code> (and associated <code>summary</code>) elements contain the actual description. The default
+        collapsed / closed state of the <code>details</code> element means that only the <code>summary</code> "label" is
+        visible. The user can choose to expand / open the <code>details</code> element in order to reveal the full description
+        content (which itself may contain a hyperlink to further external content). The process of expanding / collapsing
+        the <code>details</code> element is keyboard-accessible and generally well-supported in modern web browsers.
+    </p>
+    <p>
+        When the <code>details</code> element is located immediately after the described object (e.g. immediately below an
+        image), the description summary and full content are reached by simply following the linear reading order. This is
+        accessible to both mainstream users (e.g. visually) and users of assistive technologies (e.g. via synthetic speech
+        / screen readers). The <code>aria-details</code> attribute in the described object (e.g. the source image HTML tag
+        / element) references the immediately-following <code>details</code> element, and as such provides additional semantic
+        information in the accessibility tree that assistive technologies (such as screen readers) rely on to help users
+        navigate content.
+    </p>
+    <p>
+        When the <code>details</code> element is located away from the described object (e.g. at the end of the HTML document,
+        in the form of a "footnote" ), simply following the linear reading order is not an adequate user experience. Instead,
+        there must be a link to allow the user to jump from the described object into the description, and there must be
+        a "link back" mechanism in order to resume reading from the described object. Because the
+        <code>aria-details</code> attribute is only exposed to users of assistive technologies, there must be an additional
+        "fallback" affordance (such as a regular HTML link) located near the described object. Although such link needs to
+        be visible to mainstream users, it may be styled discretely to avoid cluttering the information stream. Note that
+        in the case of HTML tables which are typically content-rich, it may be preferable to include a description link immediately
+        before the table, rather than immediately after it. Otherwise, users would be forced to skip the entire table (rows
+        and columns) in order to reach the description link.
+    </p>
+    <p>
+        Note that the use of <code>figure</code> and <code>figcaption</code> to wrap images is entirely optional. In some cases, the <code>alt</code> attribute on the <code>img</code> HTML element is sufficient.
+    </p>
+    <p>
+        <span style="color: red;">[REMOVED]</span> (only the "visually offscren" technique is recommended, not 'aria-hidden') It is also possible to use the <code>aria-hidden</code> attribute in order to make some content (let's call this
+        "CONTENT A") inaccessible by screen readers and other assistive technologies. This can be used in conjunction with
+        an "offscreen" CSS class which defines styling to visually hide content from view (let's call this "CONTENT B") whilst
+        maintaining keyboard focusability. This way, "CONTENT A" and "CONTENT B" become mutually-exclusive depending on whether
+        the user relies on assistive technology.
+    </p>
+    <p>
+        It is also possible to use 
+        an "offscreen" CSS class which defines styling to visually hide content from view whilst
+        maintaining keyboard focusability, and ensuring accessibility via assistive technologies such as screen readers.
+    </p>
+    <nav epub:type="toc">
+        <h2>table of contents</h2>
+        <ol>
+           <li>
+        <a href="test1.html">
+            (1) <code>img</code> HTML tag with <code>aria-details</code> attribute pointing to an immediately-following <code>details</code>        element        
+            </a>
+        </li>
+        <li>
+        <a href="test2.html">
+                (2) HTML <code>table</code> with <code>aria-details</code> attribute (on a parent <code>div</code> element, to avoid redundant screen reader announcements on every table cells), which points to an immediately-following <code>details</code>        element
+            </a>
+        </li>
+        <li>
+        <a href="test3.html">
+        (3) <code>img</code> HTML tag with <code>aria-details</code> attribute pointing to immediately-following <code>details</code>        element, containing a hyperlink to an external description document
+        </a>
+    </li>
+    <li>
+        <a href="test4.html">
+        (4) <code>img</code> HTML tag with <code>aria-details</code> attribute as well as fallback discrete HTML link (located
+        immediately below the image) pointing to a distant <code>details</code> element (located at the end of the document),
+        which contains a link to navigate from the extended description back to the described image.
+        </a>
+    </li>
+    <li>
+        <a href="test5.html">
+        (5) HTML <code>table</code> with <code>aria-details</code> attribute as well as fallback discrete HTML links (located
+        immediately before and after the table) pointing to a distant <code>details</code> element (located at the end of
+        the document), which contains a link to navigate from the extended description back to the described table.
+        </a>
+    </li>
+    <li>
+        <a href="test6.html">
+        (6) <code>img</code> HTML tag with an immediately-following <code>details</code> element positioned off-screen (visually hidden but
+        keyboard-focusable, therefore accessible to screen readers and other assistive technologies).
+        </a>
+    </li>
+    <li>
+        <a href="test6b.html">
+        (6b) Image description separate linked file.
+        </a>
+    </li>
+   <li>
+        <a href="test7.html">
+        (7) <span style="color: red;">[REMOVED]</span> <code>img</code> HTML tag with <code>aria-details</code> attribute as well as fallback visually-offscreen but
+        keyboard-focusable HTML link (located in the markup source immediately below the image) pointing to a distant <code>details</code>        element (located at the end of the document), also visually-offscreen and keyboard-focusable, containing a link to
+        navigate from the extended description back to the described image.
+        </a>
+    </li>
+    <li>
+        <a href="test8.html">
+        (8) image description from CK-12 Biology textbook (freely available at Bookshare)
+        </a>
+    </li>
+    <li>
+            <a href="test9.html">           
+    (9) <code>img</code> HTML tag with <code>aria-details</code> attribute pointing to an offscreen (using CSS) <code>div</code> element that has a
+    <code>role</code> attribute with the <code>region</code> value, and an <code>aria-label</code> attribute that says "Description".
+            </a>
+        </li>
+     </ol>
+  </nav>
+
+</body>
+
+</html>

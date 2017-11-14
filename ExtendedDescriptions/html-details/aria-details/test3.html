@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>ARIA details test 3</title>
+
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <h2>
+        (3) <code>img</code> HTML tag with <code>aria-details</code> attribute pointing to immediately-following <code>details</code>        element, containing a hyperlink to an external description document
+    </h2>
+
+    <figure id="image">
+        <img src="daisy.png" alt="DAISY logo" aria-details="details" />
+        <figcaption>My image</figcaption>
+    </figure>
+
+    <details id="details">
+        <summary>
+            Image description (click to expand)
+        </summary>
+        Follow <a target="_BLANK" href="http://daisy.org">this link</a> to open an external document that describes the above
+        image.
+    </details>
+
+</body>
+
+</html>
