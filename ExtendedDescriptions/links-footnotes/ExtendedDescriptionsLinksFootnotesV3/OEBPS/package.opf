@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <package xmlns="http://www.idpf.org/2007/opf" version="3.0" xml:lang="en" unique-identifier="uid" prefix="cc: http://creativecommons.org/ns#">
   <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
-    <dc:title id="title">V2:Extended Descriptions Experiments.</dc:title>
+    <dc:title id="title">V3:Extended Descriptions Experiments.</dc:title>
     <dc:creator>DIAGRAM Center</dc:creator>
     <dc:identifier id="uid">extended-descriptions-experiments</dc:identifier>
     <dc:language>en-US</dc:language>
-    <meta property="dcterms:modified">2017-11-29T07:00:00Z</meta>
+    <meta property="dcterms:modified">2017-12-06T07:00:00Z</meta>
     <dc:publisher>DIAGRAM Center</dc:publisher>  
     <dc:contributor>Charles LaPierre</dc:contributor>
     <dc:description>Sample proposals for usage of links and noterefs for extended descriptions for images</dc:description>
