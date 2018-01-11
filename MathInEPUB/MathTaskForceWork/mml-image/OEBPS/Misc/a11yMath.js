@@ -42,6 +42,20 @@ function MakeMathAccessible() {
 		if ( (parent.tagName.localeCompare("div")==0 || parent.tagName.localeCompare("span")==0) ) {
 			parent.removeAttribute("aria-hidden");	// use remove rather than unset due to NVDA/IE bug
 		}
+		if ( parent.getAttribute("class") && 
+			 parent.getAttribute("class").localeCompare("MJX_Assistive_MathML")==0 ) {
+			// MathJax is running, so two extra levels from which to check/remove attr
+			parent = element.parentNode;
+			if ( parent &&
+				 (parent.tagName.localeCompare("div")==0 || parent.tagName.localeCompare("span")==0) ) {
+				parent.removeAttribute("aria-hidden");	// use remove rather than unset due to NVDA/IE bug
+				parent = element.parentNode;
+				if ( parent &&
+					 (parent.tagName.localeCompare("div")==0 || parent.tagName.localeCompare("span")==0) ) {
+					parent.removeAttribute("aria-hidden");	// use remove rather than unset due to NVDA/IE bug
+				}
+			}
+		}
 	};
 	var changeImage = function(element) {
 		element.setAttribute("alt", "");
@@ -52,7 +66,7 @@ function MakeMathAccessible() {
 			element.setAttribute("aria-hidden", "true");
 		}
 		if (element.getAttribute("class") && 
-			 element.getAttribute("class").indexOf("MathMLNoDisplay") >=0) {
+			element.getAttribute("class").indexOf("MathMLNoDisplay") >=0) {
 			element.parentNode.removeChild(element)
 		}
 	};
@@ -63,6 +77,6 @@ function MakeMathAccessible() {
 	// used for HTML math case to remove the text from AT to avoid double speak
 	ForEach( document.getElementsByTagName("span"), changeMathSpan );
 	
-	// make sure an MathJax CSS math is hidden, not needed for properly done pages
+	// make sure MathJax CSS math is hidden, not needed for properly done pages
 	ForEach( document.getElementsByClassName("MathJax"), setARIAHidden );
 }
