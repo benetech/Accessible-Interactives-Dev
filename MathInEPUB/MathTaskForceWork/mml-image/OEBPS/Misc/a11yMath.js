@@ -60,7 +60,7 @@ function MakeMathAccessible() {
 				if ( isSpanOrDiv(parent) ) {
 					var attrBefore = parent.getAttribute("ARIA-HIDDEN")
 					parent.removeAttribute("ARIA-HIDDEN");	// use remove rather than unset due to NVDA/IE bug
-					console.log("Level: "+i+" "+parent.getAttribute("ARIA-HIDDEN")+" class: "+parent.getAttribute("class"));
+					console.log("Level: "+ i +" hidden attr: " +attrBefore+ "/" +parent.getAttribute("ARIA-HIDDEN")+" class: "+parent.getAttribute("class"));
 				}
 			}
 		}
