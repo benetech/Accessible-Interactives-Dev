@@ -50,9 +50,10 @@ function MakeMathAccessible() {
 		if ( isSpanOrDiv(parent) ) {
 			parent.removeAttribute("aria-hidden");	// use remove rather than unset due to NVDA/IE bug
 		}
-		console.log("math parent class='" + parent.getAttribute("class")+"'; class test="+(parent.getAttribute("class")==="MJX_Assistive_MathML"));
-		if ( parent.getAttribute("class") && 
-			 parent.getAttribute("class").startsWith("MJX_Assistive_MathML") ) {
+		console.log("math parent class='" + parent.getAttribute("class"));
+		var mathJaxClass = parent.getAttribute("class");
+		if ( mathJaxClass && 
+			 (mathJaxClass.startsWith("MJX_Assistive_MathML") || mathJaxClass==="MathJax_Preview") ) {
 			// MathJax is running, so up to three extra levels from which to check/remove attr
 			//  two for inline, three for display
 			for (var i=0; i<3; i++) {	
@@ -61,6 +62,8 @@ function MakeMathAccessible() {
 					var attrBefore = parent.getAttribute("aria-hidden")
 					parent.removeAttribute("aria-hidden");	// use remove rather than unset due to NVDA/IE bug
 					console.log("Level: "+ i +" hidden attr: " +attrBefore+ "/" +parent.getAttribute("aria-hidden")+" class: "+parent.getAttribute("class"));
+				} else {
+					break;		// out of MathJax
 				}
 			}
 		}
