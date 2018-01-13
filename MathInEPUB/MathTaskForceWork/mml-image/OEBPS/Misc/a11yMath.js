@@ -28,7 +28,8 @@ function ForEach(nodeList, callback, scope) {
   }
 };
 
-
+// Note: in HTHML, tag and attribute names are case-insensitive; in XHTML, they are case-sensitive
+// Class names are case-sensitive in HTML, but not CSS.
 function MakeMathAccessible() {
 	if (!CanUseMathML())
 		return;
@@ -44,24 +45,22 @@ function MakeMathAccessible() {
 			return (tagName==="DIV" || tagName==="SPAN");
 		}
 		
-		element.removeAttribute("aria-hidden");		// use remove rather than unset due to NVDA/IE bug
+		element.removeAttribute("ARIA-HIDDEN");		// use remove rather than unset due to NVDA/IE bug
 		var parent = element.parentNode;		
 		if ( isSpanOrDiv(parent) ) {
-			parent.removeAttribute("aria-hidden");	// use remove rather than unset due to NVDA/IE bug
+			parent.removeAttribute("ARIA-HIDDEN");	// use remove rather than unset due to NVDA/IE bug
 		}
 		console.log("math parent class='" + parent.getAttribute("class")+"'; class test="+(parent.getAttribute("class")==="MJX_Assistive_MathML"));
 		if ( parent.getAttribute("class") && 
-			 parent.getAttribute("class")==="MJX_Assistive_MathML" ) {
-			// MathJax is running, so two extra levels from which to check/remove attr
-			parent = parent.parentNode;
-			if ( isSpanOrDiv(parent) ) {
-				parent.removeAttribute("aria-hidden");	// use remove rather than unset due to NVDA/IE bug
-				console.log("First: "+parent.getAttribute("aria-hidden")+" class: "+parent.getAttribute("class"));
+			 parent.getAttribute("class").toUpperCase()==="MJX_ASSISTIVE_MATHML" ) {
+			// MathJax is running, so up to three extra levels from which to check/remove attr
+			//  two for inline, three for display
+			for (var i=0; i<3; i++) {	
 				parent = parent.parentNode;
 				if ( isSpanOrDiv(parent) ) {
-					parent.removeAttribute("aria-hidden");	// use remove rather than unset due to NVDA/IE bug
-					console.log("Second: "+parent.getAttribute("aria-hidden")+" class: "+parent.getAttribute("class"));
-				}
+					var attrBefore = parent.getAttribute("ARIA-HIDDEN")
+					parent.removeAttribute("ARIA-HIDDEN");	// use remove rather than unset due to NVDA/IE bug
+					console.log("Level: "+i+" "+parent.getAttribute("ARIA-HIDDEN")+" class: "+parent.getAttribute("class"));
 			}
 		}
 	};
