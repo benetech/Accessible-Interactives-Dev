@@ -45,22 +45,22 @@ function MakeMathAccessible() {
 			return (tagName==="DIV" || tagName==="SPAN");
 		};
 		
-		element.removeAttribute("ARIA-HIDDEN");		// use remove rather than unset due to NVDA/IE bug
+		element.removeAttribute("aria-hidden");		// use remove rather than unset due to NVDA/IE bug
 		var parent = element.parentNode;		
 		if ( isSpanOrDiv(parent) ) {
-			parent.removeAttribute("ARIA-HIDDEN");	// use remove rather than unset due to NVDA/IE bug
+			parent.removeAttribute("aria-hidden");	// use remove rather than unset due to NVDA/IE bug
 		}
 		console.log("math parent class='" + parent.getAttribute("class")+"'; class test="+(parent.getAttribute("class")==="MJX_Assistive_MathML"));
 		if ( parent.getAttribute("class") && 
-			 parent.getAttribute("class").toUpperCase()==="MJX_ASSISTIVE_MATHML" ) {
+			 parent.getAttribute("class").startsWith("MJX_Assistive_MathML") ) {
 			// MathJax is running, so up to three extra levels from which to check/remove attr
 			//  two for inline, three for display
 			for (var i=0; i<3; i++) {	
 				parent = parent.parentNode;
 				if ( isSpanOrDiv(parent) ) {
-					var attrBefore = parent.getAttribute("ARIA-HIDDEN")
-					parent.removeAttribute("ARIA-HIDDEN");	// use remove rather than unset due to NVDA/IE bug
-					console.log("Level: "+ i +" hidden attr: " +attrBefore+ "/" +parent.getAttribute("ARIA-HIDDEN")+" class: "+parent.getAttribute("class"));
+					var attrBefore = parent.getAttribute("aria-hidden")
+					parent.removeAttribute("aria-hidden");	// use remove rather than unset due to NVDA/IE bug
+					console.log("Level: "+ i +" hidden attr: " +attrBefore+ "/" +parent.getAttribute("aria-hidden")+" class: "+parent.getAttribute("class"));
 				}
 			}
 		}
