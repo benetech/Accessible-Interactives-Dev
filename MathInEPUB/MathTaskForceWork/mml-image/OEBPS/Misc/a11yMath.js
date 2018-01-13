@@ -43,7 +43,7 @@ function MakeMathAccessible() {
 				return false;
 			var tagName = parent.tagName.toUpperCase();
 			return (tagName==="DIV" || tagName==="SPAN");
-		}
+		};
 		
 		element.removeAttribute("ARIA-HIDDEN");		// use remove rather than unset due to NVDA/IE bug
 		var parent = element.parentNode;		
@@ -61,6 +61,7 @@ function MakeMathAccessible() {
 					var attrBefore = parent.getAttribute("ARIA-HIDDEN")
 					parent.removeAttribute("ARIA-HIDDEN");	// use remove rather than unset due to NVDA/IE bug
 					console.log("Level: "+i+" "+parent.getAttribute("ARIA-HIDDEN")+" class: "+parent.getAttribute("class"));
+				}
 			}
 		}
 	};
