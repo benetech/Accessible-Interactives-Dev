@@ -28,7 +28,8 @@ function ForEach(nodeList, callback, scope) {
   }
 };
 
-
+// Note: in HTHML, tag and attribute names are case-insensitive; in XHTML, they are case-sensitive
+// Class names are case-sensitive in HTML, but not CSS.
 function MakeMathAccessible() {
 	if (!CanUseMathML())
 		return;
@@ -37,22 +38,32 @@ function MakeMathAccessible() {
 		element.setAttribute("aria-hidden", "true");
 	};
 	var unsetARIAHidden = function(element) {
+		var isSpanOrDiv = function(element) {
+			if (!element)
+				return false;
+			var tagName = parent.tagName.toUpperCase();
+			return (tagName==="DIV" || tagName==="SPAN");
+		};
+		
 		element.removeAttribute("aria-hidden");		// use remove rather than unset due to NVDA/IE bug
-		var parent = element.parentNode;
-		if ( (parent.tagName.localeCompare("div")==0 || parent.tagName.localeCompare("span")==0) ) {
+		var parent = element.parentNode;		
+		if ( isSpanOrDiv(parent) ) {
 			parent.removeAttribute("aria-hidden");	// use remove rather than unset due to NVDA/IE bug
 		}
-		if ( parent.getAttribute("class") && 
-			 parent.getAttribute("class").localeCompare("MJX_Assistive_MathML")==0 ) {
-			// MathJax is running, so two extra levels from which to check/remove attr
-			parent = element.parentNode;
-			if ( parent &&
-				 (parent.tagName.localeCompare("div")==0 || parent.tagName.localeCompare("span")==0) ) {
-				parent.removeAttribute("aria-hidden");	// use remove rather than unset due to NVDA/IE bug
-				parent = element.parentNode;
-				if ( parent &&
-					 (parent.tagName.localeCompare("div")==0 || parent.tagName.localeCompare("span")==0) ) {
+		console.log("math parent class='" + parent.getAttribute("class"));
+		var mathJaxClass = parent.getAttribute("class");
+		if ( mathJaxClass && 
+			 (mathJaxClass.startsWith("MJX_Assistive_MathML") || mathJaxClass==="MathJax_Preview") ) {
+			// MathJax is running, so up to three extra levels from which to check/remove attr
+			//  two for inline, three for display
+			for (var i=0; i<3; i++) {	
+				parent = parent.parentNode;
+				if ( isSpanOrDiv(parent) ) {
+					var attrBefore = parent.getAttribute("aria-hidden")
 					parent.removeAttribute("aria-hidden");	// use remove rather than unset due to NVDA/IE bug
+					console.log("Level: "+ i +" hidden attr: " +attrBefore+ "/" +parent.getAttribute("aria-hidden")+" class: "+parent.getAttribute("class"));
+				} else {
+					break;		// out of MathJax
 				}
 			}
 		}
