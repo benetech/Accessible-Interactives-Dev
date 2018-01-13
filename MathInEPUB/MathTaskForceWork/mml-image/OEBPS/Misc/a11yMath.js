@@ -42,21 +42,20 @@ function MakeMathAccessible() {
 		if ( (parent.tagName.localeCompare("div")==0 || parent.tagName.localeCompare("span")==0) ) {
 			parent.removeAttribute("aria-hidden");	// use remove rather than unset due to NVDA/IE bug
 		}
-		alert("class='" + parent.getAttribute("class")+"'; class test="+(parent.getAttribute("class")==="MJX_Assistive_MathML"));
+		console.log("math parent class='" + parent.getAttribute("class")+"'; class test="+(parent.getAttribute("class")==="MJX_Assistive_MathML"));
 		if ( parent.getAttribute("class") && 
 			 parent.getAttribute("class").localeCompare("MJX_Assistive_MathML")==0 ) {
 			// MathJax is running, so two extra levels from which to check/remove attr
 			parent = element.parentNode;
-			alert("inside unsetARIAHidden, inside MJX; parent="+parent);
 			if ( parent &&
 				 (parent.tagName.localeCompare("div")==0 || parent.tagName.localeCompare("span")==0) ) {
 				parent.removeAttribute("aria-hidden");	// use remove rather than unset due to NVDA/IE bug
+				console.log("First: "+parent.getAttribute("aria-hidden")+" class: "+parent.getAttribute("class"));
 				parent = element.parentNode;
-				alert("removed first hidden; parent="+parent);
 				if ( parent &&
 					 (parent.tagName.localeCompare("div")==0 || parent.tagName.localeCompare("span")==0) ) {
-					alert("removed second hidden");
 					parent.removeAttribute("aria-hidden");	// use remove rather than unset due to NVDA/IE bug
+					console.log("Second: "+parent.getAttribute("aria-hidden")+" class: "+parent.getAttribute("class"));
 				}
 			}
 		}
