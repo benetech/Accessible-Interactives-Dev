@@ -42,6 +42,7 @@ function MakeMathAccessible() {
 		if ( (parent.tagName.localeCompare("div")==0 || parent.tagName.localeCompare("span")==0) ) {
 			parent.removeAttribute("aria-hidden");	// use remove rather than unset due to NVDA/IE bug
 		}
+		alert("insdie unsetARIAHidden");
 		if ( parent.getAttribute("class") && 
 			 parent.getAttribute("class").localeCompare("MJX_Assistive_MathML")==0 ) {
 			// MathJax is running, so two extra levels from which to check/remove attr
