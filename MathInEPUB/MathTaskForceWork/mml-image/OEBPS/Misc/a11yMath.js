@@ -38,35 +38,7 @@ function MakeMathAccessible() {
 		element.setAttribute("aria-hidden", "true");
 	};
 	var unsetARIAHidden = function(element) {
-		var isSpanOrDiv = function(element) {
-			if (!element)
-				return false;
-			var tagName = parent.tagName.toUpperCase();
-			return (tagName==="DIV" || tagName==="SPAN");
-		};
-		
 		element.removeAttribute("aria-hidden");		// use remove rather than unset due to NVDA/IE bug
-		var parent = element.parentNode;		
-		if ( isSpanOrDiv(parent) ) {
-			parent.removeAttribute("aria-hidden");	// use remove rather than unset due to NVDA/IE bug
-		}
-		console.log("math parent class='" + parent.getAttribute("class"));
-		var mathJaxClass = parent.getAttribute("class");
-		if ( mathJaxClass && 
-			 (mathJaxClass.startsWith("MJX_Assistive_MathML") || mathJaxClass==="MathJax_Preview") ) {
-			// MathJax is running, so up to three extra levels from which to check/remove attr
-			//  two for inline, three for display
-			for (var i=0; i<3; i++) {	
-				parent = parent.parentNode;
-				if ( isSpanOrDiv(parent) ) {
-					var attrBefore = parent.getAttribute("aria-hidden")
-					parent.removeAttribute("aria-hidden");	// use remove rather than unset due to NVDA/IE bug
-					console.log("Level: "+ i +" hidden attr: " +attrBefore+ "/" +parent.getAttribute("aria-hidden")+" class: "+parent.getAttribute("class"));
-				} else {
-					break;		// out of MathJax
-				}
-			}
-		}
 	};
 	var changeImage = function(element) {
 		element.setAttribute("alt", "");
@@ -82,7 +54,7 @@ function MakeMathAccessible() {
 		}
 	};
 	
-	ForEach( document.getElementsByTagName("math"), unsetARIAHidden );
+	ForEach( document.getElementsByClassName("NoJavaHiddenMathML"), unsetARIAHidden );
 	ForEach( document.getElementsByClassName("MathImageNoSR"), changeImage );
 	
 	// used for HTML math case to remove the text from AT to avoid double speak
