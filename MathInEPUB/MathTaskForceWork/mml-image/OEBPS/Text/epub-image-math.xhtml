@@ -18,13 +18,16 @@ In order to make this accessible, two separate elements are used as shown:
     </p>
     <div>
       <pre>
-&lt;math xmlns="http://www.w3.org/1998/Math/MathML" class="MathMLNoDisplay" aria-hidden="true"&gt; ...MathML... &lt;/math&gt;
+&lt;span class="MathMLNoJavaHidden" aria-hidden="true"&gt;
+   &lt;math xmlns="http://www.w3.org/1998/Math/MathML" class="MathMLNoDisplay"&gt; ...MathML... &lt;/math&gt;
+&lt;/span&gt;
 &lt;img class="... MathImageNoSR" src="..." style="vertical-align: ...amount to shift...;" alt="...text to speak..." &gt;
     </pre>
   </div>
   <p>Although the order is not important, we use an ordering to simplify the description.</p>
   <ol>
-<li>The first item is the MathML equivalent of the image. This element allows for full accessibility when possible. The element is clipped and invisible to both display and speech. When MathML and JS are supported, this element has aria-hidden changed to 'false' so that the reading system uses it.</li>
+<li>The first item is the MathML equivalent of the image. This element allows for full accessibility when possible. The element is clipped and invisible to both display and speech. When MathML and JS are supported, this element has aria-hidden changed to 'false' so that the reading system uses it.<br/>
+Note: 'aria-hidden' is not allowed on a &lt;math&gt; tag, so the MathML is wrapped in a &lt;span&gt; element.</li>
 <li>An image element with 'alt' set and 'vertical-align' set (typically to a negative value in 'ex's). By default, this image is visible and the alt text is spoken. When MathML and JS are supported, this element is changed to be hidden and have alt text be an empty string so it is not spoken. The JS looks for the class name <i>MathImageNoSR</i>, so it must be set on images that represent math.</li>
 </ol>
 
@@ -43,7 +46,7 @@ Note: when reading alt text, some screen readers will say something like "graphi
 <h2>Math sample text</h2>
 <p>
 The formula for a line that runs through the points
-<span class="NoJavaHiddenMathML" aria-hidden="true">
+<span class="MathMLNoJavaHidden" aria-hidden="true">
     <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" class="MathMLNoDisplay" alttext="x sub 1, y sub 1">
   <mo>(</mo>
     <msub> <mi>x</mi><mn>1</mn></msub>
@@ -54,7 +57,7 @@ The formula for a line that runs through the points
 </span>
 <img class="MathImageNoSR" src="../Images/epub-image-x1y1.svg" style="vertical-align: -0.844ex;" alt="x sub 1 y sub 1"/>
 and
-<span class="NoJavaHiddenMathML" aria-hidden="true">
+<span class="MathMLNoJavaHidden" aria-hidden="true">
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" class="MathMLNoDisplay" alttext="x sub 2 y sub 2">
   <mo>(</mo>
     <msub> <mi>x</mi><mn>2</mn> </msub>
@@ -67,7 +70,7 @@ and
 is:
 </p>
 <!-- too complicated for HTML Math - fall back to an image -->
-<span class="NoJavaHiddenMathML" aria-hidden="true">
+<span class="MathMLNoJavaHidden" aria-hidden="true">
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block" class="MathMLNoDisplay" alttext="y minus y 1 equals StartFraction y 2 minus y 1 Over x 2 minus x 1 EndFraction left-parenthesis x minus x 1 right-parenthesis">
     <mrow>
       <mstyle displaystyle="true">
@@ -131,7 +134,7 @@ is:
 <img class="MathImageNoSR" src="../Images/epub-image-2pointform.svg" style="vertical-align: -2.103ex;" alt="y minus y sub 1, equals, the fraction with numerator y sub 2 minus y sub 1, and denominator x sub 2 minus x sub 1, times open paren x minus x sub 1 close paren"/>
 <p>
 where
-<span class="NoJavaHiddenMathML" aria-hidden="true">
+<span class="MathMLNoJavaHidden" aria-hidden="true">
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" class="MathMLNoDisplay" alttext="x sub 2 not-equals x sub 1">
   <msub> <mi>x</mi><mn>2</mn> </msub>
   <mo>≠<!-- not equals --></mo>

@@ -19,7 +19,9 @@ In order to make this accessible, three separate elements are used as shown:
 </p>
 <div>
     <pre>
-&lt;math xmlns="http://www.w3.org/1998/Math/MathML" class="MathMLNoDisplay" aria-hidden="true"&gt; ...MathML... &lt;/math&gt;
+&lt;span class="MathMLNoJavaHidden" aria-hidden="true"&gt;
+   &lt;math xmlns="http://www.w3.org/1998/Math/MathML" class="MathMLNoDisplay"&gt; ...MathML... &lt;/math&gt;
+&lt;/span&gt;
 &lt;span class="MathMLNoDisplay"&gt; ...text to speak... &lt;span&gt;
 &lt;span role="math" aria-hidden="true" &gt; ...HTML Math... &lt;/span&gt;
     </pre>
@@ -28,7 +30,8 @@ In order to make this accessible, three separate elements are used as shown:
 Although the order is not important, we use an ordering to simplify the description.
 </p>
 <ol>
-<li>The first item is the MathML equivalent of the HTML Math. This element allows for full accessibility when possible. The element is clipped and invisible to both display and speech. When MathML and JS are supported, this element has aria-hidden changed to 'false' so that the reading system uses it.</li>
+<li>The first item is the MathML equivalent of the HTML Math. This element allows for full accessibility when possible. The element is clipped and invisible to both display and speech. When MathML and JS are supported, this element has aria-hidden changed to 'false' so that the reading system uses it.<br/>
+Note: 'aria-hidden' is not allowed on a &lt;math&gt; tag, so the MathML is wrapped in a &lt;span&gt; element.</li>
 <li>A span element containing the text to speak follows the MathML. It is hidden from display but not speech. When MathML and JS are supported, this element is changed so it is not spoken.</li>
 <li>The HTML math is last. It must be wrapped in a span tag with role="math". It is visible to display but not speech.</li>
 </ol>
@@ -49,7 +52,7 @@ If there is <em>no</em> JavaScript support, then we presume there is no MathML s
 <h2>Math sample text</h2>
 <p>
 The formula for a line that runs through the points
-<span aria-hidden="true">
+<span class="MathMLNoJavaHidden" aria-hidden="true">
   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" class="MathMLNoDisplay" alttext="x sub 1, y sub 1">
     <mo>(</mo>
     <msub> <mi>x</mi><mn>1</mn></msub>
@@ -58,11 +61,10 @@ The formula for a line that runs through the points
     <mo>)</mo>
   </math>  
 </span>
-
 <span class="MathMLNoDisplay"> x sub 1 y sub 1 </span>
 <span role="math" aria-hidden="true">(<i>x</i><sub>1</sub>,&#160;<i>y</i><sub>1</sub>)</span>
 and 
-<div aria-hidden="true" style="display: inline">
+<span class="MathMLNoJavaHidden" aria-hidden="true" style="display: inline">
   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" class="MathMLNoDisplay" alttext="x sub 2, y sub 2">
     <mo>(</mo>
     <msub> <mi>x</mi><mn>2</mn> </msub>
@@ -70,14 +72,13 @@ and
     <msub> <mi>y</mi><mn>2</mn> </msub>
     <mo>)</mo>
   </math>  
-</div>
-
+</span>
 <span class="MathMLNoDisplay"> x sub 2, y sub 2 </span>
 <span role='math' aria-hidden="true">(<i>x</i><sub>2</sub>,&#160;<i>y</i><sub>2</sub>)</span>
 is:
 </p>
 <!-- too complicated for HTML Math - fall back to MathML + image or CSS Math -->
- <div aria-hidden="true">
+ <span class="MathMLNoJavaHidden" aria-hidden="true">
    <math xmlns="http://www.w3.org/1998/Math/MathML" display="block" class="MathMLNoDisplay" alttext="y minus y 1 equals StartFraction y 2 minus y 1 Over x 2 minus x 1 EndFraction left-parenthesis x minus x 1 right-parenthesis">
      <mrow>
        <mstyle displaystyle="true">
@@ -137,18 +138,18 @@ is:
        </mstyle>
      </mrow>
    </math>   
- </div>
+ </span>
 
 <img class="MathImageNoSR" src="../Images/formula.svg" style="vertical-align: -2.171ex; width:27.295ex; height:5.176ex;" alt="y minus y sub 1 equals the fraction with numerator y sub 2 minus y sub 1 and denominator x sub 2 minus x sub 1, times open paren x minus x sub 1 close paren" />
 <p>
 where
-<div aria-hidden="true" style="display: inline">
+<span class="MathMLNoJavaHidden" aria-hidden="true" style="display: inline">
   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" class="MathMLNoDisplay" alttext="x sub 2 not-equals x sub 1">
     <msub> <mi>x</mi><mn>2</mn> </msub>
     <mo>&#x2260;<!-- not equals --></mo>
     <msub> <mi>x</mi><mn>1</mn> </msub>
   </math>  
-</div>
+</span>
 <span class="MathMLNoDisplay"> x sub 2 not equal to x sub 1 </span>
 <span role="math" aria-hidden="true"><i>x</i><sub>2</sub>&#160;&#x2260;&#160;<i>x</i><sub>1</sub></span>.
 </p>

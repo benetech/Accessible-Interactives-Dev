@@ -54,7 +54,7 @@ function MakeMathAccessible() {
 		}
 	};
 	
-	ForEach( document.getElementsByClassName("NoJavaHiddenMathML"), unsetARIAHidden );
+	ForEach( document.getElementsByClassName("MathMLNoJavaHidden"), unsetARIAHidden );
 	ForEach( document.getElementsByClassName("MathImageNoSR"), changeImage );
 	
 	// used for HTML math case to remove the text from AT to avoid double speak
