@@ -4,10 +4,9 @@
 <title>MathML Sample (HTML Math)</title>
 <meta charset="UTF-8"/> 
 <link rel="stylesheet" type="text/css" href="../Styles/a11yMath.css"/>
-<script type="text/javascript" src="../Misc/a11yMath.js"> </script>
 </head>
 
-<body onload="MakeMathAccessible()">
+<body>
 <h1> Sample page with Math encoded as HTML Math</h1>
 <h2> HTML Math Description</h2>
 <p>
@@ -48,111 +47,5 @@ If there is <em>no</em> JavaScript support, then we presume there is no MathML s
 </ul>
 <p>Note: in the sample below, the larger display math is encoded as an image. Please see the appropriate web page for how this is done so that it is accessible.
 </p>
-
-<h2>Math sample text</h2>
-<p>
-The formula for a line that runs through the points
-<span class="MathMLNoJavaHidden" aria-hidden="true">
-  <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" class="MathMLNoDisplay" alttext="x sub 1, y sub 1">
-    <mo>(</mo>
-    <msub> <mi>x</mi><mn>1</mn></msub>
-    <mo>,</mo>
-    <msub> <mi>y</mi><mn>1</mn></msub>
-    <mo>)</mo>
-  </math>  
-</span>
-<span class="MathMLNoDisplay"> x sub 1 y sub 1 </span>
-<span role="math" aria-hidden="true">(<i>x</i><sub>1</sub>,&#160;<i>y</i><sub>1</sub>)</span>
-and 
-<span class="MathMLNoJavaHidden" aria-hidden="true" style="display: inline">
-  <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" class="MathMLNoDisplay" alttext="x sub 2, y sub 2">
-    <mo>(</mo>
-    <msub> <mi>x</mi><mn>2</mn> </msub>
-    <mo>,</mo>
-    <msub> <mi>y</mi><mn>2</mn> </msub>
-    <mo>)</mo>
-  </math>  
-</span>
-<span class="MathMLNoDisplay"> x sub 2, y sub 2 </span>
-<span role='math' aria-hidden="true">(<i>x</i><sub>2</sub>,&#160;<i>y</i><sub>2</sub>)</span>
-is:
-</p>
-<!-- too complicated for HTML Math - fall back to MathML + image or CSS Math -->
- <span class="MathMLNoJavaHidden" aria-hidden="true">
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="block" class="MathMLNoDisplay" alttext="y minus y 1 equals StartFraction y 2 minus y 1 Over x 2 minus x 1 EndFraction left-parenthesis x minus x 1 right-parenthesis">
-     <mrow>
-       <mstyle displaystyle="true">
-         <mi>y</mi>
-         <mo>&#x2212;<!-- − --></mo>
-         <msub>
-           <mi>y</mi>
-           <mrow>
-             <mn>1</mn>
-           </mrow>
-         </msub>
-         <mo>=</mo>
-         <mrow>
-           <mfrac>
-             <mrow>
-               <msub>
-                 <mi>y</mi>
-                 <mrow>
-                   <mn>2</mn>
-                 </mrow>
-               </msub>
-               <mo>&#x2212;<!-- − --></mo>
-               <msub>
-                 <mi>y</mi>
-                 <mrow>
-                   <mn>1</mn>
-                 </mrow>
-               </msub>
-             </mrow>
-             <mrow>
-               <msub>
-                 <mi>x</mi>
-                 <mrow>
-                   <mn>2</mn>
-                 </mrow>
-               </msub>
-               <mo>&#x2212;<!-- − --></mo>
-               <msub>
-                 <mi>x</mi>
-                 <mrow>
-                   <mn>1</mn>
-                 </mrow>
-               </msub>
-             </mrow>
-           </mfrac>
-         </mrow>
-         <mo stretchy="false">(</mo>
-         <mi>x</mi>
-         <mo>&#x2212;<!-- − --></mo>
-         <msub>
-           <mi>x</mi>
-           <mrow>
-             <mn>1</mn>
-           </mrow>
-         </msub>
-         <mo stretchy="false">)</mo>
-       </mstyle>
-     </mrow>
-   </math>   
- </span>
-
-<img class="MathImageNoSR" src="../Images/formula.svg" style="vertical-align: -2.171ex; width:27.295ex; height:5.176ex;" alt="y minus y sub 1 equals the fraction with numerator y sub 2 minus y sub 1 and denominator x sub 2 minus x sub 1, times open paren x minus x sub 1 close paren" />
-<p>
-where
-<span class="MathMLNoJavaHidden" aria-hidden="true" style="display: inline">
-  <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" class="MathMLNoDisplay" alttext="x sub 2 not-equals x sub 1">
-    <msub> <mi>x</mi><mn>2</mn> </msub>
-    <mo>&#x2260;<!-- not equals --></mo>
-    <msub> <mi>x</mi><mn>1</mn> </msub>
-  </math>  
-</span>
-<span class="MathMLNoDisplay"> x sub 2 not equal to x sub 1 </span>
-<span role="math" aria-hidden="true"><i>x</i><sub>2</sub>&#160;&#x2260;&#160;<i>x</i><sub>1</sub></span>.
-</p>
-
 </body>
 </html>

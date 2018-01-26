@@ -3,10 +3,9 @@
 <title>MathML Sample (Images)</title>
 <meta charset="UTF-8"/> 
 <link rel="stylesheet" type="text/css" href="../Styles/a11yMath.css"/>
-<script src="../Misc/a11yMath.js"> </script>
 </head>
 
-<body onload="MakeMathAccessible()">
+<body role="main">
 <h1> Sample page with Math encoded as Images</h1>
 <h2> Image Math Description</h2>
 <p>
@@ -43,106 +42,5 @@ If there is <em>no</em> JavaScript support, then we presume there is no MathML s
 <p>
 Note: when reading alt text, some screen readers will say something like "graphic" or "image" before reading the alt text. If the alt text is long, it may stop in the middle of the reading and repeat "graphic" before reading more. E.g., NVDA reads the long equation below as "graphic y minus y sub 1 ... and denominator x". Hitting down arrow again resumes reading with "graphic 2 minus x sub 1 ...".
 </p>
-<h2>Math sample text</h2>
-<p>
-The formula for a line that runs through the points
-<span class="MathMLNoJavaHidden" aria-hidden="true">
-    <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" class="MathMLNoDisplay" alttext="x sub 1, y sub 1">
-  <mo>(</mo>
-    <msub> <mi>x</mi><mn>1</mn></msub>
-	 <mo>,</mo>
-    <msub> <mi>y</mi><mn>1</mn></msub>
-  <mo>)</mo>
-</math>
-</span>
-<img class="MathImageNoSR" src="../Images/epub-image-x1y1.svg" style="vertical-align: -0.844ex;" alt="x sub 1 y sub 1"/>
-and
-<span class="MathMLNoJavaHidden" aria-hidden="true">
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" class="MathMLNoDisplay" alttext="x sub 2 y sub 2">
-  <mo>(</mo>
-    <msub> <mi>x</mi><mn>2</mn> </msub>
-	 <mo>,</mo>
-    <msub> <mi>y</mi><mn>2</mn> </msub>
-  <mo>)</mo>
-</math>
-    </span>
-<img class="MathImageNoSR" src="../Images/epub-image-x2y2.svg" style="vertical-align: -0.844ex;" alt="x sub 2 y sub 2"/>
-is:
-</p>
-<!-- too complicated for HTML Math - fall back to an image -->
-<span class="MathMLNoJavaHidden" aria-hidden="true">
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block" class="MathMLNoDisplay" alttext="y minus y 1 equals StartFraction y 2 minus y 1 Over x 2 minus x 1 EndFraction left-parenthesis x minus x 1 right-parenthesis">
-    <mrow>
-      <mstyle displaystyle="true">
-        <mi>y</mi>
-        <mo>−<!-- − --></mo>
-        <msub>
-          <mi>y</mi>
-          <mrow>
-            <mn>1</mn>
-          </mrow>
-        </msub>
-        <mo>=</mo>
-        <mrow>
-          <mfrac>
-            <mrow>
-              <msub>
-                <mi>y</mi>
-                <mrow>
-                  <mn>2</mn>
-                </mrow>
-              </msub>
-              <mo>−<!-- − --></mo>
-              <msub>
-                <mi>y</mi>
-                <mrow>
-                  <mn>1</mn>
-                </mrow>
-              </msub>
-            </mrow>
-            <mrow>
-              <msub>
-                <mi>x</mi>
-                <mrow>
-                  <mn>2</mn>
-                </mrow>
-              </msub>
-              <mo>−<!-- − --></mo>
-              <msub>
-                <mi>x</mi>
-                <mrow>
-                  <mn>1</mn>
-                </mrow>
-              </msub>
-            </mrow>
-          </mfrac>
-        </mrow>
-        <mo stretchy="false">(</mo>
-        <mi>x</mi>
-        <mo>−<!-- − --></mo>
-        <msub>
-          <mi>x</mi>
-          <mrow>
-            <mn>1</mn>
-          </mrow>
-        </msub>
-        <mo stretchy="false">)</mo>
-      </mstyle>
-    </mrow>
-</math>
-    </span>
-<img class="MathImageNoSR" src="../Images/epub-image-2pointform.svg" style="vertical-align: -2.103ex;" alt="y minus y sub 1, equals, the fraction with numerator y sub 2 minus y sub 1, and denominator x sub 2 minus x sub 1, times open paren x minus x sub 1 close paren"/>
-<p>
-where
-<span class="MathMLNoJavaHidden" aria-hidden="true">
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" class="MathMLNoDisplay" alttext="x sub 2 not-equals x sub 1">
-  <msub> <mi>x</mi><mn>2</mn> </msub>
-  <mo>≠<!-- not equals --></mo>
-  <msub> <mi>x</mi><mn>1</mn> </msub>
-</math>
-    </span>    
-<img class="MathImageNoSR" src="../Images/epub-image-x2nex1.svg" style="vertical-align: -0.704ex;" alt="x sub 2 not equal to x sub 1"/>.
-</p>
-
 </body>
 </html>
