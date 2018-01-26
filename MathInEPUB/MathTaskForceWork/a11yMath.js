@@ -28,7 +28,8 @@ function ForEach(nodeList, callback, scope) {
   }
 };
 
-
+// Note: in HTHML, tag and attribute names are case-insensitive; in XHTML, they are case-sensitive
+// Class names are case-sensitive in HTML, but not CSS.
 function MakeMathAccessible() {
 	if (!CanUseMathML())
 		return;
@@ -38,31 +39,27 @@ function MakeMathAccessible() {
 	};
 	var unsetARIAHidden = function(element) {
 		element.removeAttribute("aria-hidden");		// use remove rather than unset due to NVDA/IE bug
-		var parent = element.parentNode;
-		if ( (parent.tagName.localeCompare("div")==0 || parent.tagName.localeCompare("span")==0) ) {
-			parent.removeAttribute("aria-hidden");	// use remove rather than unset due to NVDA/IE bug
-		}
 	};
 	var changeImage = function(element) {
 		element.setAttribute("alt", "");
 		element.setAttribute("aria-hidden", "true");
 	};
-	var changeMathSpan = function(element) {
+	var changeMathSpanIfRequired = function(element) {
 		if (element.getAttribute("role")=="math") {
 			element.setAttribute("aria-hidden", "true");
 		}
 		if (element.getAttribute("class") && 
-			 element.getAttribute("class").indexOf("MathMLNoDisplay") >=0) {
+			element.getAttribute("class").indexOf("MathMLNoDisplay") >=0) {
 			element.parentNode.removeChild(element)
 		}
 	};
 	
-	ForEach( document.getElementsByTagName("math"), unsetARIAHidden );
+	ForEach( document.getElementsByClassName("MathMLNoJavaHidden"), unsetARIAHidden );
 	ForEach( document.getElementsByClassName("MathImageNoSR"), changeImage );
 	
 	// used for HTML math case to remove the text from AT to avoid double speak
-	ForEach( document.getElementsByTagName("span"), changeMathSpan );
+	ForEach( document.getElementsByTagName("span"), changeMathSpanIfRequired );
 	
-	// make sure an MathJax CSS math is hidden, not needed for properly done pages
+	// make sure MathJax CSS math is hidden, not needed for properly done pages
 	ForEach( document.getElementsByClassName("MathJax"), setARIAHidden );
 }

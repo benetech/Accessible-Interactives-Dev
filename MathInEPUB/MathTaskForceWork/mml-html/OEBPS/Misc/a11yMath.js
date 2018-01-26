@@ -44,7 +44,7 @@ function MakeMathAccessible() {
 		element.setAttribute("alt", "");
 		element.setAttribute("aria-hidden", "true");
 	};
-	var changeMathSpan = function(element) {
+	var changeMathSpanIfRequired = function(element) {
 		if (element.getAttribute("role")=="math") {
 			element.setAttribute("aria-hidden", "true");
 		}
@@ -58,7 +58,7 @@ function MakeMathAccessible() {
 	ForEach( document.getElementsByClassName("MathImageNoSR"), changeImage );
 	
 	// used for HTML math case to remove the text from AT to avoid double speak
-	ForEach( document.getElementsByTagName("span"), changeMathSpan );
+	ForEach( document.getElementsByTagName("span"), changeMathSpanIfRequired );
 	
 	// make sure MathJax CSS math is hidden, not needed for properly done pages
 	ForEach( document.getElementsByClassName("MathJax"), setARIAHidden );
