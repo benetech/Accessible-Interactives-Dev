@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta name="identifier" content="book_71629139776" />
+    <title>MathML Sample (Images)</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../Styles/a11yMath.css" />
+  </head>
+  <body role="main">
+    <h1>Sample page with Math encoded as Images</h1>
+    <h2>Image Math Description</h2>
+    <p>
+      This page uses &lt;img&gt; elements to encode math. All images that represent math should have a
+      <i>class</i>
+      attribue whose value includes
+      <i>MathImageNoSR</i>
+      . The
+      <i>alt</i>
+      attribute should describe the math as a fallback description. The vertical-align CSS property should be set as a style on each &lt;img&gt; tag to make sure the image properly aligns with the surrounding text for inline math. It is preferable to use SVG rather than a raster format such as png so that the image scales nicely when the page is zoomed.
+    </p>
+    <h2>Additional requirements to make the math accessible</h2>
+    <p>In order to make this accessible, two separate elements are used as shown:</p>
+    <div>
+      <pre>&lt;span class="MathMLNoJavaHidden" aria-hidden="true"&gt;
+   &lt;math xmlns="http://www.w3.org/1998/Math/MathML" class="MathMLNoDisplay"&gt; ...MathML... &lt;/math&gt;
+&lt;/span&gt;
+&lt;img class="... MathImageNoSR" src="..." style="vertical-align: ...amount to shift...;" alt="...text to speak..." &gt;</pre>
+    </div>
+    <p>Although the order is not important, we use an ordering to simplify the description.</p>
+    <ol>
+      <li>
+        The first item is the MathML equivalent of the image. This element allows for full accessibility when possible. The element is clipped and invisible to both display and speech. When MathML and JS are supported, this element has aria-hidden changed to 'false' so that the reading system uses it.
+        <br />
+        Note: 'aria-hidden' is not allowed on a &lt;math&gt; tag, so the MathML is wrapped in a &lt;span&gt; element.
+      </li>
+      <li>
+        An image element with 'alt' set and 'vertical-align' set (typically to a negative value in 'ex's). By default, this image is visible and the alt text is spoken. When MathML and JS are supported, this element is changed to be hidden and have alt text be an empty string so it is not spoken. The JS looks for the class name
+        <i>MathImageNoSR</i>
+        , so it must be set on images that represent math.
+      </li>
+    </ol>
+    <p>
+      If there is
+      <em>no</em>
+      JavaScript support, then we presume there is no MathML support and have the cases:
+    </p>
+    <ul>
+      <li>ARIA supported: the first element is neither read nor displayed and the third element is both displayed and read.</li>
+      <li>
+        <em>No</em>
+        ARIA support (Kindle only?): we get double reading, with garbage read for the MathML.
+        <i>It is possible that the EPUB-to-MOBI conversion tool strips the MathML so that we only get a single reading.</i>
+        The style sheet for Kindle's should remove the MathML from the reading and display this should work as intended.
+      </li>
+    </ul>
+    <p>Note: when reading alt text, some screen readers will say something like "graphic" or "image" before reading the alt text. If the alt text is long, it may stop in the middle of the reading and repeat "graphic" before reading more. E.g., NVDA reads the long equation below as "graphic y minus y sub 1 ... and denominator x". Hitting down arrow again resumes reading with "graphic 2 minus x sub 1 ...".</p>
+  </body>
+</html>
+
