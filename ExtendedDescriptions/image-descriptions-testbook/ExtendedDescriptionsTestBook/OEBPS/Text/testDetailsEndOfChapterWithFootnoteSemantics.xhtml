@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en">
 
 <head>
-    <title>Extended Descriptions At end of the Page/Chapter</title>
+    <title>Extended Descriptions At end of the Page/Chapter, with footnote semantics</title>
 
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
     <meta name="charset" content="utf-8" />
@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <h1>Image descriptions using Links to End of Chapter</h1>
+    <h1>Image descriptions using Links to End of Chapter, with footnote semantics</h1>
 
     <p>These examples come from
         <a href="https://www.w3.org/WAI/tutorials/images/complex/">Web Accessibility Tutorials</a>
@@ -26,7 +26,7 @@
             aria-details="#image1-extended-desc" />
         <figcaption>Example.com Site visitors Jan to March 2014</figcaption>
     </figure>
-    <a id="image1-link" href="#image1-extended-desc" title="Follow link for extended description at end of chapter">Follow for extended description</a>
+    <a epub:type="noteref" role="doc-noteref" id="image1-link" href="#image1-extended-desc" title="Follow link for extended description at end of chapter">Follow for extended description</a>
 
     <p>The example #1 has a simple link using standard HTML linking to an internal reference at the bottom of the page. The
         next example has a clickable image directly after the image in question which links to the bottom of the page for
@@ -40,7 +40,7 @@
     <p>In this example, the head of the peacock is described using a paragraph of text that is on the web page.</p>
 
     <img id="image2" src="../Images/peafowl-998cf337.jpg" alt="Male peacock head" aria-details="#image2-extended-desc" />
-    <a id="image2-link" href="#image2-extended-desc" title="Follow link for extended description at end of chapter">
+    <a epub:type="noteref" role="doc-noteref" id="image2-link" href="#image2-extended-desc" title="Follow link for extended description at end of chapter">
         <img src="../Images/more_info.jpeg" alt="" role="presentation"/>
     </a>
 
@@ -60,7 +60,7 @@
 
     <h2>Appendix:Extended Descriptions</h2>
 
-    <aside id="image1-extended-desc">
+    <aside epub:type="footnote" role="doc-footnote" id="image1-extended-desc">
         <h3>Example 1: Description of Bar Chart</h3>
         <div>
             <h4>Overview</h4>
@@ -106,14 +106,14 @@
                 with heights indicating the number of visitors. A fourth column is provided for each website with the accumulated
                 site visitors for the quarter.</p>
             <p>
-                <a href="#image1">Navigate back to Example 1: Bar Chart.</a>
+                <a epub:type="backlink" role="doc-backlink" href="#image1">Navigate back to Example 1: Bar Chart.</a>
             </p>
         </div>
     </aside>
 
     <hr />
     
-    <aside id="image2-extended-desc">
+    <aside epub:type="footnote" role="doc-footnote" id="image2-extended-desc">
         <h3>Example 2: Description of Peacock</h3>
         <div>
             <p>
@@ -123,7 +123,7 @@
                 have iridescent greenish blue feathers. The back has scaly bronze-green feathers with black and copper markings.
             </p>
             <p>
-                <a href="#image2">Navigate back to Example 2: Peacock image.</a>
+                <a epub:type="backlink" role="doc-backlink" href="#image2">Navigate back to Example 2: Peacock image.</a>
             </p>
         </div>
     </aside>

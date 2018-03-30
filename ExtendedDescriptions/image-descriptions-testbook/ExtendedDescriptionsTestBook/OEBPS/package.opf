@@ -8,6 +8,7 @@
     <meta property="dcterms:modified">2018-03-09T09:00:00Z</meta>
     <dc:publisher>DIAGRAM Center</dc:publisher>  
     <dc:contributor>Charles LaPierre</dc:contributor>
+    <dc:contributor>Daniel Weck</dc:contributor>
     <dc:description>Tests for extended descriptions of images</dc:description>
     <dc:rights>This work is licensed under a Creative Commons Attribution-Noncommercial-Share Alike (CC BY-NC-SA) license.</dc:rights>
     <meta property="schema:accessibilityHazard">none</meta>
@@ -30,7 +31,8 @@
 
     <item id="i1" href="Text/testDetailsUnderImage.xhtml" media-type="application/xhtml+xml" />
     <item id="i2" href="Text/testDetailsEndOfChapter.xhtml" media-type="application/xhtml+xml"  />
-    <item id="i3" href="Text/testDetailsHiddenDescribedBy.xhtml" media-type="application/xhtml+xml" />
+    <item id="i3" href="Text/testDetailsEndOfChapterWithFootnoteSemantics.xhtml" media-type="application/xhtml+xml"  />
+    <item id="i4" href="Text/testDetailsHiddenDescribedBy.xhtml" media-type="application/xhtml+xml" />
    
     <item id="img_more_info" href="Images/more_info.jpeg" media-type="image/jpeg"/>
     <item id="img_Blastocyst" href="Images/chart-ebcaadfb.png" media-type="image/png"/> 
@@ -41,5 +43,6 @@
     <itemref idref="i1"/>
     <itemref idref="i2"/>
     <itemref idref="i3"/>
+    <itemref idref="i4"/>
   </spine>
 </package>
