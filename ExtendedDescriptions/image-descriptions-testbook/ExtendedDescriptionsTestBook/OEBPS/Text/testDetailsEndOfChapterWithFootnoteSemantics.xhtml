@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en">
 
 <head>
-    <title>Extended Descriptions At end of the Page/Chapter</title>
+    <title>Extended Descriptions At end of the Page/Chapter, with footnote semantics</title>
 
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
     <meta name="charset" content="utf-8" />
@@ -13,20 +13,20 @@
 </head>
 
 <body>
-    <h1>Image descriptions using Links to End of Chapter</h1>
+    <h1>Image descriptions using Links to End of Chapter, with footnote semantics</h1>
 
     <p>These examples come from
         <a href="https://www.w3.org/WAI/tutorials/images/complex/">Web Accessibility Tutorials</a>
     </p>
 
-    <h2>Example 3: Bar Chart</h2>
+    <h2>Example 5: Bar Chart</h2>
 
     <figure id="image1">
         <img src="../Images/chart-ebcaadfb.png" alt="Bar chart showing monthly and total visitors for the first quarter 2014 for sites 1 to 3"
             aria-details="#image1-extended-desc" />
         <figcaption>Example.com Site visitors Jan to March 2014</figcaption>
     </figure>
-    <a id="image1-link" href="#image1-extended-desc" title="Follow link for extended description at end of chapter">Follow for extended description</a>
+    <a epub:type="noteref" role="doc-noteref" id="image1-link" href="#image1-extended-desc" title="Follow link for extended description at end of chapter">Follow for extended description</a>
 
     <p>This example has a simple link using standard HTML linking to an internal reference at the bottom of the page. The next
         example has a clickable image directly after the image in question which links to the bottom of the page for its
@@ -35,12 +35,12 @@
 
     <hr />
 
-    <h2>Example 4: Detailed Description of Image</h2>
+    <h2>Example 6: Detailed Description of Image</h2>
 
     <p>In this example, the head of the peacock is described using a paragraph of text that is on the web page.</p>
 
     <img id="image2" src="../Images/peafowl-998cf337.jpg" alt="Male peacock head" aria-details="#image2-extended-desc" />
-    <a id="image2-link" href="#image2-extended-desc" title="Follow link for extended description at end of chapter">
+    <a epub:type="noteref" role="doc-noteref" id="image2-link" href="#image2-extended-desc" title="Follow link for extended description at end of chapter">
         <img src="../Images/more_info.jpeg" alt="" role="presentation" />
     </a>
 
@@ -60,8 +60,8 @@
 
     <h2>Appendix:Extended Descriptions</h2>
 
-    <aside id="image1-extended-desc">
-        <h3>Example 3: Description of Bar Chart</h3>
+    <aside epub:type="footnote" role="doc-footnote" id="image1-extended-desc">
+        <h3>Example 5: Description of Bar Chart</h3>
         <div>
             <h4>Overview</h4>
             <p>The chart shows the website hits for the first quarter of 2014. It shows that Site 1 has more visitors than either
@@ -106,15 +106,15 @@
                 horizontally, with heights indicating the number of visitors. A fourth column is provided for each website
                 with the accumulated site visitors for the quarter.</p>
             <p>
-                <a href="#image1">Navigate back to Example 3: Bar Chart image.</a>
+                <a epub:type="backlink" role="doc-backlink" href="#image1-link">Navigate back to description link of Example 5: Bar Chart image.</a>
             </p>
         </div>
     </aside>
 
     <hr />
 
-    <aside id="image2-extended-desc">
-        <h3>Example 4: Description of Peacock</h3>
+    <aside epub:type="footnote" role="doc-footnote" id="image2-extended-desc">
+        <h3>Example 6: Description of Peacock</h3>
         <div>
             <p>
                 The male peacock is metallic blue on the crown, the feathers of the head being short and curled. The fan-shaped crest on
@@ -123,7 +123,7 @@
                 have iridescent greenish blue feathers. The back has scaly bronze-green feathers with black and copper markings.
             </p>
             <p>
-                <a href="#image2">Navigate back to Example 4: Peacock image.</a>
+                <a epub:type="backlink" role="doc-backlink" href="#image2-link">Navigate back to description link of Example 6: Peacock image.</a>
             </p>
         </div>
     </aside>
