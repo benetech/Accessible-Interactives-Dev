@@ -3,18 +3,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en">
 
 <head>
-    <title>Extended Descriptions Under each Image</title>
+    <title>Extended Descriptions Hidden Under each Image using ARIA described-by</title>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
     <meta name="charset" content="utf-8" />
     <link href="../Styles/styles.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-    <h1>Extended Descriptions Under each Image</h1>
+    <h1>Extended Descriptions Hidden Under each Image using ARIA described-by</h1>
     <p>These examples come from
         <a href="https://www.w3.org/WAI/tutorials/images/complex/">Web Accessibility Tutorials</a>
     </p>
 
+    <p>In both these examples the HTML Details/Summary is used to expose the extended image descriptions. Aria-details also
+        points to this details/summary which eventually will be picked up by assistive technologies and reading systems to
+        make this a seamless experience.</p>
+
+    <hr />
     <h2>Example 1: Bar Chart</h2>
     <figure>
         <img src="../Images/chart-ebcaadfb.png" alt="Bar chart showing monthly and total visitors for the first quarter 2014 for sites 1 to 3"
@@ -68,9 +73,6 @@
         </figcaption>
     </figure>
 
-    <p>In both these examples the HTML Details/Summary is used to expose the extended image descriptions. Aria-details also
-        points to this details/summary which eventually will be picked up by assistive technologies and reading systems to
-        make this a seamless experience.</p>
     <hr />
     <h2>Example 2: Detailed Description of Image</h2>
 
