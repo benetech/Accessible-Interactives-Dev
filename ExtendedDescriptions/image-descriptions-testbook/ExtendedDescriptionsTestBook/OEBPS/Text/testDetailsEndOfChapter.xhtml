@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
 <head>
     <title>Extended Descriptions At end of the Page/Chapter</title>
 
@@ -13,95 +14,111 @@
 
 <body>
     <h1>Image descriptions using Links to End of Chapter</h1>
-    
-    <p>These examples come from <a href="https://www.w3.org/WAI/tutorials/images/complex/">Web Accessibility Tutorials</a></p>
+
+    <p>These examples come from
+        <a href="https://www.w3.org/WAI/tutorials/images/complex/">Web Accessibility Tutorials</a>
+    </p>
 
     <h2>Example 1: Bar Chart</h2>
 
-   <figure>
-    <img src="../Images/chart-ebcaadfb.png" alt="Bar chart showing monthly and total visitors for the first quarter 2014 for sites 1 to 3" aria-details="#image1-extended-desc"/>
-       <figcaption>Example.com Site visitors Jan to March 2014</figcaption>
+    <figure>
+        <img src="../Images/chart-ebcaadfb.png" alt="Bar chart showing monthly and total visitors for the first quarter 2014 for sites 1 to 3"
+            aria-details="#image1-extended-desc" />
+        <figcaption>Example.com Site visitors Jan to March 2014</figcaption>
     </figure>
-    <a id="image1" href="#image1-extended-desc">Follow for extended description</a>
-    
-    <p>The example #1 has a simple link using standard HTML linking to an internal reference at the bottom of the page.  The next example has a clickable image directly after the image in question which links to the bottom of the page for its description.  This shows two possible ways that you can link to the extended descriptions with a visible link or a clickable image.</p>
+    <a id="image1" href="#image1-extended-desc" title="Follow link for extended description at end of chapter">Follow for extended description</a>
+
+    <p>The example #1 has a simple link using standard HTML linking to an internal reference at the bottom of the page. The
+        next example has a clickable image directly after the image in question which links to the bottom of the page for
+        its description. This shows two possible ways that you can link to the extended descriptions with a visible link
+        or a clickable image.</p>
 
     <hr />
-    
+
     <h2>Example 2: Detailed Description of Image</h2>
 
     <p>In this example, the head of the peacock is described using a paragraph of text that is on the web page.</p>
 
-    <img src="../Images/peafowl-998cf337.jpg" alt="Male peacock head" aria-details="#image2-extended-desc"/>
-    <a id="image2" href="#image2-extended-desc"><img src="../Images/more_info.jpeg" alt="Follow link for extended description at end of chapter"/></a>   
- 
+    <img src="../Images/peafowl-998cf337.jpg" alt="Male peacock head" aria-details="#image2-extended-desc" />
+    <a id="image2" href="#image2-extended-desc" title="Follow link for extended description at end of chapter">
+        <img src="../Images/more_info.jpeg" alt="" />
+    </a>
+
     <hr />
-    
+
     <h2>Complex Images</h2>
-        <p>
-            Complex images contain substantial information – more than can be conveyed in a short phrase or sentence. These are typically:
-        </p>
-        <ul>
-            <li>graphs and charts, including flow charts and organizational charts;</li>
-            <li>diagrams and illustrations where the page text relies on the user being able to understand the image;</li>
-            <li>maps showing locations or other information such as weather systems.</li>
-        </ul>
+    <p>
+        Complex images contain substantial information – more than can be conveyed in a short phrase or sentence. These are typically:
+    </p>
+    <ul>
+        <li>graphs and charts, including flow charts and organizational charts;</li>
+        <li>diagrams and illustrations where the page text relies on the user being able to understand the image;</li>
+        <li>maps showing locations or other information such as weather systems.</li>
+    </ul>
 
-<hr />
-    
+    <hr />
+
     <h2>Appendix:Extended Descriptions</h2>
-        <h3 id="image1-extended-desc">Example 1: Description of Bar Chart</h3>
-             <div>
-                <h4>Overview</h4>
-                    <p>The chart shows the website hits for the first quarter of 2014. It shows that Site 1 has more visitors than either of the other sites, but the number of visitors is decreasing. Site 2 has a fairly constant number of visitors, while for Site 3 page hits are increasing month on month.</p>
-                <h4>Data</h4>
-                    <table>
-                        <tr>
-                            <th>Period</th>
-                            <th>Site 1</th>
-                            <th>Site 2</th>
-                            <th>Site 3</th>
-                        </tr>
-                        <tr>
-                            <td>Jan</td>
-                           <td>135</td>
-                           <td>112</td>
-                           <td>92</td>
-                        </tr>
-                        <tr>
-                            <td>Feb</td>
-                           <td>117</td>
-                           <td>114</td>
-                           <td>99</td>
-                        </tr>
-                        <tr>
-                            <td>Mar</td>
-                           <td>96</td>
-                           <td>111</td>
-                           <td>126</td>
-                        </tr>
-                         <tr>
-                            <td>Qtr Total</td>
-                           <td>348</td>
-                           <td>337</td>
-                           <td>308</td>
-                        </tr>
-                   </table>
-            <h4>Presentation</h4>
-            <p>The bar chart represents both the number of visitors per month for each website, and the total number of visitors per website for the entire quarter. Website visitors for each month are represented using columns lined up horizontally, with heights indicating the number of visitors. A fourth column is provided for each website with the accumulated site visitors for the quarter.</p>
-            <a href="#image1">Navigate back to Example 1: Bar Chart.</a>       
-        </div>
+    <h3 id="image1-extended-desc">Example 1: Description of Bar Chart</h3>
+    <div>
+        <h4>Overview</h4>
+        <p>The chart shows the website hits for the first quarter of 2014. It shows that Site 1 has more visitors than either
+            of the other sites, but the number of visitors is decreasing. Site 2 has a fairly constant number of visitors,
+            while for Site 3 page hits are increasing month on month.</p>
+        <h4>Data</h4>
+        <table>
+            <tr>
+                <th>Period</th>
+                <th>Site 1</th>
+                <th>Site 2</th>
+                <th>Site 3</th>
+            </tr>
+            <tr>
+                <td>Jan</td>
+                <td>135</td>
+                <td>112</td>
+                <td>92</td>
+            </tr>
+            <tr>
+                <td>Feb</td>
+                <td>117</td>
+                <td>114</td>
+                <td>99</td>
+            </tr>
+            <tr>
+                <td>Mar</td>
+                <td>96</td>
+                <td>111</td>
+                <td>126</td>
+            </tr>
+            <tr>
+                <td>Qtr Total</td>
+                <td>348</td>
+                <td>337</td>
+                <td>308</td>
+            </tr>
+        </table>
+        <h4>Presentation</h4>
+        <p>The bar chart represents both the number of visitors per month for each website, and the total number of visitors
+            per website for the entire quarter. Website visitors for each month are represented using columns lined up horizontally,
+            with heights indicating the number of visitors. A fourth column is provided for each website with the accumulated
+            site visitors for the quarter.</p>
+        <a href="#image1">Navigate back to Example 1: Bar Chart.</a>
+    </div>
 
-    <hr /> 
-        <h3 id="image2-extended-desc">Example 2: Description of Peacock</h3>
-          <div>
-            <p>
-            The male peacock is metallic blue on the crown, the feathers of the head being short and curled. The fan-shaped crest on the head is made of feathers with bare black shafts and tipped with blush-green webbing. A white stripe above the eye and a crescent shaped white patch below the eye are formed by bare white skin. The sides of the head have iridescent greenish blue feathers. The back has scaly bronze-green feathers with black and copper markings.
-            </p>
-             <a href="#image2">Navigate back to Example 2: Peacock image.</a>       
-         </div>
-          
-    
- </body>
+    <hr />
+    <h3 id="image2-extended-desc">Example 2: Description of Peacock</h3>
+    <div>
+        <p>
+            The male peacock is metallic blue on the crown, the feathers of the head being short and curled. The fan-shaped crest on
+            the head is made of feathers with bare black shafts and tipped with blush-green webbing. A white stripe above
+            the eye and a crescent shaped white patch below the eye are formed by bare white skin. The sides of the head
+            have iridescent greenish blue feathers. The back has scaly bronze-green feathers with black and copper markings.
+        </p>
+        <a href="#image2">Navigate back to Example 2: Peacock image.</a>
+    </div>
+
+
+</body>
 
 </html>
