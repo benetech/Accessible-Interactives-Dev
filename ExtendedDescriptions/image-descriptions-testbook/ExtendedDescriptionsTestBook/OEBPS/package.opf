@@ -27,10 +27,12 @@
   
     <item id="styles" href="Styles/styles.css" media-type="text/css" />
     <item id="toc" href="Text/index.xhtml" media-type="application/xhtml+xml" properties="nav" />
-    <item id="i1" href="Text/testDetailsEndOfChapter.xhtml" media-type="application/xhtml+xml"  />
-    <item id="i2" href="Text/testDetailsUnderImage.xhtml" media-type="application/xhtml+xml" />
+
+    <item id="i1" href="Text/testDetailsUnderImage.xhtml" media-type="application/xhtml+xml" />
+    <item id="i2" href="Text/testDetailsEndOfChapter.xhtml" media-type="application/xhtml+xml"  />
     <item id="i3" href="Text/testDetailsHiddenDescribedBy.xhtml" media-type="application/xhtml+xml" />
-   <item id="img_more_info" href="Images/more_info.jpeg" media-type="image/jpeg"/>
+   
+    <item id="img_more_info" href="Images/more_info.jpeg" media-type="image/jpeg"/>
     <item id="img_Blastocyst" href="Images/chart-ebcaadfb.png" media-type="image/png"/> 
     <item id="img_Blastulation" href="Images/peafowl-998cf337.jpg" media-type="image/jpeg"/> 
   </manifest>
