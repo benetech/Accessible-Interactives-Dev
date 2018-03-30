@@ -5,13 +5,18 @@
 // So the basic assumption is that MathML is accessible if JS runs.
 // Cases where this isn't true:
 //		Linux (none of the above screen readers work there)
+//		Edge -- uses UIA, and that doesn't expose MathML
 //		?? Non Safari on MacOS
 function CanUseMathML() {
 	var isLinux = function(){
-		var matches = navigator.userAgent.match(/Linux/);
+		var matches = window.navigator.userAgent.match(/Linux/);
 		return (matches!=null && matches.length==1);
+	}
+	var isEdge = function(){
+		var matches = window.navigator.userAgent.match(/Edge\/\d+/);
+		return (matches!=null);
 	};
-	return !isLinux();
+	return !isLinux() && !isEdge();
 }
 
 
@@ -19,11 +24,12 @@ function CanUseMathML() {
 // IMHO, this makes for cleaner code
 function ForEach(nodeList, callback, scope) {
   for (var i = 0; i < nodeList.length; i++) {
-	 callback(nodeList[i], i, nodeList); // passes back stuff we need
+	 callback(nodeList[i]); // passes back stuff we need
   }
 };
 
-
+// Note: in HTHML, tag and attribute names are case-insensitive; in XHTML, they are case-sensitive
+// Class names are case-sensitive in HTML, but not CSS.
 function MakeMathAccessible() {
 	if (!CanUseMathML())
 		return;
@@ -32,34 +38,28 @@ function MakeMathAccessible() {
 		element.setAttribute("aria-hidden", "true");
 	};
 	var unsetARIAHidden = function(element) {
-		element.setAttribute("aria-hidden", "false");
-		var parent = element.parentNode;
-		if (parent.tagName == "div" || parent.tagName == "span") {
-			parent.setAttribute("aria-hidden", "false");
-		}
+		element.removeAttribute("aria-hidden");		// use remove rather than unset due to NVDA/IE bug
 	};
 	var changeImage = function(element) {
-		if (element.getAttribute("role")=="math") {
-			element.setAttribute("alt", "");
-			element.setAttribute("aria-hidden", "true");
-		}
+		element.setAttribute("alt", "");
+		element.setAttribute("aria-hidden", "true");
 	};
-	var changeMathSpan = function(element) {
+	var changeMathSpanIfRequired = function(element) {
 		if (element.getAttribute("role")=="math") {
 			element.setAttribute("aria-hidden", "true");
 		}
 		if (element.getAttribute("class") && 
-			 element.getAttribute("class").indexOf("MathMLNoDisplay") >=0) {
+			element.getAttribute("class").indexOf("MathMLNoDisplay") >=0) {
 			element.parentNode.removeChild(element)
 		}
 	};
 	
-	ForEach( document.getElementsByTagName("math"), unsetARIAHidden );
-	ForEach( document.getElementsByTagName("img"), changeImage );
+	ForEach( document.getElementsByClassName("MathMLNoJavaHidden"), unsetARIAHidden );
+	ForEach( document.getElementsByClassName("MathImageNoSR"), changeImage );
 	
 	// used for HTML math case to remove the text from AT to avoid double speak
-	ForEach( document.getElementsByTagName("span"), changeMathSpan );
+	ForEach( document.getElementsByTagName("span"), changeMathSpanIfRequired );
 	
-	// make sure an MathJax CSS math is hidden, not needed for properly done pages
+	// make sure MathJax CSS math is hidden, not needed for properly done pages
 	ForEach( document.getElementsByClassName("MathJax"), setARIAHidden );
 }

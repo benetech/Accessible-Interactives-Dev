@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>ARIA details test 2</title>
+
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <h2>
+        (2) HTML <code>table</code> with <code>aria-details</code> attribute (on a parent <code>div</code> element, to avoid redundant screen reader announcements on every table cells), which points to an immediately-following <code>details</code>        element
+    </h2>
+    <div aria-details="details">
+    <table border="1">
+        <caption>My data table</caption>
+        <tr>
+            <td>
+                cell 1
+            </td>
+            <td>
+                cell 2
+            </td>
+            <td>
+                cell a
+            </td>
+            <td>
+                cell b
+            </td>
+        </tr>
+        <tr>
+            <td>
+                cell 3
+            </td>
+            <td>
+                cell 4
+            </td>
+            <td>
+                cell c
+            </td>
+            <td>
+                cell d
+            </td>
+        </tr>
+        <tr>
+            <td>
+                cell 5
+            </td>
+            <td>
+                cell 6
+            </td>
+            <td>
+                cell e
+            </td>
+            <td>
+                cell f
+            </td>
+        </tr>
+        <tr>
+            <td>
+                cell 7
+            </td>
+            <td>
+                cell 8
+            </td>
+            <td>
+                cell g
+            </td>
+            <td>
+                cell h
+            </td>
+        </tr>
+    </table>
+    </div>
+
+    <details id="details">
+        <summary>
+            Description
+        </summary>
+        This is the table description (any HTML markup is valid here).
+    </details>
+
+</body>
+
+</html>

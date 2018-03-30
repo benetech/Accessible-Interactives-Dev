@@ -4,20 +4,38 @@
   <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
     <dc:language>en</dc:language>
     <dc:title>MathML Sample (CSS)</dc:title>
-    <dc:date>2017-04-17</dc:date>
+   <dc:creator id="creator01">DIAGRAM Center</dc:creator>
+        <meta property="role" refines="#creator01">aut</meta>
+        <meta property="file-as" refines="#creator01">DIAGRAM Center</meta>
+    <dc:date>2018-01-26</dc:date>
     <dc:identifier id="u9uFUdyoTzapXFLDJ2nFfF">u9uFUdyoTzapXFLDJ2nFfF</dc:identifier>
-    <meta property="dcterms:modified">2017-04-28T00:00:00Z</meta>
-  </metadata>
+    <meta property="dcterms:modified">2018-01-26T00:00:00Z</meta>
+    <meta property="schema:accessibilityFeature">structuralNavigation</meta>
+    <meta property="schema:accessibilityFeature">MathML</meta>
+    <meta property="schema:accessibilityFeature">describedMath</meta>
+    <meta property="schema:accessibilityHazard">none</meta>
+    <meta property="schema:accessMode">textual</meta>
+    <meta property="schema:accessMode">visual</meta>
+    <meta property="schema:accessModeSufficient">textual</meta>
+    <meta property="schema:accessModeSufficient">textual,visual</meta>
+    <meta property="schema:accessModeSufficient">visual</meta>
+    <meta property="schema:accessibilityAPI">ARIA</meta>
+    <meta property="schema:accessibilitySummary">This title is a well-marked up and structured book, which is fully accessible. This is for to be used to test various reading systems on their math accessibility.</meta>
+    
+</metadata>
   <manifest>
     <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
     <item id="a11yMath.js" href="Misc/a11yMath.js" media-type="application/javascript"/>
     <item id="a11yMath.css" href="Styles/a11yMath.css" media-type="text/css"/>
     <item id="epub-css-math.xhtml" href="Text/epub-css-math.xhtml"
+      media-type="application/xhtml+xml"/>
+    <item id="epub-css-math-examples.xhtml" href="Text/epub-css-math-examples.xhtml"
       media-type="application/xhtml+xml" properties="scripted mathml"/>
     <item href="Text/nav.xhtml" id="nav" media-type="application/xhtml+xml" properties="nav"/>
    </manifest>
   <spine toc="ncx">
     <itemref idref="nav"/>
     <itemref idref="epub-css-math.xhtml"/>
+    <itemref idref="epub-css-math-examples.xhtml"/>
   </spine>
 </package>

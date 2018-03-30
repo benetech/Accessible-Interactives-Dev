@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>ARIA details test 1</title>
+
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <h2>
+        (1) <code>img</code> HTML tag with <code>aria-details</code> attribute pointing to an immediately-following <code>details</code>        element
+    </h2>
+
+    <figure id="image">
+        <img src="daisy.png" alt="DAISY logo" aria-details="details" />
+        <figcaption>My image</figcaption>
+    </figure>
+
+    <details id="details">
+        <summary>
+            Description
+        </summary>
+        This is the image description (any HTML markup is valid here).
+    </details>
+
+</body>
+
+</html>
