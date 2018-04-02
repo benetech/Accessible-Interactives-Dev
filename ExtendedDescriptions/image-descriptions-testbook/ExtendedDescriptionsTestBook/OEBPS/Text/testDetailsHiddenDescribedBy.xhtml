@@ -15,9 +15,8 @@
         <a href="https://www.w3.org/WAI/tutorials/images/complex/">Web Accessibility Tutorials</a>
     </p>
 
-    <p>In both these examples the HTML Details/Summary is used to expose the extended image descriptions. Aria-details also
-        points to this details/summary which eventually will be picked up by assistive technologies and reading systems to
-        make this a seamless experience.</p>
+    <p>In both these examples the aria-describedby is used to expose the extended image descriptions which is hidden in an aside.</p>
+    <p><b>Note:</b> Since aria-describedby will flatten all the extended image description text the table within the extended image description will not be navigable using AT.</p>
 
     <hr />
     <h2>Example 7: Bar Chart</h2>
