@@ -5,7 +5,7 @@
     <dc:creator>DIAGRAM Center</dc:creator>
     <dc:identifier id="uid">extended-descriptions-experiments</dc:identifier>
     <dc:language>en-US</dc:language>
-    <meta property="dcterms:modified">2018-04-02T07:00:00Z</meta>
+    <meta property="dcterms:modified">2018-04-11T011:00:00Z</meta>
     <dc:publisher>DIAGRAM Center</dc:publisher>  
     <dc:contributor>Charles LaPierre</dc:contributor>
     <dc:contributor>Daniel Weck</dc:contributor>
@@ -36,8 +36,8 @@
     <item id="i5" href="Text/testPresentationalImage.xhtml" media-type="application/xhtml+xml" />
    
     <item id="img_more_info" href="Images/more_info.jpeg" media-type="image/jpeg"/>
-    <item id="img_Blastocyst" href="Images/chart-ebcaadfb.png" media-type="image/png"/> 
-    <item id="img_Blastulation" href="Images/peafowl-998cf337.jpg" media-type="image/jpeg"/> 
+    <item id="img_chart" href="Images/chart-ebcaadfb.png" media-type="image/png"/> 
+    <item id="img_peafowl" href="Images/peafowl-998cf337.jpg" media-type="image/jpeg"/> 
   </manifest>
   <spine>
     <itemref idref="toc"/>
