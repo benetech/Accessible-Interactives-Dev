@@ -10,14 +10,18 @@
 <h1>Test 010</h1>
     <h2>Support for Java Script and MathML</h2>
         <p>
-            The assistive technology reports presence of 4 MathML expressions and provides functionality to read it.  
+            The test has 4 MathML expressions.
             <br/>
-            If you hear the prefix "image alt fallback" prior to the explanation of the math then the JavaScript was not enabled and the image description fallback was provided as a replacement.  
             <br/>
-            If you hear the prefix "mathml alttext" this is the embedded description inside the mathML, it will be good to note you heard this and if you were also able to actually navigate the math.
+            The test passes if the assistive technology reports presence of all 4 MathML expressions and provides functionality to read it.
             <br/>
-            What should happen is a textual description of the math equation is given to you by your AT and you should also be able to explore the math equations by going into the math using your AT.
-        </p>
+            <br/>
+           If the test passes, please provide notes about your MathML reading experience. for example, did you hear the prefix "mathml alttext” and you heard the expression “(mathml alttext): x sub 1, y sub 1” or was the math expression expressed via the readers own math rulesets such as “left parenthesis x subscript 1, y subscript 1 right parenthesis” with no prefix, and how well you were able to navigate in MathML.”
+            <br/>
+            <br/>
+            The test fails if you read/hear the prefix "image alt fallback" prior to the explanation of the math. The test also fails if you read/hear duplicate expressions, once for MathML and other for fall back. This means that Java Script failed to work properly.
+            <br/>
+          </p>
         <p>
             The formula for a line that runs through the points
             <span class="MathMLNoJavaHidden" aria-hidden="true">
@@ -121,7 +125,7 @@
 <h1>Test 020</h1>
     <h2>Support for fall back mechanism.</h2>
         <p>
-            The assistive technology detects 4 images and reads the following alttext:
+            The test passes if the assistive technology detects 4 images and reads the following alttext:
     <br/>
             "x sub 1, y sub 1"
     <br/>
