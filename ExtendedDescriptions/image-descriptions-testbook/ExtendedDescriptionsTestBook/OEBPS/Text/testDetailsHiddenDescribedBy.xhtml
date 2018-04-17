@@ -3,29 +3,35 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en">
 
 <head>
-    <title>Extended Descriptions Hidden Under each Image using ARIA described-by</title>
+    <title>Extended Descriptions Under each Image using ARIA described-by</title>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
     <meta name="charset" content="utf-8" />
     <link href="../Styles/styles.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-    <h1>Extended Descriptions Hidden Under each Image using ARIA described-by</h1>
-    <p>These examples come from
-        <a href="https://www.w3.org/WAI/tutorials/images/complex/">Web Accessibility Tutorials</a>
-    </p>
+    <h1>Extended Descriptions Under each Image using ARIA described-by</h1>
 
-    <p>In both these examples the aria-describedby is used to expose the extended image descriptions which is hidden in an aside.</p>
-    <p><b>Note:</b> Since aria-describedby will flatten all the extended image description text the table within the extended image description will not be navigable using AT.</p>
+<p>In the following examples the aria-describedby is used to expose the extended image description which is in an aside.</p>
+    <p><b>Note:</b> Since aria-describedby will flatten all the extended image description text, we believe  the table within the extended image description will not be navigable using AT.</p>
 
     <hr />
     <h2>Example 7: Bar Chart</h2>
+
+<p>Test 040<br/>
+Support for describedby aside placed inside figcaption<br/>
+The test passes if you are able to read/hear the following text when the focus is on the image:<br/>
+"The chart shows the website hits for the first quarter of 2014. It shows that Site 1 has more visitors than
+                    either of the other sites, but the number of visitors is decreasing. Site 2 has a fairly constant number
+                    of visitors, while for Site 3 page hits are increasing month on month."<br/>
+Note: there may be a lot more text read that is in a table.</p>
+
     <figure>
         <img src="../Images/chart-ebcaadfb.png" alt="Bar chart showing monthly and total visitors for the first quarter 2014 for sites 1 to 3"
             aria-describedby="image1-extended-desc" />
         <figcaption>
             Example.com Site visitors Jan to March 2014
-            <aside class="extendedDesciption" id="image1-extended-desc" hidden="hidden">
+            <aside class="extendedDescription" id="image1-extended-desc" >
                 <h3>Overview</h3>
                 <p>The chart shows the website hits for the first quarter of 2014. It shows that Site 1 has more visitors than
                     either of the other sites, but the number of visitors is decreasing. Site 2 has a fairly constant number
@@ -73,12 +79,24 @@
     </figure>
 
     <hr />
-    <h2>Example 8: Detailed Description of Image</h2>
+    <h2>Example 8: Peacock Detailed Description of Image</h2>
 
-    <p>In this example, the head of the peacock is described using a paragraph of text that is on the web page.</p>
+    <p>In this example, the head of the peacock is described using a paragraph of text that is in an aside on the web page.</p>
+<p>Test 050<br/>
+Support for describedby hidden aside as sibling of image.<br/>
+The test passes if you are able to read/hear the following text when the focus is on the image:<br/>
+"The male is metallic blue on the crown, the feathers of the head being short and curled. The fan-shaped crest on the head
+            is made of feathers with bare black shafts and tipped with blush-green webbing. A white stripe above the eye
+            and a crescent shaped white patch below the eye are formed by bare white skin. The sides of the head have iridescent
+            greenish blue feathers. The back has scaly bronze-green feathers with black and copper markings."</p>
+
 
     <img src="../Images/peafowl-998cf337.jpg" alt="Male peacock head" aria-describedby="image2-extended-desc" />
-    <aside class="extendedDesciption" id="image2-extended-desc" hidden="hidden">
+<hr/>
+<h3>Filler simulating aside at the end of the chapter</h3>
+
+
+    <aside class="extendeddDescription" id="image2-extended-desc">
         <p>
             The male is metallic blue on the crown, the feathers of the head being short and curled. The fan-shaped crest on the head
             is made of feathers with bare black shafts and tipped with blush-green webbing. A white stripe above the eye

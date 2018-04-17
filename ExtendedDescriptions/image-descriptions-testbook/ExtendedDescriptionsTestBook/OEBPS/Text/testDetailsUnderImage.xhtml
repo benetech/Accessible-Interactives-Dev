@@ -4,31 +4,41 @@
 
 <head>
     <title>Extended Descriptions Under each Image</title>
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
     <meta name="charset" content="utf-8" />
     <link href="../Styles/styles.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
     <h1>Extended Descriptions Under each Image</h1>
-    <p>These examples come from
-        <a href="https://www.w3.org/WAI/tutorials/images/complex/">Web Accessibility Tutorials</a>
-    </p>
 
 
-    <p>In both these examples the HTML Details/Summary is used to expose the extended image descriptions which is directly under the image in both cases.</p>
+    <p>In the two following examples the HTML Details/Summary is used to expose the extended image descriptions which is directly under the image .</p>
     <p>Aria-details also points to this details/summary which
         eventually will be picked up by assistive technologies and reading systems to make this a seamless experience.</p>
 
     <hr />
-    <h2>Example 1: Bar Chart (figure and associated caption)</h2>
+    <h2>Example 1: Bar Chart (figure and associated details inside the caption)</h2>
+
+<p>test 070<br/>
+Support for aria-details pointing to HTML details/summary placed inside figcaption<br/>
+aria-details is reported on the image and the UI or the AT provides functionality which takes you to the HTML details/summary element just below the image.</p>
+
+
+
+<p>Test 060<br/>
+Support for HTML details/summary placed inside figcaption.<br/>
+Test passes if following steps are successful:<br/>
+- The HTML details/summary is presented by assistive technology, <br/>
+- You can expand and collapse the details.<br/>
+- You can read the content of the summary as well as the content in the details element.</p>
+
     <figure>
         <img src="../Images/chart-ebcaadfb.png" alt="Bar chart showing monthly and total visitors for the first quarter 2014 for sites 1 to 3"
             aria-details="#image1-extended-desc" />
         <figcaption>
             Example.com Site visitors Jan to March 2014
 
-            <details class="extendedDesciption" id="image1-extended-desc">
+            <details class="extendedDescription" id="image1-extended-desc">
                 <summary>Expand / collapse description</summary>
                 <div>
                     <h3>Overview</h3>
@@ -79,12 +89,25 @@
     </figure>
 
     <hr />
-    <h2>Example 2: Detailed Description of Image</h2>
+    <h2>Example 2: Peacock Detailed Description of Image with details immediately below image (no figure wrapper)</h2>
+
+
+<p>test 090<br/>
+Support for aria-details pointing to HTML details/summary placed as sibling of img.<br/>
+aria-details is reported on the image and the UI or the AT provides functionality which takes you to the HTML details/summary element just below the image.</p>
+
+<p>Test 080<br/>
+Support for HTML details/summary placed at same level (sibling( of image.<br/>
+Test passes if following steps are successful:<br/>
+- The HTML details/summary is presented by assistive technology <br/>
+- You can expand and collapse the details.<br/>
+- You can read the content of summary as well as the content of the details element.</p>
+
 
     <p>In this example, the head of the peacock is described using a paragraph of text that is on the web page.</p>
 
     <img src="../Images/peafowl-998cf337.jpg" alt="Male peacock head" aria-details="#image2-extended-desc" />
-    <details class="extendedDesciption" id="image2-extended-desc">
+    <details class="extendedDescription" id="image2-extended-desc">
         <summary>Expand / collapse description</summary>
         <div>
             <p>
