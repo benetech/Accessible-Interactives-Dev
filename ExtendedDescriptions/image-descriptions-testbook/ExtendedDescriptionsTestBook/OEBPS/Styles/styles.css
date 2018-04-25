@@ -14,13 +14,8 @@ td {
     padding: 1em;
 }
 
-:target {
-    border: 1px dotted blue;
-}
-
-
-summary {
-    border: 1px solid silver;
+thead td {
+    font-weight: bold;
 }
 
 caption, .caption, figcaption {
@@ -29,31 +24,51 @@ caption, .caption, figcaption {
     text-align: left;
 }
 
-thead td {
-    font-weight: bold;
-}
-
-a:focus, a:active, a:hover {
+a:focus, a:active, a:hover, details > summary:focus {
   outline-width: 1px;
   outline-style: dashed;
   outline-color: red;
+  outline-offset: 0.1em;
+}
+
+:target {
+  /* border: 2px solid black; */
+
+  outline-width: 2px;
+  outline-style: solid;
+  outline-color: black;
+  outline-offset: 0.2em;
+}
+
+details > summary {
+    border: 1px solid silver;
+    padding: 0.3em;
+}
+
+details > div {
+    padding: 1em;
+}
+
+details[open] {
+    /* border: 2px solid black; */
+  
+    outline-width: 2px;
+    outline-style: solid;
+    outline-color: black;
+    outline-offset: 0em;
 }
 
 aside.extendedDescription  {
 /*  position: absolute; */
-  height: 1px;
-  width: 1px;
-  clip: rect(1px 1px 1px 1px);
-  clip: rect(1px,1px,1px,1px);
-  clip-path: polygon(0px 0px, 0px 0px,0px 0px, 0px 0px);
-  -webkit-clip-path: polygon(0px 0px, 0px 0px,0px 0px, 0px 0px);
-  overflow: hidden!important;
+    height: 1px;
+    width: 1px;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px,1px,1px,1px);
+    clip-path: polygon(0px 0px, 0px 0px,0px 0px, 0px 0px);
+    -webkit-clip-path: polygon(0px 0px, 0px 0px,0px 0px, 0px 0px);
+    overflow: hidden!important;
 }
 
-:target {
-  border: 2px solid black;
-}
-
-details[open] {
-    border: 2px solid black;
+.endDesc {
+    padding: 1em;
 }
