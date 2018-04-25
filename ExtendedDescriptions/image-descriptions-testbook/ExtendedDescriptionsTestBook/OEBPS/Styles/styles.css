@@ -40,6 +40,10 @@ a:focus, a:active, a:hover, details > summary:focus {
   outline-offset: 0.2em;
 }
 
+details {
+    padding: 1em;
+}
+
 details > summary {
     border: 1px solid silver;
     padding: 0.3em;
@@ -55,7 +59,7 @@ details[open] {
     outline-width: 2px;
     outline-style: solid;
     outline-color: black;
-    outline-offset: 0em;
+    outline-offset: -.3em;
 }
 
 aside.extendedDescription  {
@@ -71,4 +75,11 @@ aside.extendedDescription  {
 
 .endDesc {
     padding: 1em;
+}
+
+
+.listhead{
+    font-size: 150%;
+    font-weight: bold;  
+    padding: 0em;
 }
