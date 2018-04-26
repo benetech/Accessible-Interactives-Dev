@@ -7,21 +7,26 @@
 
 <body role="main">
 <h1>Introduction</h1>
+
+<p>Reading mathematics  has always been a problem for persons who are blind, because math is not represented as static text. MathML is a way to encode math for machine processing and presentation, and it has been a W3C Standard for more than 20 years. However, the browsers have only implemented limited support.</p> 
+
+<p>Publishers use MathML in their production workflows to generate an image of the math expression. Assistive technology have started to implement support for MathML by converting the expressions to a textual representation.  Building on this combination of factors, we have developed some techniques that brings together SVG images of math, Javascript, and Mathml to present math that utilizes the features of assistive technology. </p>
+
     <h2> Image Math Description</h2>
-    <p>
-        The objective of the test book is to identify the reading systems and assistive technology that support the technique explained as follows:
+
+<p>        This testing will help us identify the techniques for Math that are supported most widely in reading Apps and assistive technology combinations. With this information, we will develop best practices with publishers and also provide feedback to reading App developers for improving accessibility of their products. We will also provide this information to Assistive Technology developers.
     </p>
-     <p>
-        This testing will help us identify the techniques for Math that are supported most widely in reading Apps and assistive technology combinations. With this information, we will develop best practices with publishers and also provide feedback to reading App developers for improving accessibility of their products. We will also provide this information to Assistive Technology developers.
+<p>        The objective of the test book is to identify the reading systems and assistive technology that support the technique explained as follows:
     </p>
+
     <p>
         1. If reading system supports Java Script then it places MathML in the DOM, which means that reading systems that use both Java script and MathML will provide access to MathML.
     </p>
     <p>
-        2. If reading system does not support Java Script then the Image of MathML with alttext is shown. This acts as fall back mechanism.
+        2. If reading system does not support Java Script then the Image of MathML with alttext is shown. This acts as a fallback mechanism.
     </p>
     <p>
-        To avoid reading of duplicate expressions, The Java Script ensures that one of the above two mechanisms is hidden.
+        To avoid reading duplicate expressions, The Java Script ensures that only one of the above two mechanisms is presented by hiding the other alternative.
     </p>
 
 </body>

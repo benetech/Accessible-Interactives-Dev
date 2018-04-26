@@ -22,10 +22,11 @@
             The test fails if you read/hear the prefix "image alt fallback" prior to the explanation of the math. The test also fails if you read/hear duplicate expressions, once for MathML and other for fall back. This means that Java Script failed to work properly.
             <br/>
           </p>
+<p>Begin first expression</p>
         <p>
             The formula for a line that runs through the points
             <span class="MathMLNoJavaHidden" aria-hidden="true">
-                <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" class="MathMLNoDisplay" alttext="(mathml alttext): x sub 1, y sub 1">
+                <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" class="MathMLNoDisplay" alt-text="(mathml alt-text): x sub 1, y sub 1">
               <mo>(</mo>
                 <msub> <mi>x</mi><mn>1</mn></msub>
                  <mo>,</mo>
@@ -34,9 +35,11 @@
             </math>
             </span>
             <img class="MathImageNoSR" src="../Images/epub-image-x1y1.svg" style="vertical-align: -0.844ex;" alt="(image alt fallback): x sub 1 y sub 1"/>
-            and
+            and</p>
+<p> Begin second expression</p>
+<p>
             <span class="MathMLNoJavaHidden" aria-hidden="true">
-            <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" class="MathMLNoDisplay" alttext="(mathml alttext): x sub 2 y sub 2 (mathml alttext)">
+            <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" class="MathMLNoDisplay" alt-text="(mathml alt-text): x sub 2 y sub 2 (mathml alt-text)">
               <mo>(</mo>
                 <msub> <mi>x</mi><mn>2</mn> </msub>
                  <mo>,</mo>
@@ -47,9 +50,10 @@
             <img class="MathImageNoSR" src="../Images/epub-image-x2y2.svg" style="vertical-align: -0.844ex;" alt="(image alt fallback): x sub 2 y sub 2"/>
             is:
             </p>
+<p>Begin Third expression</p>
             <!-- too complicated for HTML Math - fall back to an image -->
             <span class="MathMLNoJavaHidden" aria-hidden="true">
-            <math xmlns="http://www.w3.org/1998/Math/MathML" display="block" class="MathMLNoDisplay" alttext="(mathml alttext): y minus y 1 equals StartFraction y 2 minus y 1 Over x 2 minus x 1 EndFraction left-parenthesis x minus x 1 right-parenthesis">
+            <math xmlns="http://www.w3.org/1998/Math/MathML" display="block" class="MathMLNoDisplay" alt-text="(mathml alt-text): y minus y 1 equals StartFraction y 2 minus y 1 Over x 2 minus x 1 EndFraction left-parenthesis x minus x 1 right-parenthesis">
                 <mrow>
                   <mstyle displaystyle="true">
                     <mi>y</mi>
@@ -110,10 +114,11 @@
             </math>
                 </span>
             <img class="MathImageNoSR" src="../Images/epub-image-2pointform.svg" style="vertical-align: -2.103ex;" alt="(image alt fallback): y minus y sub 1, equals, the fraction with numerator y sub 2 minus y sub 1, and denominator x sub 2 minus x sub 1, times open paren x minus x sub 1 close paren"/>
+<p>Begin fourth expression</p>
             <p>
             where
             <span class="MathMLNoJavaHidden" aria-hidden="true">
-            <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" class="MathMLNoDisplay" alttext="(mathml alttext): x sub 2 not-equals x sub 1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" class="MathMLNoDisplay" alt-text="(mathml alt-text): x sub 2 not-equals x sub 1">
               <msub> <mi>x</mi><mn>2</mn> </msub>
               <mo>≠<!-- not equals --></mo>
               <msub> <mi>x</mi><mn>1</mn> </msub>
@@ -125,7 +130,7 @@
 <h1 id="test020">Test 020</h1>
     <h2>Support for Fallback Mechanism</h2>
         <p>
-            The test passes if the assistive technology detects 4 images and reads the following alttext:
+            The test passes if the assistive technology detects 4 images and reads the following alt-text:
     <br/>
             "x sub 1, y sub 1"
     <br/>
@@ -136,15 +141,19 @@
             "x sub 2 not equal x sub 1"
     <br/> 
     </p>
+<p>Begin first expression</p>
         <p>
             The formula for a line that runs through the points
             <img src="../Images/epub-image-x1y1.svg" style="vertical-align: -0.844ex;" alt="x sub 1, y sub 1"/>
-            and
+</p>
+<p>            and<br/>
             <img src="../Images/epub-image-x2y2.svg" style="vertical-align: -0.844ex;" alt="x sub 2, y sub 2"/>
-            is:
+</p><p>            is:<br/>
+Begin Third expression.
             </p>
             <img src="../Images/epub-image-2pointform.svg" style="vertical-align: -2.103ex;" alt="y minus y sub 1, equals, the fraction with numerator y sub 2 minus y sub 1, and denominator x sub 2 minus x sub 1, times open paren x minus x sub 1 close paren"/>
-            <p>
+            <p> Begin fourth expression</p>
+<p>
             where
             <img src="../Images/epub-image-x2nex1.svg" style="vertical-align: -0.704ex;" alt="x sub 2 not equal to x sub 1 "/>.
         </p>
