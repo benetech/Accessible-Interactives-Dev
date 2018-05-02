@@ -24,7 +24,7 @@
     <meta property="schema:accessModeSufficient">textual</meta>
     <meta property="schema:accessModeSufficient">visual</meta>
     <meta property="schema:accessModeSufficient">textual,visual</meta>
-    <meta property="schema:accessibilitySummary">This EPUB is just for testing purposes as the intent is to test reading systems on accessiblity for extended descriptions with the descriptions.</meta>    
+    <meta property="schema:accessibilitySummary">This EPUB is just for testing purposes as the intent is to test reading systems on accessibility for extended descriptions with the descriptions.</meta>    
     </metadata>
   <manifest>
   
