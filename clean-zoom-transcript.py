@@ -11,9 +11,10 @@ with open(filename) as file, open(filename[:-4]+'-cleaned.txt', 'w') as outFile:
     file.seek(0)
     countedLines = collections.Counter(l.strip() for l in file if "yeah" not in l.lower())
     speakers = [speaker for speaker, count in countedLines.most_common() if count > 5]
-    speakers = "(("+")|(".join(speakers)+"))"
-    speakerRE = re.compile(speakers, re.MULTILINE)
+    speakerNames = "(("+")|(".join(speakers)+"))"
+    speakerRE = re.compile(speakerNames, re.MULTILINE)
     contents = remove.sub("\n", contents)
     contents = blanks.sub("\n", contents)
     contents = speakerRE.sub(r"\n\1", contents)
+    outFile.write(str(len(speakers))+" speakers in this conversation:\n"+"\n".join(speakers)+"\n")
     outFile.write(contents)
