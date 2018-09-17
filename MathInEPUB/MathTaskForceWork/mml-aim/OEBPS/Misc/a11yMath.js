@@ -4,7 +4,7 @@
 //   know about (NVDA, JAWS, VoiceOver, TalkBack, ChomeVox) all handle MathML.
 // So the basic assumption is that MathML is accessible if JS runs.
 // Cases where this isn't true:
-//		Linux (none of the above screen readers work there)
+//		Linux (Orca now works)
 //		Edge -- uses UIA, and that doesn't expose MathML
 //		?? Non Safari on MacOS
 function CanUseMathML() {
